@@ -1,4 +1,4 @@
-title: 'Blogs ORang InDonesia'
+title: 'blogs.or.id'
 description: 'Berita Terkini Dari Daerah maupun Mancanegara '
 logo: spresso-logo.png
 url: ''
@@ -7,7 +7,7 @@ comments:
     enabled: false
     disqus_shortname: ''
 author:
-    name: 'Adijaya'
+    name: 'blogadmin'
     twitter: spress_cms
     github: 'https://github.com/spress/Spress'
     bitbucket: null
