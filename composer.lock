@@ -1,0 +1,119 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d91ea37e4f8183faad0c2e6e19bb30bd",
+    "packages": [
+        {
+            "name": "spress/spress-installer",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spress/Spress-installer.git",
+                "reference": "ed31aa40817b133e4c19e5bf6224f343cf959275"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spress/Spress-installer/zipball/ed31aa40817b133e4c19e5bf6224f343cf959275",
+                "reference": "ed31aa40817b133e4c19e5bf6224f343cf959275",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0"
+            },
+            "replace": {
+                "yosymfony/spress-installer": "self.version"
+            },
+            "require-dev": {
+                "composer/composer": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Yosymfony\\Spress\\Composer\\SpressPlugin",
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Yosymfony\\Spress\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "Installer for Spress addons",
+            "keywords": [
+                "installer",
+                "plugins",
+                "spress",
+                "themes"
+            ],
+            "time": "2017-02-11 12:01:38"
+        },
+        {
+            "name": "spress/spress-theme-spresso",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spress/Spress-theme-spresso.git",
+                "reference": "dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spress/Spress-theme-spresso/zipball/dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6",
+                "reference": "dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6",
+                "shasum": ""
+            },
+            "require": {
+                "spress/spress-installer": "~2.1"
+            },
+            "replace": {
+                "yosymfony/spress-theme-spresso": "self.version"
+            },
+            "type": "spress-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "Spresso theme for Spress",
+            "keywords": [
+                "bootstrap",
+                "spress",
+                "template",
+                "theme"
+            ],
+            "time": "2017-09-02 15:01:36"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

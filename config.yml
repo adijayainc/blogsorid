@@ -1,0 +1,34 @@
+title: 'Blogs ORang InDonesia'
+description: 'Berita Terkini Dari Daerah maupun Mancanegara '
+logo: spresso-logo.png
+url: ''
+parsedown_actived: true
+comments:
+    enabled: false
+    disqus_shortname: ''
+author:
+    name: 'Adijaya'
+    twitter: spress_cms
+    github: 'https://github.com/spress/Spress'
+    bitbucket: null
+    facebook: null
+    linkedin: null
+    gplus: null
+    youtube: adijayainc
+collections:
+    posts: { output: true }
+    projects: { output: true }
+feed:
+    max_item: 10
+open_graph:
+    locale: en_US
+code_highlight: true
+google_verify: null
+bing_verify: null
+top_menu:
+    - { name: Home, url: / }
+    - { name: Projects, url: /projects }
+bottom_menu:
+    - { name: 'Go to the Spresso theme webpage', url: 'https://github.com/yosymfony/Spress-theme-spresso' }
+themes:
+    name: spress/spress-theme-spresso
