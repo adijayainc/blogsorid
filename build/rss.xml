@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Blogs ORang InDonesia</title>
+        <title>blogs.or.id</title>
         <link></link>
-        <description>RSS feed for Blogs ORang InDonesia</description>
+        <description>RSS feed for blogs.or.id</description>
         <atom:link href="/rss.xml" rel="self" type="application/rss+xml" />
                     <item>
                 <title>Sample Post</title>
@@ -103,7 +103,7 @@
 <div><a href="#" class="btn btn-default">This is a button</a></div>
 ]]></description>
                 <link>/articles/2014/01/18/sample-post</link>
-                <pubDate>Sat, 18 Jan 2014 00:00:00 +0700</pubDate>
+                <pubDate>Sat, 18 Jan 2014 00:00:00 +0000</pubDate>
                 <guid>/articles/2014/01/18/sample-post</guid>
             </item>
                     <item>
@@ -121,7 +121,7 @@ to the <code>./src/content/posts</code> folder that follows the convention <code
 <p><a href="https://gitter.im/spress/Spress?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter" /></a></p>
 ]]></description>
                 <link>/2015/07/26/welcome-to-spress</link>
-                <pubDate>Sun, 26 Jul 2015 00:00:00 +0700</pubDate>
+                <pubDate>Sun, 26 Jul 2015 00:00:00 +0000</pubDate>
                 <guid>/2015/07/26/welcome-to-spress</guid>
             </item>
                     <item>
@@ -129,7 +129,7 @@ to the <code>./src/content/posts</code> folder that follows the convention <code
                 <description><![CDATA[<p>Begitu banyak website sekarang yang menampilkan berita sekedarnya , bahkan malah tidak berdsarkan fakta sebenarnya membuat kita mnejadi harus lebih teliti untuk membaca berita</p>
 ]]></description>
                 <link>/2017/09/23/kembalinya-website-yang-sudah-lama-hilang</link>
-                <pubDate>Sat, 23 Sep 2017 00:00:00 +0700</pubDate>
+                <pubDate>Sat, 23 Sep 2017 00:00:00 +0000</pubDate>
                 <guid>/2017/09/23/kembalinya-website-yang-sudah-lama-hilang</guid>
             </item>
             </channel>
