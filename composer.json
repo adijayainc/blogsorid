@@ -4,7 +4,7 @@
     "keywords": ["spress", "theme"],
     "type": "spress-theme",
         "require": {
-                "spress/spress-theme-spresso": "*"
+                "spress-add-ons/clean-blog-theme": "*"
             },
         "minimum-stability": "dev"
 }

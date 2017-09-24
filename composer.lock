@@ -4,8 +4,53 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d91ea37e4f8183faad0c2e6e19bb30bd",
+    "content-hash": "991cbb171f91e1d369ba1ba98702ad72",
     "packages": [
+        {
+            "name": "spress-add-ons/clean-blog-theme",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spress-add-ons/Clean-blog-theme.git",
+                "reference": "ae197e3b64738ba2739564e86b08397e49510450"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spress-add-ons/Clean-blog-theme/zipball/ae197e3b64738ba2739564e86b08397e49510450",
+                "reference": "ae197e3b64738ba2739564e86b08397e49510450",
+                "shasum": ""
+            },
+            "require": {
+                "spress/spress-installer": "~2.1"
+            },
+            "type": "spress-theme",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Victor Puertas",
+                    "email": "vpgugr@gmail.com",
+                    "homepage": "http://yosymfony.com"
+                }
+            ],
+            "description": "Clean blog theme for Spress design by Start Bootstrap",
+            "keywords": [
+                "blog",
+                "bootstrap",
+                "responsive",
+                "spress",
+                "startbootstrap",
+                "template"
+            ],
+            "time": "2017-06-20 18:11:55"
+        },
         {
             "name": "spress/spress-installer",
             "version": "dev-master",
@@ -60,52 +105,6 @@
                 "themes"
             ],
             "time": "2017-02-11 12:01:38"
-        },
-        {
-            "name": "spress/spress-theme-spresso",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spress/Spress-theme-spresso.git",
-                "reference": "dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spress/Spress-theme-spresso/zipball/dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6",
-                "reference": "dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6",
-                "shasum": ""
-            },
-            "require": {
-                "spress/spress-installer": "~2.1"
-            },
-            "replace": {
-                "yosymfony/spress-theme-spresso": "self.version"
-            },
-            "type": "spress-theme",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Victor Puertas",
-                    "email": "vpgugr@gmail.com",
-                    "homepage": "http://yosymfony.com"
-                }
-            ],
-            "description": "Spresso theme for Spress",
-            "keywords": [
-                "bootstrap",
-                "spress",
-                "template",
-                "theme"
-            ],
-            "time": "2017-09-02 15:01:36"
         }
     ],
     "packages-dev": [],

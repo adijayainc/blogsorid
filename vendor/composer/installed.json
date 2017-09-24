@@ -57,27 +57,24 @@
         ]
     },
     {
-        "name": "spress/spress-theme-spresso",
+        "name": "spress-add-ons/clean-blog-theme",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/spress/Spress-theme-spresso.git",
-            "reference": "dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6"
+            "url": "https://github.com/spress-add-ons/Clean-blog-theme.git",
+            "reference": "ae197e3b64738ba2739564e86b08397e49510450"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/spress/Spress-theme-spresso/zipball/dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6",
-            "reference": "dfc1f183e7b86c5bdf5aabd026b77b14a7972ef6",
+            "url": "https://api.github.com/repos/spress-add-ons/Clean-blog-theme/zipball/ae197e3b64738ba2739564e86b08397e49510450",
+            "reference": "ae197e3b64738ba2739564e86b08397e49510450",
             "shasum": ""
         },
         "require": {
             "spress/spress-installer": "~2.1"
         },
-        "replace": {
-            "yosymfony/spress-theme-spresso": "self.version"
-        },
-        "time": "2017-09-02T15:01:36+00:00",
+        "time": "2017-06-20T18:11:55+00:00",
         "type": "spress-theme",
         "extra": {
             "branch-alias": {
@@ -87,7 +84,7 @@
         "installation-source": "source",
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "MIT"
+            "Apache-2.0"
         ],
         "authors": [
             {
@@ -96,12 +93,14 @@
                 "homepage": "http://yosymfony.com"
             }
         ],
-        "description": "Spresso theme for Spress",
+        "description": "Clean blog theme for Spress design by Start Bootstrap",
         "keywords": [
+            "blog",
             "bootstrap",
+            "responsive",
             "spress",
-            "template",
-            "theme"
+            "startbootstrap",
+            "template"
         ]
     }
 ]
