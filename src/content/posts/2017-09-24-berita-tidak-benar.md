@@ -9,7 +9,8 @@ header_img:
   author_url:
 categories:
   - News
-tags: berita
+tags: 
+  - berita
 ---
 
 <p> banyak informasi beredar, tetapi yang dicari hanya yang sesuai dengan keinginan kita. Karena itu , setiap berita  hanya ditulis berdasarkan keiningan dari penulis saja, bukan berdasarkan kondisi nyata yang terjadi.</p>
