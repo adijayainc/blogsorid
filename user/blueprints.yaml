@@ -1,13 +1,18 @@
-name: One-Page Site
-version: 2.0.0
-description: "The **One-Page Skeleton** provides a great example of how to build a modern one-page design with navigation that scrolls to the relevant section of the page. This skeleton uses the Quark theme."
-icon: comments
+name: Notepad
+version: 1.0.3
+description: "Notepad theme by HOSSAIN MOHD FAYSAL ported to **Grav**"
+icon: pencil-square
 author:
   name: Team Grav
   email: devs@getgrav.org
   url: http://getgrav.org
-homepage: https://github.com/getgrav/grav-skeleton-onepage-site
-demo: http://demo.getgrav.org/onepage-skeleton
-keywords: onepage, quark, skeleton, scroll, single, page, modular
-bugs: https://github.com/getgrav/grav-skeleton-onepage-site/issues
+homepage: https://github.com/getgrav/grav-skeleton-notepad-site
+demo: http://demo.getgrav.org/notepad-skeleton
+keywords: notepad, theme, modern, fast, responsive, blog
+bugs: https://github.com/getgrav/grav-theme-notepad/issues
 license: MIT
+
+form:
+  validation: strict
+  fields:
+

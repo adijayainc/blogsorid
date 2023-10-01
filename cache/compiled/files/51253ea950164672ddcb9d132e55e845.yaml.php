@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/user/plugins/flex-objects/blueprints/flex-objects/user-accounts.yaml',
-    'modified' => 1689699317,
+    'modified' => 1689699319,
     'size' => 289,
     'data' => [
         'title' => 'User Accounts (Admin)',

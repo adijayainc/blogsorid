@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/system/config/mime.yaml',
-    'modified' => 1688067395,
+    'modified' => 1696150212,
     'size' => 35811,
     'data' => [
         'types' => [

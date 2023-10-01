@@ -1,0 +1,12 @@
+1696155467
+C:39:"Grav\Common\Flex\Types\Pages\PageObject":1175:{a:4:{s:4:"type";s:5:"pages";s:3:"key";s:5:"about";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:1:{s:5:"title";s:16:"ABOUT THE AUTHOR";}s:11:"frontmatter";s:23:"title: ABOUT THE AUTHOR";s:8:"markdown";s:709:"![Authorl](author.jpg)
+
+
+The Notepad theme for Grav is a direct port of the [Notepad Theme for Jekyll](http://hmfaysal.github.io/Notepad/) designed by [Hossain Mohd Faysal](http://hmfaysal.github.io/).
+
+You can **download** the theme here: [github.com/getgrav/grav-theme-notepad](https://github.com/getgrav/grav-theme-notepad) but it's strongly advised to download the complete [Download Notepad Skeleton](http://getgrav.org/downloads/skeletons#extras).
+
+You can find out more info about customizing your Grav theme, as well as basic Grav usage documentation at [learn.getgrav.org](http://learn.getgrav.org)
+
+You can find the source code for Grav at [github.com/getgrav/grav](https://github.com/getgrav/grav)
+";}s:7:"storage";a:6:{s:3:"key";s:5:"about";s:11:"storage_key";s:5:"about";s:8:"template";s:4:"page";s:17:"storage_timestamp";i:1689699311;s:8:"markdown";a:1:{s:0:"";a:1:{s:4:"page";i:1689699311;}}s:8:"checksum";s:32:"34199925e068abca97b0304b47c8b69e";}}}

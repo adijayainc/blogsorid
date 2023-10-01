@@ -1,81 +1,93 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1696131824,
-    'checksum' => 'b7b029e28845f63ff42d3d4693b52f4d',
+    'timestamp' => 1696154852,
+    'checksum' => 'e6a718251c48fc6f4f2090e169dd27fc',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1696131631
+                'modified' => 1696149442
+            ],
+            'plugins/feed' => [
+                'file' => 'user/config/plugins/feed.yaml',
+                'modified' => 1696149605
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1689699309
+                'modified' => 1689699311
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1689699309
+                'modified' => 1696154147
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1689699318
+                'modified' => 1696154846
             ],
             'versions' => [
                 'file' => 'user/config/versions.yaml',
-                'modified' => 1696131702
+                'modified' => 1696150214
             ]
         ],
         'system/config' => [
             'backups' => [
                 'file' => 'system/config/backups.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'mime' => [
                 'file' => 'system/config/mime.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'permissions' => [
                 'file' => 'system/config/permissions.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'security' => [
                 'file' => 'system/config/security.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ]
         ],
         'user/plugins' => [
             'plugins/error' => [
                 'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1689699311
+                'modified' => 1689699313
+            ],
+            'plugins/pagination' => [
+                'file' => 'user/plugins/pagination/pagination.yaml',
+                'modified' => 1689699313
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1689699315
+                'modified' => 1689699317
+            ],
+            'plugins/feed' => [
+                'file' => 'user/plugins/feed/feed.yaml',
+                'modified' => 1696149572
             ],
             'plugins/flex-objects' => [
                 'file' => 'user/plugins/flex-objects/flex-objects.yaml',
-                'modified' => 1689699317
+                'modified' => 1689699319
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1689699316
+                'modified' => 1689699318
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1689699318
+                'modified' => 1689699319
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
@@ -83,32 +95,20 @@ return [
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1689699316
+                'modified' => 1689699318
             ]
         ],
         'user/themes' => [
-            'themes/quark' => [
-                'file' => 'user/themes/quark/quark.yaml',
-                'modified' => 1689699313
+            'themes/notepad' => [
+                'file' => 'user/themes/notepad/notepad.yaml',
+                'modified' => 1689699315
             ]
         ]
     ],
     'data' => [
         'themes' => [
-            'quark' => [
-                'enabled' => true,
-                'production-mode' => true,
-                'grid-size' => 'grid-lg',
-                'header-fixed' => true,
-                'header-animated' => true,
-                'header-dark' => false,
-                'header-transparent' => false,
-                'sticky-footer' => true,
-                'blog-page' => '/blog',
-                'spectre' => [
-                    'exp' => false,
-                    'icons' => false
-                ]
+            'notepad' => [
+                'enabled' => true
             ]
         ],
         'plugins' => [
@@ -117,6 +117,11 @@ return [
                 'routes' => [
                     404 => '/error'
                 ]
+            ],
+            'pagination' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'delta' => 0
             ],
             'form' => [
                 'enabled' => true,
@@ -171,6 +176,15 @@ return [
                         ]
                     ]
                 ]
+            ],
+            'feed' => [
+                'enabled' => true,
+                'limit' => 10,
+                'title' => 'My Feed Title',
+                'description' => 'My Feed Description',
+                'length' => 500,
+                'enable_json_feed' => false,
+                'show_last_modified' => false
             ],
             'flex-objects' => [
                 'enabled' => true,
@@ -3773,21 +3787,20 @@ node_modules'
                 4 => 'exe'
             ],
             'sanitize_svg' => true,
-            'salt' => 'KVd7Us2Q4CcoDq'
+            'salt' => 'gMc1Xxb7Wn3TY5'
         ],
         'site' => [
-            'title' => 'Grav',
+            'title' => 'blogs.or.id',
             'default_lang' => 'en',
             'author' => [
-                'name' => 'Joe Bloggs',
-                'email' => 'joe@test.com'
+                'name' => 'adijaya',
+                'email' => 'adijaya@gmail.com'
             ],
             'taxonomies' => [
-                0 => 'category',
-                1 => 'tag'
+                0 => 'tag'
             ],
             'metadata' => [
-                'description' => 'Grav is an easy to use, yet powerful, open source flat-file CMS'
+                'description' => 'blogs.or.id adalah kumpulan para content creator demi kemajuan bangsa '
             ],
             'summary' => [
                 'enabled' => true,
@@ -3799,6 +3812,55 @@ node_modules'
             'routes' => NULL,
             'blog' => [
                 'route' => '/blog'
+            ],
+            'description' => 'Media Konten Sehat',
+            'owner' => [
+                'name' => 'adijaya',
+                'email' => 'adijaya@gmail.com',
+                'description' => 'Awesome Dude, Awesome Life',
+                'twitter' => 'blogsorid',
+                'facebook' => 'blogsorid',
+                'github' => 'blogsorid',
+                'instagram' => 'blogsorid',
+                'google_plus' => 'https://plus.google.com/+blogsorid'
+            ],
+            'logo' => '/user/themes/notepad/images/logo.png',
+            'links' => [
+                0 => [
+                    'title' => 'Featured Posts',
+                    'url' => '/featured'
+                ],
+                1 => [
+                    'title' => 'Categories',
+                    'url' => '/categories'
+                ],
+                2 => [
+                    'title' => 'About',
+                    'url' => '/about'
+                ]
+            ],
+            'include' => [
+                0 => '.htaccess'
+            ],
+            'exclude' => [
+                0 => 'lib',
+                1 => 'config.rb',
+                2 => 'Gemfile',
+                3 => 'Capfile',
+                4 => 'Gemfile.lock',
+                5 => 'config',
+                6 => 'log',
+                7 => 'Rakefile',
+                8 => 'Rakefile.rb',
+                9 => 'tmp',
+                10 => 'less',
+                11 => '*.sublime-project',
+                12 => '*.sublime-workspace',
+                13 => 'test',
+                14 => 'spec',
+                15 => 'Gruntfile.js',
+                16 => 'package.json',
+                17 => 'node_modules'
             ]
         ],
         'system' => [
@@ -3839,7 +3901,7 @@ node_modules'
                 'debug' => false
             ],
             'home' => [
-                'alias' => '/home',
+                'alias' => '/blog',
                 'hide_in_urls' => false
             ],
             'pages' => [
@@ -3847,7 +3909,7 @@ node_modules'
                 'dirs' => [
                     0 => 'page://'
                 ],
-                'theme' => 'quark',
+                'theme' => 'notepad',
                 'order' => [
                     'by' => 'default',
                     'dir' => 'asc'
@@ -3922,7 +3984,8 @@ node_modules'
                         0 => 'form',
                         1 => 'forms'
                     ]
-                ]
+                ],
+                'markdown_extra' => false
             ],
             'cache' => [
                 'enabled' => true,
@@ -3981,7 +4044,7 @@ node_modules'
                 ]
             ],
             'errors' => [
-                'display' => 0,
+                'display' => true,
                 'log' => true
             ],
             'log' => [
@@ -4095,11 +4158,11 @@ node_modules'
                     'history' => [
                         0 => [
                             'version' => '1.7.42.3',
-                            'date' => '2023-10-01 03:40:55'
+                            'date' => '2023-10-01 08:37:40'
                         ],
                         1 => [
                             'version' => '1.7.42.3',
-                            'date' => '2023-10-01 03:41:42'
+                            'date' => '2023-10-01 08:50:14'
                         ]
                     ]
                 ]

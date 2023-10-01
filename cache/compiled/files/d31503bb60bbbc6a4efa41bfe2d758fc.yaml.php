@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'plugins://flex-objects/flex-objects.yaml',
-    'modified' => 1689699317,
+    'modified' => 1689699319,
     'size' => 316,
     'data' => [
         'enabled' => true,

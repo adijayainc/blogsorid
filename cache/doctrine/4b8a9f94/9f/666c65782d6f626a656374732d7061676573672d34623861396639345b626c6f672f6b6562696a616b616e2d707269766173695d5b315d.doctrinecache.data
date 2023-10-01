@@ -1,0 +1,11 @@
+1696155467
+C:39:"Grav\Common\Flex\Types\Pages\PageObject":1166:{a:4:{s:4:"type";s:5:"pages";s:3:"key";s:22:"blog/kebijakan-privasi";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:6:{s:5:"title";s:17:"Kebijakan Privasi";s:4:"slug";s:16:"sample-link-post";s:11:"description";s:38:"Example and code for using link posts.";s:8:"taxonomy";a:1:{s:3:"tag";a:3:{i:0;s:11:"sample post";i:1;s:9:"link post";i:2;s:8:"featured";}}s:4:"link";s:18:"http://getgrav.org";s:9:"published";b:1;}s:11:"frontmatter";s:230:"title: 'Kebijakan Privasi'
+slug: sample-link-post
+description: 'Example and code for using link posts.'
+taxonomy:
+    tag:
+        - 'sample post'
+        - 'link post'
+        - featured
+link: 'http://getgrav.org'
+published: true";s:8:"markdown";s:181:"Semua konten dalam website ini dilindungi undang-undang , menyadur sebagian maupun seluruhnya dianggap melanggar apabila tidak memberitahu melalui email atau cukup retwit @blogsorid";}s:7:"storage";a:6:{s:3:"key";s:22:"blog/kebijakan-privasi";s:11:"storage_key";s:22:"blog/kebijakan-privasi";s:8:"template";s:4:"page";s:17:"storage_timestamp";i:1696152491;s:8:"markdown";a:1:{s:0:"";a:1:{s:4:"page";i:1696152491;}}s:8:"checksum";s:32:"c749d49ee9b45f04f46b0fb51bdb4709";}}}
