@@ -1,0 +1,8 @@
+1696132231
+C:39:"Grav\Common\Flex\Types\Pages\PageObject":875:{a:4:{s:4:"type";s:5:"pages";s:3:"key";s:4:"home";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:5:{s:5:"title";s:18:"One Page Demo Site";s:4:"menu";s:4:"Home";s:11:"onpage_menu";b:1;s:12:"body_classes";s:41:"title-h1h2 header-dark header-transparent";s:7:"content";a:1:{s:5:"items";s:13:"@self.modular";}}s:11:"frontmatter";s:145:"title: One Page Demo Site
+menu: Home
+onpage_menu: true
+body_classes: title-h1h2 header-dark header-transparent
+
+content:
+    items: @self.modular";s:8:"markdown";s:0:"";}s:7:"storage";a:7:{s:3:"key";s:4:"home";s:11:"storage_key";s:7:"01.home";s:8:"template";s:7:"modular";s:17:"storage_timestamp";i:1689699309;s:8:"markdown";a:1:{s:0:"";a:1:{s:7:"modular";i:1689699309;}}s:8:"children";a:4:{s:8:"01._hero";b:0;s:14:"02._highlights";b:0;s:11:"03._callout";b:0;s:12:"04._features";b:0;}s:8:"checksum";s:32:"411e9ba7cd278a54ecb3558b25c700e5";}}}

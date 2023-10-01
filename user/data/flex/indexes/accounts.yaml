@@ -1,0 +1,9 @@
+version: '1.2'
+timestamp: 1696131631
+count: 1
+index:
+  adijaya:
+    storage_key: adijaya
+    storage_timestamp: 1696131631
+    key: adijaya
+    email: adijaya@gmail.com
