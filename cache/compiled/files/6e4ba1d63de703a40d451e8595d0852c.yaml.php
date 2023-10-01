@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/system/blueprints/flex/configure/compat.yaml',
-    'modified' => 1688067395,
+    'modified' => 1696150212,
     'size' => 428,
     'data' => [
         'form' => [

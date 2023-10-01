@@ -1,9 +1,9 @@
 version: '1.2'
-timestamp: 1696131631
+timestamp: 1696149442
 count: 1
 index:
   adijaya:
     storage_key: adijaya
-    storage_timestamp: 1696131631
+    storage_timestamp: 1696149441
     key: adijaya
     email: adijaya@gmail.com

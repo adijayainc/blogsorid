@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/system/languages/fi.yaml',
-    'modified' => 1688067395,
+    'modified' => 1696150212,
     'size' => 3321,
     'data' => [
         'GRAV' => [

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/user/config/versions.yaml',
-    'modified' => 1696131702,
+    'modified' => 1696150214,
     'size' => 198,
     'data' => [
         'core' => [
@@ -12,11 +12,11 @@ return [
                 'history' => [
                     0 => [
                         'version' => '1.7.42.3',
-                        'date' => '2023-10-01 03:40:55'
+                        'date' => '2023-10-01 08:37:40'
                     ],
                     1 => [
                         'version' => '1.7.42.3',
-                        'date' => '2023-10-01 03:41:42'
+                        'date' => '2023-10-01 08:50:14'
                     ]
                 ]
             ]

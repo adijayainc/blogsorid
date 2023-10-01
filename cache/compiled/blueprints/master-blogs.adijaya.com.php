@@ -1,65 +1,73 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1696131826,
-    'checksum' => '8969a2f920ba560d2402c50c9d872f68',
+    'timestamp' => 1696154854,
+    'checksum' => '24cfd5cf74c9a9ff64dd297e01a50e51',
     'files' => [
         'user/plugins/admin/blueprints/config' => [
             'media' => [
                 'file' => 'user/plugins/admin/blueprints/config/media.yaml',
-                'modified' => 1689699318
+                'modified' => 1689699319
             ]
         ],
         'system/blueprints/config' => [
             'backups' => [
                 'file' => 'system/blueprints/config/backups.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'media' => [
                 'file' => 'system/blueprints/config/media.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'scheduler' => [
                 'file' => 'system/blueprints/config/scheduler.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'security' => [
                 'file' => 'system/blueprints/config/security.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'site' => [
                 'file' => 'system/blueprints/config/site.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'streams' => [
                 'file' => 'system/blueprints/config/streams.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ],
             'system' => [
                 'file' => 'system/blueprints/config/system.yaml',
-                'modified' => 1688067395
+                'modified' => 1696150212
             ]
         ],
         'user/plugins' => [
             'plugins/error' => [
                 'file' => 'user/plugins/error/blueprints.yaml',
-                'modified' => 1689699311
+                'modified' => 1689699313
+            ],
+            'plugins/pagination' => [
+                'file' => 'user/plugins/pagination/blueprints.yaml',
+                'modified' => 1689699313
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/blueprints.yaml',
-                'modified' => 1689699315
+                'modified' => 1689699317
+            ],
+            'plugins/feed' => [
+                'file' => 'user/plugins/feed/blueprints.yaml',
+                'modified' => 1696149572
             ],
             'plugins/flex-objects' => [
                 'file' => 'user/plugins/flex-objects/blueprints.yaml',
-                'modified' => 1689699317
+                'modified' => 1689699319
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
-                'modified' => 1689699316
+                'modified' => 1689699318
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
-                'modified' => 1689699318
+                'modified' => 1689699319
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/blueprints.yaml',
@@ -67,13 +75,13 @@ return [
             ],
             'plugins/email' => [
                 'file' => 'user/plugins/email/blueprints.yaml',
-                'modified' => 1689699316
+                'modified' => 1689699318
             ]
         ],
         'user/themes' => [
-            'themes/quark' => [
-                'file' => 'user/themes/quark/blueprints.yaml',
-                'modified' => 1689699312
+            'themes/notepad' => [
+                'file' => 'user/themes/notepad/blueprints.yaml',
+                'modified' => 1689699315
             ]
         ]
     ],
@@ -2932,6 +2940,55 @@ return [
                 'name' => 'plugins.error.routes.404',
                 'validation' => 'strict'
             ],
+            'plugins.pagination' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.pagination.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.pagination.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.pagination.delta' => [
+                'type' => 'number',
+                'size' => 'x-small',
+                'label' => 'PLUGIN_PAGINATION.DELTA',
+                'default' => 0,
+                'validate' => [
+                    'type' => 'number',
+                    'min' => 0
+                ],
+                'name' => 'plugins.pagination.delta',
+                'validation' => 'strict'
+            ],
+            'plugins.pagination.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_PAGINATION.BUILTIN_CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.pagination.built_in_css',
+                'validation' => 'strict'
+            ],
             'plugins.form' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -3398,6 +3455,92 @@ return [
                     'math' => 'Math Puzzle'
                 ],
                 'name' => 'plugins.form.basic_captcha.type',
+                'validation' => 'strict'
+            ],
+            'plugins.feed' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.feed.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin status',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.feed.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.feed.limit' => [
+                'type' => 'range',
+                'label' => 'Feed count',
+                'validate' => [
+                    'type' => 'number',
+                    'min' => 10,
+                    'max' => 1000
+                ],
+                'name' => 'plugins.feed.limit',
+                'validation' => 'strict'
+            ],
+            'plugins.feed.title' => [
+                'type' => 'text',
+                'label' => 'Title',
+                'name' => 'plugins.feed.title',
+                'validation' => 'strict'
+            ],
+            'plugins.feed.description' => [
+                'type' => 'textarea',
+                'label' => 'Description',
+                'name' => 'plugins.feed.description',
+                'validation' => 'strict'
+            ],
+            'plugins.feed.length' => [
+                'type' => 'range',
+                'label' => 'Feed Length (0 for full-text feed)',
+                'validate' => [
+                    'type' => 'number',
+                    'min' => 0,
+                    'max' => 10000
+                ],
+                'name' => 'plugins.feed.length',
+                'validation' => 'strict'
+            ],
+            'plugins.feed.enable_json_feed' => [
+                'type' => 'toggle',
+                'label' => 'JSON feed support',
+                'highlight' => 0,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.feed.enable_json_feed',
+                'validation' => 'strict'
+            ],
+            'plugins.feed.show_last_modified' => [
+                'type' => 'toggle',
+                'label' => 'Show last modified date',
+                'highlight' => 0,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.feed.show_last_modified',
                 'validation' => 'strict'
             ],
             'plugins.flex-objects' => [
@@ -5083,199 +5226,12 @@ return [
                 'name' => 'plugins.email.debug',
                 'validation' => 'loose'
             ],
-            'themes.quark' => [
+            'themes.notepad' => [
                 'type' => '_root',
                 'form_field' => false,
                 'form' => [
                     'validation' => 'loose'
                 ]
-            ],
-            'themes' => [
-                'type' => '_parent',
-                'name' => 'themes',
-                'form_field' => false
-            ],
-            'themes.quark.production-mode' => [
-                'type' => 'toggle',
-                'label' => 'Production mode',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.production-mode',
-                'validation' => 'loose'
-            ],
-            'themes.quark.grid-size' => [
-                'type' => 'select',
-                'label' => 'THEME_QUARK.ADMIN.GRID_SIZE',
-                'size' => 'small',
-                'options' => [
-                    '' => 'None (full width)',
-                    'grid-xl' => 'Extra Large',
-                    'grid-lg' => 'Large',
-                    'grid-md' => 'Medium'
-                ],
-                'name' => 'themes.quark.grid-size',
-                'validation' => 'loose'
-            ],
-            'themes.quark.custom_logo' => [
-                'array' => true,
-                'media_field' => true,
-                'validate' => [
-                    'type' => 'ignore'
-                ],
-                'type' => 'file',
-                'label' => 'Custom Logo',
-                'size' => 'large',
-                'destination' => 'theme://images/logo',
-                'multiple' => false,
-                'markdown' => true,
-                'description' => 'Will be used instead of default logo `theme://images/grav-logo.svg`',
-                'accept' => [
-                    0 => 'image/*'
-                ],
-                'name' => 'themes.quark.custom_logo',
-                'validation' => 'loose'
-            ],
-            'themes.quark.custom_logo_mobile' => [
-                'array' => true,
-                'media_field' => true,
-                'validate' => [
-                    'type' => 'ignore'
-                ],
-                'type' => 'file',
-                'label' => 'Mobile Custom Logo',
-                'size' => 'large',
-                'destination' => 'theme://images/logo',
-                'multiple' => false,
-                'accept' => [
-                    0 => 'image/*'
-                ],
-                'name' => 'themes.quark.custom_logo_mobile',
-                'validation' => 'loose'
-            ],
-            'themes.quark.header-fixed' => [
-                'type' => 'toggle',
-                'label' => 'Fixed header',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.header-fixed',
-                'validation' => 'loose'
-            ],
-            'themes.quark.header-animated' => [
-                'type' => 'toggle',
-                'label' => 'Animated',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.header-animated',
-                'validation' => 'loose'
-            ],
-            'themes.quark.header-dark' => [
-                'type' => 'toggle',
-                'label' => 'Dark Style',
-                'highlight' => 0,
-                'default' => 0,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.header-dark',
-                'validation' => 'loose'
-            ],
-            'themes.quark.header-transparent' => [
-                'type' => 'toggle',
-                'label' => 'Transparent',
-                'highlight' => 0,
-                'default' => 0,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.header-transparent',
-                'validation' => 'loose'
-            ],
-            'themes.quark.sticky-footer' => [
-                'type' => 'toggle',
-                'label' => 'Sticky footer',
-                'highlight' => 1,
-                'default' => 1,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.sticky-footer',
-                'validation' => 'loose'
-            ],
-            'themes.quark.blog-page' => [
-                'type' => 'text',
-                'label' => 'Blog Page',
-                'size' => 'medium',
-                'default' => '/blog',
-                'name' => 'themes.quark.blog-page',
-                'validation' => 'loose'
-            ],
-            'themes.quark.spectre' => [
-                'type' => '_parent',
-                'name' => 'themes.quark.spectre',
-                'form_field' => false
-            ],
-            'themes.quark.spectre.exp' => [
-                'type' => 'toggle',
-                'label' => 'Experimentals CSS',
-                'highlight' => 0,
-                'default' => 0,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.spectre.exp',
-                'validation' => 'loose'
-            ],
-            'themes.quark.spectre.icons' => [
-                'type' => 'toggle',
-                'label' => 'Icons CSS',
-                'highlight' => 0,
-                'default' => 0,
-                'options' => [
-                    1 => 'PLUGIN_ADMIN.ENABLED',
-                    0 => 'PLUGIN_ADMIN.DISABLED'
-                ],
-                'validate' => [
-                    'type' => 'bool'
-                ],
-                'name' => 'themes.quark.spectre.icons',
-                'validation' => 'loose'
             ]
         ],
         'rules' => [
@@ -5602,6 +5558,11 @@ return [
                         404 => 'plugins.error.routes.404'
                     ]
                 ],
+                'pagination' => [
+                    'enabled' => 'plugins.pagination.enabled',
+                    'delta' => 'plugins.pagination.delta',
+                    'built_in_css' => 'plugins.pagination.built_in_css'
+                ],
                 'form' => [
                     'enabled' => 'plugins.form.enabled',
                     'debug' => 'plugins.form.debug',
@@ -5649,6 +5610,15 @@ return [
                             'operators' => 'plugins.form.basic_captcha.math.operators'
                         ]
                     ]
+                ],
+                'feed' => [
+                    'enabled' => 'plugins.feed.enabled',
+                    'limit' => 'plugins.feed.limit',
+                    'title' => 'plugins.feed.title',
+                    'description' => 'plugins.feed.description',
+                    'length' => 'plugins.feed.length',
+                    'enable_json_feed' => 'plugins.feed.enable_json_feed',
+                    'show_last_modified' => 'plugins.feed.show_last_modified'
                 ],
                 'flex-objects' => [
                     'enabled' => 'plugins.flex-objects.enabled',
@@ -5847,22 +5817,7 @@ return [
                 ]
             ],
             'themes' => [
-                'quark' => [
-                    'production-mode' => 'themes.quark.production-mode',
-                    'grid-size' => 'themes.quark.grid-size',
-                    'custom_logo' => 'themes.quark.custom_logo',
-                    'custom_logo_mobile' => 'themes.quark.custom_logo_mobile',
-                    'header-fixed' => 'themes.quark.header-fixed',
-                    'header-animated' => 'themes.quark.header-animated',
-                    'header-dark' => 'themes.quark.header-dark',
-                    'header-transparent' => 'themes.quark.header-transparent',
-                    'sticky-footer' => 'themes.quark.sticky-footer',
-                    'blog-page' => 'themes.quark.blog-page',
-                    'spectre' => [
-                        'exp' => 'themes.quark.spectre.exp',
-                        'icons' => 'themes.quark.spectre.icons'
-                    ]
-                ]
+                'notepad' => 'themes.notepad'
             ]
         ],
         'dynamic' => [

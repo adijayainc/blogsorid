@@ -2,17 +2,16 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/user/config/system.yaml',
-    'modified' => 1689699318,
-    'size' => 464,
+    'modified' => 1696154846,
+    'size' => 520,
     'data' => [
+        'absolute_urls' => false,
         'home' => [
-            'alias' => '/home'
+            'alias' => '/blog'
         ],
         'pages' => [
-            'theme' => 'quark',
-            'markdown' => [
-                'extra' => false
-            ],
+            'theme' => 'notepad',
+            'markdown_extra' => false,
             'process' => [
                 'markdown' => true,
                 'twig' => false
@@ -38,6 +37,10 @@ return [
             'css_rewrite' => true,
             'js_pipeline' => false,
             'js_minify' => true
+        ],
+        'errors' => [
+            'display' => true,
+            'log' => true
         ],
         'debugger' => [
             'enabled' => false,

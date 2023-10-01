@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/user/plugins/flex-objects/blueprints/flex-objects/user-groups.yaml',
-    'modified' => 1689699317,
+    'modified' => 1689699319,
     'size' => 166,
     'data' => [
         'title' => 'User Groups (Admin)',

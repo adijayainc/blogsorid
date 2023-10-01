@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/var/www/blogs/user/accounts/adijaya.yaml',
-    'modified' => 1696131631,
+    'modified' => 1696149441,
     'size' => 227,
     'data' => [
         'state' => 'enabled',
@@ -18,6 +18,6 @@ return [
                 'login' => true
             ]
         ],
-        'hashed_password' => '$2y$10$Cg8tCXbuDIk6x6dBh0GJDeSn5WiOfMnEH9gqc89e0jPkmZ8ysDh.y'
+        'hashed_password' => '$2y$10$V7I7C0WVbnQEKWuRo6mM2ujfOtnjWssgZsLFM9un2/0rWyafldbD6'
     ]
 ];
