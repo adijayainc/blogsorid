@@ -2,37 +2,37 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledJsonFile',
     'filename' => '/var/www/blogs/user/data/flex/indexes/pages.json',
-    'modified' => 1696153974,
+    'modified' => 1696203813,
     'size' => 2749,
     'data' => [
         'version' => '1.5',
-        'timestamp' => 1696153974,
+        'timestamp' => 1696203813,
         'count' => 11,
         'index' => [
             '' => [
                 'key' => '',
                 'storage_key' => '',
                 'template' => NULL,
-                'storage_timestamp' => 1689699311,
+                'storage_timestamp' => 1696202145,
                 'children' => [
-                    'about' => 1689699311,
-                    'blog' => 1689699311,
+                    'about' => 1696202145,
+                    'blog' => 1696153974,
                     'categories' => 1689699311,
                     'featured' => 1689699311
                 ],
-                'checksum' => '3b93528ce468964a1b6cd4b0f3890345'
+                'checksum' => '8e6c0cb25d4c58687437c004695715c5'
             ],
             'about' => [
                 'key' => 'about',
                 'storage_key' => 'about',
                 'template' => 'page',
-                'storage_timestamp' => 1689699311,
+                'storage_timestamp' => 1696203813,
                 'markdown' => [
                     '' => [
-                        'page' => 1689699311
+                        'page' => 1696203813
                     ]
                 ],
-                'checksum' => '34199925e068abca97b0304b47c8b69e'
+                'checksum' => 'aeeb83d76574c14792820524eb0c5f9f'
             ],
             'blog' => [
                 'key' => 'blog',

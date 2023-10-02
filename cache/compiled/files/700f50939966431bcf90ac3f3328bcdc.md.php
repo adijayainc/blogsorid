@@ -2,23 +2,14 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledMarkdownFile',
     'filename' => '/var/www/blogs/user/pages/about/page.md',
-    'modified' => 1689699311,
-    'size' => 742,
+    'modified' => 1696203813,
+    'size' => 326,
     'data' => [
         'header' => [
-            'title' => 'ABOUT THE AUTHOR'
+            'title' => 'About'
         ],
-        'frontmatter' => 'title: ABOUT THE AUTHOR',
-        'markdown' => '![Authorl](author.jpg)
-
-
-The Notepad theme for Grav is a direct port of the [Notepad Theme for Jekyll](http://hmfaysal.github.io/Notepad/) designed by [Hossain Mohd Faysal](http://hmfaysal.github.io/).
-
-You can **download** the theme here: [github.com/getgrav/grav-theme-notepad](https://github.com/getgrav/grav-theme-notepad) but it\'s strongly advised to download the complete [Download Notepad Skeleton](http://getgrav.org/downloads/skeletons#extras).
-
-You can find out more info about customizing your Grav theme, as well as basic Grav usage documentation at [learn.getgrav.org](http://learn.getgrav.org)
-
-You can find the source code for Grav at [github.com/getgrav/grav](https://github.com/getgrav/grav)
-'
+        'frontmatter' => 'title: About',
+        'markdown' => 'Berkembangnya informasi di internet , didorong oleh konten yang dibuat oleh warga net. blogsorid mengumpulkan konten yang baik , berguna untuk dilihat dan dibaca , dan pada akhirnya dapat menyehatkan pikiran. 
+Dengan design sederhana , menghindari menghabiskan waktu hanya untuk melihat yang tidak perlu.'
     ]
 ];
