@@ -1,0 +1,40 @@
+1696676325
+C:39:"Grav\Common\Flex\Types\Pages\PageObject":3374:{a:4:{s:4:"type";s:5:"pages";s:3:"key";s:32:"blog/manifesto-blogger-indonesia";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:6:{s:5:"title";s:27:"Manifesto Blogger Indonesia";s:4:"slug";s:12:"first-commit";s:8:"taxonomy";a:1:{s:3:"tag";a:3:{i:0;s:5:"theme";i:1;s:9:"manifesto";i:2;s:12:"installation";}}s:5:"image";s:10:"cover9.jpg";s:14:"markdown_extra";b:1;s:9:"published";b:1;}s:11:"frontmatter";s:188:"title: 'Manifesto Blogger Indonesia'
+slug: first-commit
+taxonomy:
+    tag:
+        - theme
+        - manifesto
+        - installation
+image: cover9.jpg
+markdown_extra: true
+published: true";s:8:"markdown";s:2442:">&quot;The beginning is the most important part of the work.&quot;
+><small><cite title="Plato">Plato</cite></small>
+
+## Hai para blogger Indonesia!
+
+Kita semua tahu bahwa blogging adalah salah satu cara terbaik untuk berbagi ide, pengalaman, dan pengetahuan dengan orang lain di seluruh dunia. Tapi bagaimana jika kita mengambil langkah lebih jauh dan menggunakan kekuatan kita sebagai blogger untuk meningkatkan taraf hidup di Indonesia?
+
+Saya ingin mengajak semua blogger Indonesia untuk bersatu dalam sebuah manifesto, sebuah pernyataan bersama tentang tujuan kita sebagai blogger dan bagaimana kita bisa bekerja sama untuk mencapai tujuan tersebut.
+
+## Tujuan kami sebagai blogger adalah untuk:
+
+*     Meningkatkan kesadaran masyarakat tentang isu-isu penting yang terjadi di Indonesia, seperti lingkungan, hak asasi manusia, dan keadilan sosial.
+*     Membangun komunitas yang kuat dan inklusif di seluruh Indonesia, di mana setiap orang merasa didengar dan dihargai.
+*     Meningkatkan taraf hidup masyarakat Indonesia dengan memberikan informasi dan sumber daya yang bermanfaat.
+*     Meningkatkan kualitas konten blogging di Indonesia dengan mempromosikan etika blogging yang baik, seperti kejujuran, keamanan data, dan penghormatan terhadap hak cipta.
+*     Meningkatkan kemampuan teknologi dan keterampilan lainnya di antara blogger Indonesia untuk membantu mereka mencapai tujuan mereka.
+
+## Untuk mencapai tujuan ini, kami sebagai blogger Indonesia berkomitmen untuk:
+
+*     Berkolaborasi dengan blogger lainnya di Indonesia untuk menciptakan konten yang lebih bermanfaat dan berkualitas tinggi.
+*     Menggunakan platform blogging kami sebagai alat untuk meningkatkan kesadaran masyarakat tentang isu-isu penting yang terjadi di Indonesia.
+*     Memperkuat komunitas blogger Indonesia dengan mengadakan acara dan kegiatan yang bertujuan untuk membangun koneksi antara para blogger.
+*     Menjadi contoh yang baik dengan mempromosikan etika blogging yang baik dan menghindari praktik-praktik yang merugikan.
+*     Berbagi sumber daya dan informasi dengan blogger lainnya di Indonesia untuk membantu mereka mencapai tujuan mereka.
+
+Kami percaya bahwa sebagai blogger Indonesia, kita memiliki kekuatan untuk merubah dunia dan meningkatkan taraf hidup masyarakat Indonesia. Jadi mari bersatu dan bekerja sama untuk mencapai tujuan yang lebih besar. Bersama, kita bisa membuat perbedaan yang signifikan.
+
+Tertanda, Blogger Indonesia
+
+";}s:7:"storage";a:6:{s:3:"key";s:32:"blog/manifesto-blogger-indonesia";s:11:"storage_key";s:32:"blog/manifesto-blogger-indonesia";s:8:"template";s:4:"post";s:17:"storage_timestamp";i:1696670197;s:8:"markdown";a:1:{s:0:"";a:1:{s:4:"post";i:1696670197;}}s:8:"checksum";s:32:"b1e46e89f8742bc263a2619fbf6ffedd";}}}

@@ -2,11 +2,11 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledJsonFile',
     'filename' => '/var/www/blogs/user/data/flex/indexes/pages.json',
-    'modified' => 1696653561,
-    'size' => 2753,
+    'modified' => 1696675645,
+    'size' => 2741,
     'data' => [
         'version' => '1.5',
-        'timestamp' => 1696653561,
+        'timestamp' => 1696675645,
         'count' => 11,
         'index' => [
             '' => [
@@ -38,45 +38,21 @@ return [
                 'key' => 'blog',
                 'storage_key' => 'blog',
                 'template' => 'default',
-                'storage_timestamp' => 1696653561,
+                'storage_timestamp' => 1696675571,
                 'markdown' => [
                     '' => [
                         'default' => 1689699311
                     ]
                 ],
                 'children' => [
-                    '2014-01-08-a-quotation' => 1689699311,
-                    '2014-01-10-theme-elements' => 1689699311,
                     'definisi' => 1696153974,
-                    'kebijakan-privasi' => 1696152491,
-                    'manifesto-blogger-indonesia' => 1696153743,
-                    'pokok-penting-dalam-uu-ite-indonesia' => 1696653561
+                    'kebijakan-privasi' => 1696669993,
+                    'manifesto-blogger-indonesia' => 1696670197,
+                    'mencapai-follower-10k' => 1696675234,
+                    'menjadi-prompt-engineer' => 1696675571,
+                    'pokok-penting-dalam-uu-ite-indonesia' => 1696671562
                 ],
-                'checksum' => 'd6652da76428a41a155def4f0438e913'
-            ],
-            'blog/2014-01-08-a-quotation' => [
-                'key' => 'blog/2014-01-08-a-quotation',
-                'storage_key' => 'blog/2014-01-08-a-quotation',
-                'template' => 'post',
-                'storage_timestamp' => 1689699311,
-                'markdown' => [
-                    '' => [
-                        'post' => 1689699311
-                    ]
-                ],
-                'checksum' => '71770d541653765e469878af0c1c93f1'
-            ],
-            'blog/2014-01-10-theme-elements' => [
-                'key' => 'blog/2014-01-10-theme-elements',
-                'storage_key' => 'blog/2014-01-10-theme-elements',
-                'template' => 'post',
-                'storage_timestamp' => 1689699311,
-                'markdown' => [
-                    '' => [
-                        'post' => 1689699311
-                    ]
-                ],
-                'checksum' => 'febbba563618c3522eab63c34a8ffffc'
+                'checksum' => 'b40753954be6e36604a97168d823c2fd'
             ],
             'blog/definisi' => [
                 'key' => 'blog/definisi',
@@ -94,37 +70,61 @@ return [
                 'key' => 'blog/kebijakan-privasi',
                 'storage_key' => 'blog/kebijakan-privasi',
                 'template' => 'page',
-                'storage_timestamp' => 1696152491,
+                'storage_timestamp' => 1696669993,
                 'markdown' => [
                     '' => [
-                        'page' => 1696152491
+                        'page' => 1696669993
                     ]
                 ],
-                'checksum' => 'c749d49ee9b45f04f46b0fb51bdb4709'
+                'checksum' => '3dc5d93f6888a4f57e4c2adf32b216f0'
             ],
             'blog/manifesto-blogger-indonesia' => [
                 'key' => 'blog/manifesto-blogger-indonesia',
                 'storage_key' => 'blog/manifesto-blogger-indonesia',
                 'template' => 'post',
-                'storage_timestamp' => 1696153743,
+                'storage_timestamp' => 1696670197,
                 'markdown' => [
                     '' => [
-                        'post' => 1696153743
+                        'post' => 1696670197
                     ]
                 ],
-                'checksum' => '6ee9c36fd1941b698a79b1576340ac69'
+                'checksum' => 'b1e46e89f8742bc263a2619fbf6ffedd'
+            ],
+            'blog/mencapai-follower-10k' => [
+                'key' => 'blog/mencapai-follower-10k',
+                'storage_key' => 'blog/mencapai-follower-10k',
+                'template' => 'post',
+                'storage_timestamp' => 1696675234,
+                'markdown' => [
+                    '' => [
+                        'post' => 1696675234
+                    ]
+                ],
+                'checksum' => '703c1cbc4129d013076d4280e1f25cc6'
+            ],
+            'blog/menjadi-prompt-engineer' => [
+                'key' => 'blog/menjadi-prompt-engineer',
+                'storage_key' => 'blog/menjadi-prompt-engineer',
+                'template' => 'post',
+                'storage_timestamp' => 1696675645,
+                'markdown' => [
+                    '' => [
+                        'post' => 1696675645
+                    ]
+                ],
+                'checksum' => '884e202fa95287c70c145828b7cc4ecd'
             ],
             'blog/pokok-penting-dalam-uu-ite-indonesia' => [
                 'key' => 'blog/pokok-penting-dalam-uu-ite-indonesia',
                 'storage_key' => 'blog/pokok-penting-dalam-uu-ite-indonesia',
                 'template' => 'post',
-                'storage_timestamp' => 1696653561,
+                'storage_timestamp' => 1696671562,
                 'markdown' => [
                     '' => [
-                        'post' => 1696653561
+                        'post' => 1696671562
                     ]
                 ],
-                'checksum' => 'dec75b129604e65c906cf8062e412193'
+                'checksum' => 'd801985f2cf0ea7603859d9030b2e85b'
             ],
             'categories' => [
                 'key' => 'categories',
