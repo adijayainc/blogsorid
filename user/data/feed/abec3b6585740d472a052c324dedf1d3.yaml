@@ -1,4 +1,4 @@
-last_checked: 1696201655
+last_checked: 1696653430
 data:
   -
     title: 'macOS 13.0 Ventura Apache Setup: Upgrading Homebrew'
@@ -24,7 +24,7 @@ data:
     title: 'Big changes for Email plugin'
     url: 'https://getgrav.org/blog/new-email-plugin'
     date: 1665048600
-    nicetime: '12 months ago'
+    nicetime: '1 years ago'
   -
     title: 'Skeleton Build Automation'
     url: 'https://getgrav.org/blog/skeletons-build-automation'
