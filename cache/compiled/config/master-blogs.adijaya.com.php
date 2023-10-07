@@ -1,13 +1,17 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1696678218,
-    'checksum' => '22252fb98ba689fd4f6b87f33f1b5c2e',
+    'timestamp' => 1696721758,
+    'checksum' => 'f988af73c61199850c289c3d605ca58d',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
                 'modified' => 1696149442
+            ],
+            'plugins/adsense' => [
+                'file' => 'user/config/plugins/adsense.yaml',
+                'modified' => 1696721758
             ],
             'plugins/feed' => [
                 'file' => 'user/config/plugins/feed.yaml',
@@ -23,7 +27,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1696675724
+                'modified' => 1696721557
             ],
             'versions' => [
                 'file' => 'user/config/versions.yaml',
@@ -77,6 +81,10 @@ return [
                 'file' => 'user/plugins/feed/feed.yaml',
                 'modified' => 1696149572
             ],
+            'plugins/shortcode-core' => [
+                'file' => 'user/plugins/shortcode-core/shortcode-core.yaml',
+                'modified' => 1696716730
+            ],
             'plugins/flex-objects' => [
                 'file' => 'user/plugins/flex-objects/flex-objects.yaml',
                 'modified' => 1689699319
@@ -84,6 +92,10 @@ return [
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
                 'modified' => 1689699318
+            ],
+            'plugins/adsense' => [
+                'file' => 'user/plugins/adsense/adsense.yaml',
+                'modified' => 1696716748
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/admin.yaml',
@@ -186,6 +198,28 @@ return [
                 'enable_json_feed' => false,
                 'show_last_modified' => false
             ],
+            'shortcode-core' => [
+                'enabled' => true,
+                'active' => true,
+                'active_admin' => true,
+                'admin_pages_only' => true,
+                'parser' => 'regular',
+                'include_default_shortcodes' => true,
+                'css' => [
+                    'notice_enabled' => true
+                ],
+                'custom_shortcodes' => NULL,
+                'fontawesome' => [
+                    'load' => true,
+                    'url' => '//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css',
+                    'v5' => false
+                ],
+                'nextgen-editor' => [
+                    'env' => 'production',
+                    'dev_host' => 'localhost',
+                    'dev_port' => 2001
+                ]
+            ],
             'flex-objects' => [
                 'enabled' => true,
                 'built_in_css' => true,
@@ -262,6 +296,54 @@ return [
                         'manually_enable' => false,
                         'send_notification_email' => false,
                         'send_welcome_email' => false
+                    ]
+                ]
+            ],
+            'adsense' => [
+                'enabled' => true,
+                'sandbox' => false,
+                'built_in_css' => true,
+                'add_editor_button' => true,
+                'use_auto_ads' => true,
+                'adsense' => [
+                    'options' => [
+                        'mode' => 'async',
+                        'position' => 'center',
+                        'auto_ads_client' => 'ca-pub-6584524084580396',
+                        'auto_ads_filter' => [
+                            0 => 'blog',
+                            1 => 'portfolio'
+                        ]
+                    ],
+                    'page_ads' => [
+                        0 => [
+                            'id' => 'unique-id',
+                            'client' => 'ca-pub-6584524084580396',
+                            'slot' => 0,
+                            'type' => 'inarticle',
+                            'width' => 468,
+                            'height' => 60
+                        ]
+                    ],
+                    'modular_ads' => [
+                        'horizontal' => [
+                            'client' => 'ca-pub-6584524084580396',
+                            'slot' => 0,
+                            'width' => 728,
+                            'height' => 90
+                        ],
+                        'vertical' => [
+                            'client' => 'ca-pub-6584524084580396',
+                            'slot' => 0,
+                            'width' => 200,
+                            'height' => 600
+                        ],
+                        'square' => [
+                            'client' => 'ca-pub-6584524084580396',
+                            'slot' => 0,
+                            'width' => 300,
+                            'height' => 300
+                        ]
                     ]
                 ]
             ],

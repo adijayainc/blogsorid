@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1696677772,
-    'checksum' => 'f16eff16079955750497f700ec01e0ce',
+    'timestamp' => 1696721576,
+    'checksum' => 'eef83276c112366f60559e8a0d8725fd',
     'files' => [
         'user/plugins/admin/blueprints/config' => [
             'media' => [
@@ -57,6 +57,10 @@ return [
                 'file' => 'user/plugins/feed/blueprints.yaml',
                 'modified' => 1696149572
             ],
+            'plugins/shortcode-core' => [
+                'file' => 'user/plugins/shortcode-core/blueprints.yaml',
+                'modified' => 1696716730
+            ],
             'plugins/flex-objects' => [
                 'file' => 'user/plugins/flex-objects/blueprints.yaml',
                 'modified' => 1689699319
@@ -64,6 +68,10 @@ return [
             'plugins/login' => [
                 'file' => 'user/plugins/login/blueprints.yaml',
                 'modified' => 1689699318
+            ],
+            'plugins/adsense' => [
+                'file' => 'user/plugins/adsense/blueprints.yaml',
+                'modified' => 1696716748
             ],
             'plugins/admin' => [
                 'file' => 'user/plugins/admin/blueprints.yaml',
@@ -3543,6 +3551,155 @@ return [
                 'name' => 'plugins.feed.show_last_modified',
                 'validation' => 'strict'
             ],
+            'plugins.shortcode-core' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.shortcode-core.enabled' => [
+                'type' => 'toggle',
+                'label' => 'Plugin Enabled',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.active' => [
+                'type' => 'toggle',
+                'label' => 'Activated',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.active',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.active_admin' => [
+                'type' => 'toggle',
+                'label' => 'Activated in Admin',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.active_admin',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.admin_pages_only' => [
+                'type' => 'toggle',
+                'label' => 'Admin Real-Pages Only',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.admin_pages_only',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.parser' => [
+                'type' => 'select',
+                'size' => 'medium',
+                'classes' => 'fancy',
+                'label' => 'Processor',
+                'options' => [
+                    'wordpress' => 'WordpressParser',
+                    'regex' => 'RegexParser',
+                    'regular' => 'RegularParser'
+                ],
+                'name' => 'plugins.shortcode-core.parser',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.custom_shortcodes' => [
+                'type' => 'text',
+                'label' => 'Custom Shortcodes',
+                'size' => 'large',
+                'name' => 'plugins.shortcode-core.custom_shortcodes',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.css' => [
+                'type' => '_parent',
+                'name' => 'plugins.shortcode-core.css',
+                'form_field' => false
+            ],
+            'plugins.shortcode-core.css.notice_enabled' => [
+                'type' => 'toggle',
+                'label' => 'Enable Notice Shortcode CSS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.css.notice_enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.fontawesome' => [
+                'type' => '_parent',
+                'name' => 'plugins.shortcode-core.fontawesome',
+                'form_field' => false
+            ],
+            'plugins.shortcode-core.fontawesome.load' => [
+                'type' => 'toggle',
+                'label' => 'Load Fontawesome Library',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.fontawesome.load',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.fontawesome.url' => [
+                'type' => 'text',
+                'label' => 'Fontawesome URL',
+                'size' => 'large',
+                'name' => 'plugins.shortcode-core.fontawesome.url',
+                'validation' => 'strict'
+            ],
+            'plugins.shortcode-core.fontawesome.v5' => [
+                'type' => 'toggle',
+                'label' => 'Use Fontawesome Version 5',
+                'highlight' => 0,
+                'default' => 0,
+                'options' => [
+                    1 => 'Enabled',
+                    0 => 'Disabled'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.shortcode-core.fontawesome.v5',
+                'validation' => 'strict'
+            ],
             'plugins.flex-objects' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -4089,6 +4246,360 @@ return [
                 ],
                 'name' => 'plugins.login.ipv6_subnet_size',
                 'validation' => 'loose'
+            ],
+            'plugins.adsense' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.adsense.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADSENSE.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.adsense.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.sandbox' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADSENSE.SANDBOX_STATUS',
+                'highlight' => 0,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.adsense.sandbox',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.built_in_css' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADSENSE.BUILT_IN_CSS_LABEL',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.adsense.built_in_css',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.add_editor_button' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADSENSE.ADD_EDITOR_BUTTON.LABEL',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.adsense.add_editor_button',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.use_auto_ads' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADSENSE.AUTO_ADS.LABEL',
+                'highlight' => 1,
+                'default' => 0,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.adsense.use_auto_ads',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense' => [
+                'type' => '_parent',
+                'name' => 'plugins.adsense.adsense',
+                'form_field' => false
+            ],
+            'plugins.adsense.adsense.options' => [
+                'type' => '_parent',
+                'name' => 'plugins.adsense.adsense.options',
+                'form_field' => false
+            ],
+            'plugins.adsense.adsense.options.mode' => [
+                'type' => 'select',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.OPTIONS.MODE.LABEL',
+                'default' => 'async',
+                'options' => [
+                    'async' => 'PLUGIN_ADSENSE.OPTIONS.MODE.ASYNC',
+                    'sync' => 'PLUGIN_ADSENSE.OPTIONS.MODE.SYNC'
+                ],
+                'name' => 'plugins.adsense.adsense.options.mode',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.options.position' => [
+                'type' => 'select',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.OPTIONS.POSITION.LABEL',
+                'default' => 'css',
+                'options' => [
+                    'center' => 'PLUGIN_ADSENSE.OPTIONS.POSITION.CENTER',
+                    'right' => 'PLUGIN_ADSENSE.OPTIONS.POSITION.RIGHT',
+                    'left' => 'PLUGIN_ADSENSE.OPTIONS.POSITION.LEFT'
+                ],
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.adsense.adsense.options.position',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.options.auto_ads_client' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.OPTIONS.AUTO_ADS_CLIENT.LABEL',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.adsense.adsense.options.auto_ads_client',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.options.auto_ads_filter' => [
+                'type' => 'selectize',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.OPTIONS.AUTO_ADS_FILTER.LABEL',
+                'validate' => [
+                    'type' => 'commalist'
+                ],
+                'name' => 'plugins.adsense.adsense.options.auto_ads_filter',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads' => [
+                'type' => '_parent',
+                'name' => 'plugins.adsense.adsense.modular_ads',
+                'form_field' => false
+            ],
+            'plugins.adsense.adsense.modular_ads.horizontal' => [
+                'type' => '_parent',
+                'name' => 'plugins.adsense.adsense.modular_ads.horizontal',
+                'form_field' => false
+            ],
+            'plugins.adsense.adsense.modular_ads.horizontal.client' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.CLIENT',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.horizontal.client',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.horizontal.slot' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.SLOT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.horizontal.slot',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.horizontal.width' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.WIDTH',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.horizontal.width',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.horizontal.height' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.HEIGHT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.horizontal.height',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.vertical' => [
+                'type' => '_parent',
+                'name' => 'plugins.adsense.adsense.modular_ads.vertical',
+                'form_field' => false
+            ],
+            'plugins.adsense.adsense.modular_ads.vertical.client' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.CLIENT',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.vertical.client',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.vertical.slot' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.SLOT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.vertical.slot',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.vertical.width' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.WIDTH',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.vertical.width',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.vertical.height' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.HEIGHT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.vertical.height',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.square' => [
+                'type' => '_parent',
+                'name' => 'plugins.adsense.adsense.modular_ads.square',
+                'form_field' => false
+            ],
+            'plugins.adsense.adsense.modular_ads.square.client' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.CLIENT',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.square.client',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.square.slot' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.SLOT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.square.slot',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.square.width' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.WIDTH',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.square.width',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.modular_ads.square.height' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.HEIGHT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.modular_ads.square.height',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.page_ads' => [
+                'array' => true,
+                'name' => 'plugins.adsense.adsense.page_ads',
+                'type' => 'list',
+                'style' => 'vertical',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.page_ads.*' => [
+                'type' => '_parent',
+                'name' => 'plugins.adsense.adsense.page_ads.*',
+                'form_field' => false
+            ],
+            'plugins.adsense.adsense.page_ads.*.id' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.ID',
+                'validate' => [
+                    'type' => 'slug'
+                ],
+                'name' => 'plugins.adsense.adsense.page_ads.*.id',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.page_ads.*.client' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.CLIENT',
+                'validate' => [
+                    'type' => 'string'
+                ],
+                'name' => 'plugins.adsense.adsense.page_ads.*.client',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.page_ads.*.slot' => [
+                'type' => 'text',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.SLOT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.page_ads.*.slot',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.page_ads.*.type' => [
+                'type' => 'select',
+                'size' => 'large',
+                'label' => 'PLUGIN_ADSENSE.DATA.TYPE.LABEL',
+                'default' => 'inarticle',
+                'options' => [
+                    'inarticle' => 'PLUGIN_ADSENSE.DATA.TYPE.IN_ARTICLE',
+                    'normal' => 'PLUGIN_ADSENSE.DATA.TYPE.NORMAL'
+                ],
+                'name' => 'plugins.adsense.adsense.page_ads.*.type',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.page_ads.*.width' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.WIDTH',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.page_ads.*.width',
+                'validation' => 'strict'
+            ],
+            'plugins.adsense.adsense.page_ads.*.height' => [
+                'type' => 'text',
+                'size' => 'small',
+                'label' => 'PLUGIN_ADSENSE.DATA.HEIGHT',
+                'validate' => [
+                    'type' => 'int'
+                ],
+                'name' => 'plugins.adsense.adsense.page_ads.*.height',
+                'validation' => 'strict'
             ],
             'plugins.admin' => [
                 'type' => '_root',
@@ -5620,6 +6131,22 @@ return [
                     'enable_json_feed' => 'plugins.feed.enable_json_feed',
                     'show_last_modified' => 'plugins.feed.show_last_modified'
                 ],
+                'shortcode-core' => [
+                    'enabled' => 'plugins.shortcode-core.enabled',
+                    'active' => 'plugins.shortcode-core.active',
+                    'active_admin' => 'plugins.shortcode-core.active_admin',
+                    'admin_pages_only' => 'plugins.shortcode-core.admin_pages_only',
+                    'parser' => 'plugins.shortcode-core.parser',
+                    'custom_shortcodes' => 'plugins.shortcode-core.custom_shortcodes',
+                    'css' => [
+                        'notice_enabled' => 'plugins.shortcode-core.css.notice_enabled'
+                    ],
+                    'fontawesome' => [
+                        'load' => 'plugins.shortcode-core.fontawesome.load',
+                        'url' => 'plugins.shortcode-core.fontawesome.url',
+                        'v5' => 'plugins.shortcode-core.fontawesome.v5'
+                    ]
+                ],
                 'flex-objects' => [
                     'enabled' => 'plugins.flex-objects.enabled',
                     'built_in_css' => 'plugins.flex-objects.built_in_css',
@@ -5675,6 +6202,51 @@ return [
                     'max_login_count' => 'plugins.login.max_login_count',
                     'max_login_interval' => 'plugins.login.max_login_interval',
                     'ipv6_subnet_size' => 'plugins.login.ipv6_subnet_size'
+                ],
+                'adsense' => [
+                    'enabled' => 'plugins.adsense.enabled',
+                    'sandbox' => 'plugins.adsense.sandbox',
+                    'built_in_css' => 'plugins.adsense.built_in_css',
+                    'add_editor_button' => 'plugins.adsense.add_editor_button',
+                    'use_auto_ads' => 'plugins.adsense.use_auto_ads',
+                    'adsense' => [
+                        'options' => [
+                            'mode' => 'plugins.adsense.adsense.options.mode',
+                            'position' => 'plugins.adsense.adsense.options.position',
+                            'auto_ads_client' => 'plugins.adsense.adsense.options.auto_ads_client',
+                            'auto_ads_filter' => 'plugins.adsense.adsense.options.auto_ads_filter'
+                        ],
+                        'modular_ads' => [
+                            'horizontal' => [
+                                'client' => 'plugins.adsense.adsense.modular_ads.horizontal.client',
+                                'slot' => 'plugins.adsense.adsense.modular_ads.horizontal.slot',
+                                'width' => 'plugins.adsense.adsense.modular_ads.horizontal.width',
+                                'height' => 'plugins.adsense.adsense.modular_ads.horizontal.height'
+                            ],
+                            'vertical' => [
+                                'client' => 'plugins.adsense.adsense.modular_ads.vertical.client',
+                                'slot' => 'plugins.adsense.adsense.modular_ads.vertical.slot',
+                                'width' => 'plugins.adsense.adsense.modular_ads.vertical.width',
+                                'height' => 'plugins.adsense.adsense.modular_ads.vertical.height'
+                            ],
+                            'square' => [
+                                'client' => 'plugins.adsense.adsense.modular_ads.square.client',
+                                'slot' => 'plugins.adsense.adsense.modular_ads.square.slot',
+                                'width' => 'plugins.adsense.adsense.modular_ads.square.width',
+                                'height' => 'plugins.adsense.adsense.modular_ads.square.height'
+                            ]
+                        ],
+                        'page_ads' => [
+                            '*' => [
+                                'id' => 'plugins.adsense.adsense.page_ads.*.id',
+                                'client' => 'plugins.adsense.adsense.page_ads.*.client',
+                                'slot' => 'plugins.adsense.adsense.page_ads.*.slot',
+                                'type' => 'plugins.adsense.adsense.page_ads.*.type',
+                                'width' => 'plugins.adsense.adsense.page_ads.*.width',
+                                'height' => 'plugins.adsense.adsense.page_ads.*.height'
+                            ]
+                        ]
+                    ]
                 ],
                 'admin' => [
                     'enabled' => 'plugins.admin.enabled',
