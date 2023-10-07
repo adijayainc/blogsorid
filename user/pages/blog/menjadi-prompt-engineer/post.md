@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 'Menjadi Prompt Engineer '
-description: 'Theme Elements will save you tons of time working on the site content. Now you''ll be able to create complex layouts within minutes.'
+description: 'perubahan adalah abadi , yang tidak mengikuti akan tergerus .'
 taxonomy:
     tag:
         - Grav

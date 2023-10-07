@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1696677783,
-    'checksum' => 'b7dfbef4aca977c75fffdb512c770ad3',
+    'timestamp' => 1696721573,
+    'checksum' => '816255c500e28f630be55d4f71cce307',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -194,6 +194,10 @@ return [
             'plugins/form' => [
                 'file' => 'user/plugins/form/languages.yaml',
                 'modified' => 1689699317
+            ],
+            'plugins/adsense' => [
+                'file' => 'user/plugins/adsense/languages.yaml',
+                'modified' => 1696716748
             ],
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/languages.yaml',
@@ -8803,6 +8807,75 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                 'BASIC_CAPTCHA_MATH_MAX' => 'Maximum number',
                 'BASIC_CAPTCHA_MATH_OPERATORS' => 'Mathematical operators (randomized)',
                 'TURNSTILE_CAPTCHA' => 'Cloudflare Turnstile Captcha'
+            ],
+            'PLUGIN_ADSENSE' => [
+                'GLOBAL_CONFIG' => 'Global Settings',
+                'DEFAULT_CONFIG' => 'Default Configuration for AdSense',
+                'SANDBOX_STATUS' => 'Sandbox',
+                'SANDBOX_HELP' => 'Sandbox shows you demo ads for testing purposes',
+                'PLUGIN_STATUS' => 'Plugin Status',
+                'BUILT_IN_CSS_LABEL' => 'Use built in CSS',
+                'ADD_EDITOR_BUTTON' => [
+                    'LABEL' => 'Add editor button',
+                    'HELP' => 'The editor button allows you to easily enter Adsense tag in the page content'
+                ],
+                'AUTO_ADS' => [
+                    'LABEL' => 'Use Auto Ads',
+                    'HELP' => 'Integrate Auto Ads in your page using machine learning to place Adsense bloc in free position.'
+                ],
+                'OPTIONS_LABEL' => 'Options',
+                'OPTIONS' => [
+                    'MODE' => [
+                        'LABEL' => 'Code integration',
+                        'ASYNC' => 'Asynchrone',
+                        'SYNC' => 'Synchrone',
+                        'HELP' => 'Load Adsence in asynchrone mode or synchrone mode.'
+                    ],
+                    'POSITION' => [
+                        'LABEL' => 'Ad position',
+                        'CENTER' => 'Center',
+                        'LEFT' => 'Left',
+                        'RIGHT' => 'Right'
+                    ],
+                    'AUTO_ADS_CLIENT' => [
+                        'LABEL' => 'Auto Ads client ID',
+                        'PH' => 'ca-pub-0000000000000000'
+                    ],
+                    'AUTO_ADS_FILTER' => [
+                        'LABEL' => 'Apply Auto Ads to',
+                        'PH' => 'All pages',
+                        'HELP' => 'Filter of URN pages used to load Auto Ads.'
+                    ]
+                ],
+                'MODULAR_ADS' => [
+                    'LABEL' => 'Default Modular Ads',
+                    'HELP' => 'List of default Adsense blocs which integrate in your modular page.',
+                    'HORIZONTAL' => 'Horizontal Ad',
+                    'VERTICAL' => 'Vertical Ad',
+                    'SQUARE' => 'Square Ad'
+                ],
+                'PAGE_ADS' => [
+                    'LABEL' => 'Page Ads',
+                    'HELP' => 'List of Adsense blocs which integrate in your page content.'
+                ],
+                'DATA' => [
+                    'ID' => 'Unique Id',
+                    'ID_PH' => 'Slug format (Ex: my-ad-1)',
+                    'CLIENT' => 'AdSense Client-ID',
+                    'CLIENT_PH' => 'AdSense Client-ID (Ex: ca-pub-9783790291000000)',
+                    'SLOT' => 'AdSense Slot-ID',
+                    'SLOT_PH' => 'AdSense Slot-ID (Ex: 6252245400)',
+                    'WIDTH' => 'Width',
+                    'WIDTH_PH' => 'In pixels (Ex: 780)',
+                    'HEIGHT' => 'Height',
+                    'HEIGHT_PH' => 'In pixels (Ex: 90)',
+                    'TYPE' => [
+                        'LABEL' => 'Adsense type',
+                        'HELP' => 'Type of Ad to display. Refer to Adsense documentation.',
+                        'IN_ARTICLE' => 'InArticle Ad',
+                        'NORMAL' => 'Normal Ad (Width and Height required)'
+                    ]
+                ]
             ],
             'PLUGIN_PROBLEMS' => [
                 'BUILTIN_CSS' => 'Use built in CSS',

@@ -2,13 +2,13 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledMarkdownFile',
     'filename' => '/var/www/blogs/user/pages/blog/menjadi-prompt-engineer/post.md',
-    'modified' => 1696678132,
-    'size' => 2248,
+    'modified' => 1696719156,
+    'size' => 2177,
     'data' => [
         'header' => [
             'layout' => 'post',
             'title' => 'Menjadi Prompt Engineer ',
-            'description' => 'Theme Elements will save you tons of time working on the site content. Now you\'ll be able to create complex layouts within minutes.',
+            'description' => 'perubahan adalah abadi , yang tidak mengikuti akan tergerus .',
             'taxonomy' => [
                 'tag' => [
                     0 => 'Grav',
@@ -19,7 +19,7 @@ return [
         ],
         'frontmatter' => 'layout: post
 title: \'Menjadi Prompt Engineer \'
-description: \'Theme Elements will save you tons of time working on the site content. Now you\'\'ll be able to create complex layouts within minutes.\'
+description: \'perubahan adalah abadi , yang tidak mengikuti akan tergerus .\'
 taxonomy:
     tag:
         - Grav

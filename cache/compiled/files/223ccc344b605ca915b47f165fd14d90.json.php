@@ -2,12 +2,12 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledJsonFile',
     'filename' => '/var/www/blogs/user/data/flex/indexes/pages.json',
-    'modified' => 1696678132,
-    'size' => 2741,
+    'modified' => 1696719717,
+    'size' => 3015,
     'data' => [
         'version' => '1.5',
-        'timestamp' => 1696678132,
-        'count' => 11,
+        'timestamp' => 1696719717,
+        'count' => 12,
         'index' => [
             '' => [
                 'key' => '',
@@ -38,7 +38,7 @@ return [
                 'key' => 'blog',
                 'storage_key' => 'blog',
                 'template' => 'default',
-                'storage_timestamp' => 1696675571,
+                'storage_timestamp' => 1696718673,
                 'markdown' => [
                     '' => [
                         'default' => 1689699311
@@ -47,12 +47,13 @@ return [
                 'children' => [
                     'definisi' => 1696153974,
                     'kebijakan-privasi' => 1696669993,
+                    'large-language-model' => 1696718673,
                     'manifesto-blogger-indonesia' => 1696670197,
                     'mencapai-follower-10k' => 1696675234,
-                    'menjadi-prompt-engineer' => 1696675571,
+                    'menjadi-prompt-engineer' => 1696678132,
                     'pokok-penting-dalam-uu-ite-indonesia' => 1696671562
                 ],
-                'checksum' => 'b40753954be6e36604a97168d823c2fd'
+                'checksum' => 'f42d86467ae6a8533ebc76a275c88cee'
             ],
             'blog/definisi' => [
                 'key' => 'blog/definisi',
@@ -77,6 +78,18 @@ return [
                     ]
                 ],
                 'checksum' => '3dc5d93f6888a4f57e4c2adf32b216f0'
+            ],
+            'blog/large-language-model' => [
+                'key' => 'blog/large-language-model',
+                'storage_key' => 'blog/large-language-model',
+                'template' => 'post',
+                'storage_timestamp' => 1696719717,
+                'markdown' => [
+                    '' => [
+                        'post' => 1696719717
+                    ]
+                ],
+                'checksum' => '052412ed75d0c117de756b1adf24172f'
             ],
             'blog/manifesto-blogger-indonesia' => [
                 'key' => 'blog/manifesto-blogger-indonesia',
@@ -106,13 +119,13 @@ return [
                 'key' => 'blog/menjadi-prompt-engineer',
                 'storage_key' => 'blog/menjadi-prompt-engineer',
                 'template' => 'post',
-                'storage_timestamp' => 1696678132,
+                'storage_timestamp' => 1696719156,
                 'markdown' => [
                     '' => [
-                        'post' => 1696678132
+                        'post' => 1696719156
                     ]
                 ],
-                'checksum' => 'b1f4cd1ff226683fcfb2884218f0b6bf'
+                'checksum' => 'b0403526428aa8405bae6fca2c520b6e'
             ],
             'blog/pokok-penting-dalam-uu-ite-indonesia' => [
                 'key' => 'blog/pokok-penting-dalam-uu-ite-indonesia',
