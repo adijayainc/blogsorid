@@ -1,9 +1,14 @@
 version: '1.2'
-timestamp: 1713408904
-count: 1
+timestamp: 1725177579
+count: 2
 index:
   adijaya:
     storage_key: adijaya
-    storage_timestamp: 1713348522
+    storage_timestamp: 1725177579
     key: adijaya
     email: adijaya@gmail.com
+  adijaya.yaml-old:
+    storage_key: adijaya.yaml-old
+    storage_timestamp: 0
+    key: adijaya.yaml-old
+    email: null
