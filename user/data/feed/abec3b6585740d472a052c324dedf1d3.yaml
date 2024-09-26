@@ -1,25 +1,25 @@
-last_checked: 1726450947
+last_checked: 1727351885
 data:
   -
-    title: 'macOS 14.0 Sonoma Apache Setup: Upgrading Homebrew'
-    url: 'https://getgrav.org/blog/macos-ventura-apache-upgrade-homebrew'
-    date: 1697803200
-    nicetime: '11 months ago'
+    title: 'macOS 15.0 Sequoia Apache Setup: Upgrading Homebrew'
+    url: 'https://getgrav.org/blog/macos-sequoia-apache-upgrade-homebrew'
+    date: 1726660800
+    nicetime: '1 weeks ago'
   -
-    title: 'macOS 14.0 Sonoma Apache Setup: LetsEncrypt SSL'
-    url: 'https://getgrav.org/blog/macos-sonoma-apache-ssl'
-    date: 1697799780
-    nicetime: '11 months ago'
+    title: 'macOS 15.0 Sequoia Apache Setup: LetsEncrypt SSL'
+    url: 'https://getgrav.org/blog/macos-sequoia-apache-ssl'
+    date: 1726657380
+    nicetime: '1 weeks ago'
   -
-    title: 'macOS 14.0 Sonoma Apache Setup: MySQL, Xdebug & More...'
-    url: 'https://getgrav.org/blog/macos-sonoma-apache-mysql-vhost-apc'
-    date: 1697799600
-    nicetime: '11 months ago'
+    title: 'macOS 15.0 Sequoia Apache Setup: MySQL, Xdebug & More...'
+    url: 'https://getgrav.org/blog/macos-sequoia-apache-mysql-vhost-apc'
+    date: 1726657200
+    nicetime: '1 weeks ago'
   -
-    title: 'macOS 14.0 Sonoma Apache Setup: Multiple PHP Versions'
-    url: 'https://getgrav.org/blog/macos-sonoma-apache-multiple-php-versions'
-    date: 1697796000
-    nicetime: '11 months ago'
+    title: 'macOS 15.0 Sequoia Apache Setup: Multiple PHP Versions'
+    url: 'https://getgrav.org/blog/macos-sequoia-apache-multiple-php-versions'
+    date: 1726653600
+    nicetime: '1 weeks ago'
   -
     title: 'Big changes for Email plugin'
     url: 'https://getgrav.org/blog/new-email-plugin'

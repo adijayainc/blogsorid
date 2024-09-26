@@ -7,6 +7,8 @@ taxonomy:
         - featured
 image: swim.jpg
 published: true
+date: '01-09-2024 18:58'
+publish_date: '01-09-2024 18:59'
 ---
 
 Blogger menulis dan menyiarkan konten pada sebuah website yang mempunyai fungsi standard untuk dapat berubah secara regular atau disebut juga blog site, yang bisa diakses oleh siapapun selama terhubung internet . Topik yang ditulis mengenai pengalaman pribadi , opini , berita juga informasi tentang subjek / bidang industri tertentu .

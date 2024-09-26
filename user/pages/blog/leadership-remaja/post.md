@@ -1,5 +1,5 @@
 ---
-title: Si Anak Desa yang Berjuang untuk Masyarakat"
+title: Si Anak Desa yang Berjuang untuk Masyarakat
 taxonomy:
     tag:
         - lamma3
@@ -7,6 +7,8 @@ taxonomy:
         - groq
 image: swim.jpg
 published: true
+date: '26-09-2024 18:58'
+publish_date: '26-09-2024 18:59'
 ---
 
 
