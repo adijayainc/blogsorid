@@ -1,9 +1,9 @@
 # data blog
-DIR=llama-opensource
-TITLE="why is called llama ? what is the meaning behind this ?"
-DESC="why is called llama ? what is the meaning behind this ?"
-MODEL=TheBloke/Llama-2-7B-Chat-GGUF
-SYSTEM="you expert AI understand clearly about pros and cons AI "
+DIR=mind-psycholog
+TITLE="to retire a multi-millionaire in the next 5 years"
+DESC="create planning and detail step by step to become rich for the next 5 years"
+MODEL=TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF
+SYSTEM="you are helpfull assisten with more expireance on social media networking "
 
-Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
+Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,TheBloke/TinyLlama-1.1B-Chat-v1.0-GGUF
 

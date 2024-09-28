@@ -22,7 +22,7 @@ tema = data_dict.get("DIR")
 judul = data_dict.get("TITLE")  # Convert to integer if needed
 jelas = data_dict.get("DESC")  # Convert to integer if needed
 # mod = data_dict.get("MODEL")  # Convert to integer if needed disable temp
-mod = "TheBloke/Llama-2-7B-Chat-GGUF"
+mod ="lmstudio-community/Meta-Llama-3-8B-Instruct-GGUF"
 sistem = data_dict.get("SYSTEM")  # Convert to integer if needed
 #city = data_dict.get("CITY")
 # Get the current date and time
@@ -60,7 +60,7 @@ with open(os.path.join(new_dir_path,'post.md'), 'w') as f:
     print("taxonomy:")
     print("  tag:")
     print("  - genAI")
-    print("  - groq")
+    print("  - LMStudio")
     print("  -",f"{mod}")
     print("---")
     
