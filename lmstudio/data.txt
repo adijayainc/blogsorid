@@ -1,0 +1,9 @@
+# data blog
+DIR=llama-opensource
+TITLE="why is called llama ? what is the meaning behind this ?"
+DESC="why is called llama ? what is the meaning behind this ?"
+MODEL=TheBloke/Llama-2-7B-Chat-GGUF
+SYSTEM="you expert AI understand clearly about pros and cons AI "
+
+Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
+
