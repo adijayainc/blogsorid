@@ -1,0 +1,18 @@
+Humans have fun when they write — robots don’t
+
+“Please read this article that I have written and try to figure out my tone, the length of my sentences and paragraphs, the amount of detail that I use, whether I use humor, questions, how readable my writing is, the level of my vocabulary, and how emotional I am in my writing. Summarize what you have found out in 200 words.”
+
+“Based on the writing style analyzed from the provided article, create content titled [Article Title] at [Word Count]. Ensure that the new content strictly adheres to the author’s writing style in terms of tone, structure, and approach as identified in the analysis.”
+
+“ChatGPT, here’s my about page [Insert About Page]. Learn about my experience and stories that qualify me as an author for the content we’ll write. Also, here’s a personal opinion that will shape how you write your content [Personal Opinion]”
+
+ChatGPT’s models are trained up until January 2022, so it might not include the latest information relevant to the topic I initially chose, such as a “Beginner’s Guide to SEO”.
+
+“Fact 1: The average salary for an SEO specialist in 2024 is $62,000 per year. Fact 2: As of [Current Month], there are 8,302 SEO jobs available on LinkedIn.
+Please use these facts when creating your content.”
+“ChatGPT, do not include any fluff when producing content. Each sentence should provide value to the overall goal of the content piece. Strictly follow this guideline.”
+
+“ChatGPT, engagement is the highest priority. Be conversational, empathetic, and occasionally humorous.
+Use idioms, metaphors, anecdotes, and natural dialogue.”
+
+“My target audience has the following characteristics: 1) [Insert Demographic Information], 2) [Insert Tone Preferences], and 3) [Insert Reading Level Preference].”
