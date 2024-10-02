@@ -1,8 +1,8 @@
 # data blog
-DIR=permulaan-dari-akhir-tahun
-TITLE="The beginning of the end 2024 "
-DESC="fiscal year will be end by december , but october is very important for calculating company performance"
-MODEL=tinydolphin
-SYSTEM=" your a financial planner graduate from most respective university on Indonesia"
+DIR=rainforest-survival
+TITLE="howto survive in rain forest"
+DESC="how we survive in deep rain forrest"
+MODEL=llama3
+SYSTEM="detail and step by step from expert"
 
-Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
+Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3
