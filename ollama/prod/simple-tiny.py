@@ -69,10 +69,10 @@ with open(os.path.join(new_dir_path,'post.md'), 'w') as f:
     combined_prompt = f"{system_role}\n{user_prompt}"
 
     # Print combined prompt to file (optional)
-    print(f"Combined Prompt:\n{combined_prompt}")
+    # print(f"Combined Prompt:\n{combined_prompt}")
 
     # --- Groq Code (keep within the 'with' block) ---
-    api = GenerateAPI(base_url="http://192.168.0.15:11434/api", model="tinydolphin")
+    api = GenerateAPI(base_url="http://192.168.0.15:11434/api", model=f'{mod}')
 
     def get_response(prompt):
         # Send the prompt to the Ollama API and handle streaming response
