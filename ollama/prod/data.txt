@@ -1,8 +1,8 @@
 # data blog
-DIR=using-ai-daily
-TITLE="Step by step using AI for our daily life"
-DESC="prepare to generate task and schedule using gen AI for our daily life as java programmer , project manager and  technical lead, try to explain as a blog content for more audiance and IT profesional "
+DIR=workout-habit
+TITLE="Morning Walking with family"
+DESC="healthy life should be prepare while we are young, please show me what is  good habit , make per item with example , write to blog for young reader"
 MODEL=llama3
-SYSTEM="expireance project manager for 20 years"
+SYSTEM="trainner for old peoples"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3
