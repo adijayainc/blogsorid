@@ -1,8 +1,8 @@
 # data blog
-DIR=workout-habit
-TITLE="Morning Walking with family"
-DESC="healthy life should be prepare while we are young, please show me what is  good habit , make per item with example , write to blog for young reader"
+DIR=new-chapter
+TITLE="try to find new revenue stream"
+DESC="we should'nt stuck on one business model , using AI to recommend what is the best subject to explore for IT company with strong research culture ."
 MODEL=llama3
-SYSTEM="trainner for old peoples"
+SYSTEM="You're Venture Capital with experience development startup unicorn"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3
