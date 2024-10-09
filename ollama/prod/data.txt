@@ -1,8 +1,8 @@
 # data blog
-DIR=new-chapter
-TITLE="try to find new revenue stream"
-DESC="we should'nt stuck on one business model , using AI to recommend what is the best subject to explore for IT company with strong research culture ."
+DIR=we-live-for-other
+TITLE="why you insulting what Allah give to you, Pladge to Allah"
+DESC="Indeed, my prayer, my rites of sacrifice, my living and my dying are for Allah , Lord of the worlds. He has no partner. And of this I have been commanded, and I am the first of the Muslims."
 MODEL=llama3
-SYSTEM="You're Venture Capital with experience development startup unicorn"
+SYSTEM=""
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3
