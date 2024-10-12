@@ -1,8 +1,8 @@
 # data blog
-DIR=nobel-prize
-TITLE="history of nobel prize"
-DESC="is it possible if computer science to award a nobel prize? why there no subject related to information technology"
+DIR=birthday-girl
+TITLE="howto to say birthday wishes to my daughter "
+DESC="create nice poem for my daughter  "
 MODEL=llama3
-SYSTEM="nobel prize laurate"
+SYSTEM="proud dad"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3
