@@ -1,8 +1,8 @@
 # data blog
-DIR=birthday-girl
-TITLE="howto to say birthday wishes to my daughter "
-DESC="create nice poem for my daughter  "
-MODEL=llama3
-SYSTEM="proud dad"
+DIR=thea-lee
+TITLE="Working Thea Lee"
+DESC=" Job description of Deputy Undersecretary for International Affairs - Thea Lee , write for blog with more information "
+MODEL=llama3.2
+SYSTEM="expert on bilateral "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3
