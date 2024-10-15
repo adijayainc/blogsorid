@@ -1,8 +1,8 @@
 # data blog
-DIR=thea-lee
-TITLE="Working Thea Lee"
-DESC=" Job description of Deputy Undersecretary for International Affairs - Thea Lee , write for blog with more information "
+DIR=kereta-cepat
+TITLE="Perjalanan menggunakan Woosh"
+DESC=" what is fast train that run more then 300 kmh "
 MODEL=llama3.2
-SYSTEM="expert on bilateral "
+SYSTEM="expert on high speed transportation "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3
