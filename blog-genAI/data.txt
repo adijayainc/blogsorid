@@ -1,6 +1,6 @@
 # data blog
 DIR=perpindahan-kekuasaan
-TITLE="kita beruntung karena mempunyai falsasah negara sebagai pemersatu"
+TITLE="Tahun 2024 menjadi transisi kekuasaan di Indonesia"
 DESC="bagaimana Indonesia memilih pemimpin dan bagaimana proses transisi kekuasaan, buat tulisan seperti berbicara dengan pembaca dari segala latar belakang"
 MODEL=mixtral-8x7b-32768
 SYSTEM="bermain bersama kekuasaan "
