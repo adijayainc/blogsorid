@@ -1,8 +1,8 @@
 # data blog
-DIR=kesaktian-pancasila
+DIR=perpindahan-kekuasaan
 TITLE="kita beruntung karena mempunyai falsasah negara sebagai pemersatu"
-DESC="Ceritakan secara detail dan lengkap mengenai sejarah pancasila siapa yang menemukannya dan apa manfaat bagi bangsa Indonesia"
+DESC="bagaimana Indonesia memilih pemimpin dan bagaimana proses transisi kekuasaan, buat tulisan seperti berbicara dengan pembaca dari segala latar belakang"
 MODEL=mixtral-8x7b-32768
-SYSTEM="a person who very proud to become an Indonesia "
+SYSTEM="bermain bersama kekuasaan "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768

@@ -52,7 +52,7 @@ with open(os.path.join(new_dir_path,'post.md'), 'w') as f:
     print("description: ",f"{penjelasan}")
     print("date: ", formatted_now)
     print("Publish date: ", formatted_now)
-    print("image: ","picture-38.jpg")
+    print("image: ",f"{tema}"".jpg")
     
     print("taxonomy:")
     print("  tag:")
