@@ -1,8 +1,8 @@
 # data blog
-DIR=perpindahan-kekuasaan
-TITLE="Tahun 2024 menjadi transisi kekuasaan di Indonesia"
-DESC="bagaimana Indonesia memilih pemimpin dan bagaimana proses transisi kekuasaan, buat tulisan seperti berbicara dengan pembaca dari segala latar belakang"
+DIR=prabowo-gibran
+TITLE="to avoid middle income trap , we must doing fast with really good planning"
+DESC="Indonesia will have demographic bonus , with more then 300 million people, create planning for next 5 years , concentration in increase income , improve skill people  "
 MODEL=mixtral-8x7b-32768
-SYSTEM="bermain bersama kekuasaan "
+SYSTEM="writer how expert in macro economy and social politic "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
