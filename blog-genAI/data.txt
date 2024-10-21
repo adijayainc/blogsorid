@@ -1,8 +1,8 @@
 # data blog
-DIR=brics-currency
-TITLE="multi polar rise"
-DESC="brics will be united states and europe nightmare , it will be another alternative for the world instead existing support power on this world  "
+DIR=Abstraction
+TITLE="how to get abstraction and recreate to other problem"
+DESC="generative AI is only doing base on repetitive works, it can solve a problem if there is data already there , but wih halusinate if no data on there fondation model "
 MODEL=mixtral-8x7b-32768
-SYSTEM="geopolitic and foreigne afair  "
+SYSTEM="data science expert "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
