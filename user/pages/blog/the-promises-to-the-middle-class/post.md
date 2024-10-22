@@ -22,3 +22,5 @@ To mitigate these risks, it is important for policymakers to take a proactive ap
 It is also important for businesses and organizations to take responsibility for the impact of automation on their workers. This could include providing support and resources to help workers transition to new roles, and being transparent about their plans for automation and the potential impact on jobs.
 
 Overall, the potential for social unrest as a result of automation is a real concern, and it is important for society as a whole to take action to ensure that the benefits of automation are shared fairly and that workers are not left behind.
+
+[plugin:youtube](https://www.youtube.com/watch?v=bBrA3PJDqmc)
