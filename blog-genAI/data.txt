@@ -1,8 +1,8 @@
 # data blog
-DIR=Abstraction
-TITLE="how to get abstraction and recreate to other problem"
-DESC="generative AI is only doing base on repetitive works, it can solve a problem if there is data already there , but wih halusinate if no data on there fondation model "
+DIR=the-promises-to-the-middle-class
+TITLE="Helping Working voice and worker Labor union"
+DESC="focus on automation with make worker become abandon with genarate social unrest"
 MODEL=mixtral-8x7b-32768
-SYSTEM="data science expert "
+SYSTEM="you are daron acemoglu the writer why the nation failed"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
