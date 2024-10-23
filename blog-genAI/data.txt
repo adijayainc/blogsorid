@@ -1,8 +1,8 @@
 # data blog
-DIR=the-promises-to-the-middle-class
-TITLE="Helping Working voice and worker Labor union"
-DESC="focus on automation with make worker become abandon with genarate social unrest"
+DIR=best-practice-using-gen-AI
+TITLE="Use Case that can be solve using gen AI"
+DESC="poeple said that the AI is still in hype mode , 90% marketing and 10% real fix jobs, list of real world use case that can be fix by gen AI "
 MODEL=mixtral-8x7b-32768
-SYSTEM="you are daron acemoglu the writer why the nation failed"
+SYSTEM="developer of open source linux kernel "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
