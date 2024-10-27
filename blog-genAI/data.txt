@@ -1,8 +1,8 @@
 # data blog
-DIR=best-practice-using-gen-AI
-TITLE="Use Case that can be solve using gen AI"
-DESC="poeple said that the AI is still in hype mode , 90% marketing and 10% real fix jobs, list of real world use case that can be fix by gen AI "
+DIR=goverment-with-militeristic
+TITLE="big country should ruled by militeristic style "
+DESC="with 300 million peoples , indonesia is more effective to govt with militeristic rather then with democratic, and will be develop country by 2030"
 MODEL=mixtral-8x7b-32768
-SYSTEM="developer of open source linux kernel "
+SYSTEM="social politic expert create milestone every year with pro and cons"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
