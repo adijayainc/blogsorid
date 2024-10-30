@@ -1,8 +1,8 @@
 # data blog
-DIR=goverment-with-militeristic
-TITLE="big country should ruled by militeristic style "
-DESC="with 300 million peoples , indonesia is more effective to govt with militeristic rather then with democratic, and will be develop country by 2030"
+DIR=story-about-ourselves
+TITLE="what Plato said about the purpose of human"
+DESC="from century human always try to find what is the meaning of himself and from plato  everything start "
 MODEL=mixtral-8x7b-32768
-SYSTEM="social politic expert create milestone every year with pro and cons"
+SYSTEM="renainsance and auflarung for humanity"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
