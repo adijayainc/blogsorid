@@ -1,8 +1,8 @@
 # data blog
-DIR=story-about-ourselves
-TITLE="what Plato said about the purpose of human"
-DESC="from century human always try to find what is the meaning of himself and from plato  everything start "
+DIR=low-birth-rate
+TITLE="South Korea focusing on its extremely low fertility rate and aging population"
+DESC="significant challenges for its future economic and social stability Addressing this issue requires a multifaceted approach that includes promoting gender equality enhancing work-life balance and re-evaluating societal norms around marriage and family."
 MODEL=mixtral-8x7b-32768
-SYSTEM="renainsance and auflarung for humanity"
+SYSTEM="human will vanish replace by robot"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
