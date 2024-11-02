@@ -1,8 +1,8 @@
 # data blog
-DIR=low-birth-rate
-TITLE="South Korea focusing on its extremely low fertility rate and aging population"
-DESC="significant challenges for its future economic and social stability Addressing this issue requires a multifaceted approach that includes promoting gender equality enhancing work-life balance and re-evaluating societal norms around marriage and family."
+DIR=tipping-point
+TITLE="i told a story that your more capable of winning over an audience when you admit to the uncentainty and fragility of your position"
+DESC="people more to be suspicious of someone who seems falsely certain"
 MODEL=mixtral-8x7b-32768
-SYSTEM="human will vanish replace by robot"
+SYSTEM="writer of fiction story"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
