@@ -1,8 +1,8 @@
 # data blog
-DIR=tipping-point
-TITLE="i told a story that your more capable of winning over an audience when you admit to the uncentainty and fragility of your position"
-DESC="people more to be suspicious of someone who seems falsely certain"
+DIR=die-young-is-a-give
+TITLE="when our body grow with negative gradient of performance we should prepare"
+DESC="should people will remember us at our best performance and looking young "
 MODEL=mixtral-8x7b-32768
-SYSTEM="writer of fiction story"
+SYSTEM=""
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
