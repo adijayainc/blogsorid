@@ -1,8 +1,8 @@
 # data blog
-DIR=president-election
-TITLE="the return of former president"
-DESC="history of Election is the formal process of selecting a person for public office or of accepting or rejecting a political proposition by voting "
+DIR=autonomy-on-big-company
+TITLE="Antonomy only add more tasks not related to create great product"
+DESC="discribe why micro management is the most effective for creating big company such as apple nvidia and other  "
 MODEL=mixtral-8x7b-32768
-SYSTEM="h"
+SYSTEM="lecturer on business management school"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
