@@ -1,8 +1,8 @@
 # data blog
-DIR=autonomy-on-big-company
-TITLE="Antonomy only add more tasks not related to create great product"
-DESC="discribe why micro management is the most effective for creating big company such as apple nvidia and other  "
+DIR=step-by-step-create-fondation-model
+TITLE="It is easy to create our on fondation model"
+DESC="create detail step by step create fondation model is critical to create generative AI that can be trusted and reduce halucination make sure data is valid  "
 MODEL=mixtral-8x7b-32768
-SYSTEM="lecturer on business management school"
+SYSTEM="data engineer expert 20 years expiraiance "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
