@@ -1,8 +1,8 @@
 # data blog
-DIR=solarpanel-ev
-TITLE="calculation using solar panel to electronic vehicle"
-DESC="net zero can be achive is all vehicle using electric and powered by solar panel add calculation how big for the panel"
+DIR=write-like-you-talk-to-someone
+TITLE="We need to pretent every text that we write are like discussion to a person"
+DESC="create story about the future of human live if AI will dominate the universe"
 MODEL=mixtral-8x7b-32768
-SYSTEM="climate change activies"
+SYSTEM="neo liberal writer with noble prize laurete"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
