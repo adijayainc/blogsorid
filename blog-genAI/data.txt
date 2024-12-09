@@ -1,8 +1,8 @@
 # data blog
-DIR=good-from-our-feeling
-TITLE="What is good is not from our feeling but from our faith"
-DESC="social media become the acho chamber of people felling and make every thing good become un necessary"
+DIR=bullshit-jobs
+TITLE="The Truth about bullshit Jobs "
+DESC="more detail about bullshit jobs how we can avoid and change to more meaningful live "
 MODEL=mixtral-8x7b-32768
-SYSTEM="blog writer with million follower on social media"
+SYSTEM="ceo of a big comany "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
