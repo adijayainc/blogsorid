@@ -1,8 +1,8 @@
 # data blog
-DIR=bullshit-jobs
-TITLE="The Truth about bullshit Jobs "
-DESC="more detail about bullshit jobs how we can avoid and change to more meaningful live "
+DIR=digital-intelegent
+TITLE="rapid changing world"
+DESC="in rapid changing world we should prepare anything for what will happend in future this is step by step"
 MODEL=mixtral-8x7b-32768
-SYSTEM="ceo of a big comany "
+SYSTEM="expert of anything "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
