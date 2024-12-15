@@ -1,8 +1,8 @@
 # data blog
-DIR=digital-intelegent
-TITLE="rapid changing world"
-DESC="in rapid changing world we should prepare anything for what will happend in future this is step by step"
+DIR=security-team-no-value-added
+TITLE="Our system was hacked because we dont care much"
+DESC="engineers expert in security has not give any value added to our society they only work when our doing any un productive jobs to still our data"
 MODEL=mixtral-8x7b-32768
-SYSTEM="expert of anything "
+SYSTEM="expert of IT security "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
