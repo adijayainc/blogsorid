@@ -1,8 +1,8 @@
 # data blog
-DIR=security-team-no-value-added
-TITLE="Our system was hacked because we dont care much"
-DESC="engineers expert in security has not give any value added to our society they only work when our doing any un productive jobs to still our data"
+DIR=fast-culture
+TITLE="critic for fast culture "
+DESC="Fast culture encapsulates the rapid and ever-changing landscape of modern life, characterized by the swift rise and fall of trends, technologies, and societal norms. Fueled by the immediacy and connectivity of social media platforms like Instagram, TikTok, and Twitter, this culture thrives on the quick dissemination and consumption of information, fashion, and entertainment. In this fast-paced environment, what's trendy today might be outdated tomorrow, pushing individuals to constantly keep up with the latest viral challenges, fashion statements, and technological advancements. This phenomenon often emphasizes consumerism and instant gratification, reflecting a society that values speed and visibility, sometimes at the expense of depth and tradition."
 MODEL=mixtral-8x7b-32768
-SYSTEM="expert of IT security "
+SYSTEM="humanisme carl honore"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
