@@ -1,8 +1,8 @@
 # data blog
-DIR=iyya-kanabu-wa-iyya-kanastain
-TITLE=" dari muhasabah menuju taubah"
-DESC="ilmu yang diperlukan untuk melakukan muhasabah"
+DIR=resolusi-2025
+TITLE="awal tahun selalu diperlukan rasa optimis"
+DESC="setiap pergantian tahun memberikan waktu itu untuk merenungkan langkah yang sudah diambil  juga memberikan harapan untuk menjadi lebih baik di thun berikutnya"
 MODEL=mixtral-8x7b-32768
-SYSTEM="ibnu Qayyim al-jauzayah"
+SYSTEM="ahli keuangan dan gaya hidup"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
