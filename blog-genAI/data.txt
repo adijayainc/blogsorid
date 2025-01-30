@@ -1,8 +1,8 @@
 # data blog
-DIR=resolusi-2025
-TITLE="awal tahun selalu diperlukan rasa optimis"
-DESC="setiap pergantian tahun memberikan waktu itu untuk merenungkan langkah yang sudah diambil  juga memberikan harapan untuk menjadi lebih baik di thun berikutnya"
+DIR=genAI-will-eat-your-jobs
+TITLE=""
+DESC="selama kita selalu merasa paling benar dan tidak mau sama sekali berubah maka seperti menyerahkan kepala sendiri oleh tajamnya sabetan waktu"
 MODEL=mixtral-8x7b-32768
-SYSTEM="ahli keuangan dan gaya hidup"
+SYSTEM="waktu tidak akan menunggu kita kan merugi saat sudah terlambat"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768

@@ -2,7 +2,7 @@ import requests
 import json
 
 # Define the URL for the Ollama API
-url = 'http://192.168.0.15:11434/api/generate'
+url = 'http://localhost:11434/api/generate'
 
 # Prepare the data payload
 data = {
