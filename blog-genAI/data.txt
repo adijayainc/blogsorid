@@ -2,7 +2,7 @@
 DIR=the American empire decline
 TITLE="tariff will drive the american empire to decline"
 DESC="The decline of the American Empire is not a certainty, but it is a possibility if the U.S. fails to adapt to these challenges. The U.S. will likely remain a major global power, but its dominance may wane as other countries rise and the global balance of power shifts. The extent of this decline will depend on how the U.S. addresses internal challenges, manages relations with rising powers, and adapts to a changing world order."
-MODEL=mixtral-8x7b-32768
+MODEL=llama3-70b-8192
 SYSTEM="Paul Krugman is widely recognized for his work in economics, particularly in the fields of international trade and economic geography. He was awarded the Nobel Memorial Prize in Economic Sciences in 2008 for his contributions to the theory of international trade and economic geography"
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
