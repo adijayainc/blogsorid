@@ -19,6 +19,11 @@ judul = data_dict.get("TITLE")
 jelas = data_dict.get("DESC")
 mod = data_dict.get("MODEL")
 sistem = data_dict.get("SYSTEM")
+# Extract variables from OS env
+token = os.environ["TOKEN"]
+openweb = os.environ["OPENWEB"]
+print(openweb)
+print(token)
 
 # Get the current date and time
 now = datetime.now()
@@ -52,9 +57,9 @@ with open(os.path.join(new_dir_path, 'post.md'), 'w') as f:
     print("---")
 
     # Call OpenWebUI API
-    url = 'http://adiai.adijaya.com:3000/api/chat/completions'
+    url = f'{openweb}'
     headers = {
-        'Authorization': f'Bearer sk-13c9780d6f63429ebd3dd9f4ee06b186',
+        'Authorization': f'Bearer {token}',
         'Content-Type': 'application/json'
     }
     data = {

@@ -1,8 +1,8 @@
 # data blog
-DIR=10 days of last ramadhan
-TITLE="culminating in the observance of Laylat al-Qadr "
-DESC="This period is marked by heightened worship, reflection, and the pursuit of forgiveness, culminating in the observance of Laylat al-Qadr, or the Night of Power."
-MODEL=gemma3:1b
-SYSTEM="spiritual expert "
+DIR=Education Department Shutdown
+TITLE="What is the benefit  dismantling the U.S. Department of Education"
+DESC="Education advocates have voiced significant concerns about the potential impact of dismantling the department. The National Education Association warned that the shutdown could lead to increased class sizes, elimination of job training programs, and higher education tuition costs"
+MODEL=deepseek-r1-distill-llama-70b
+SYSTEM="education expert "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768

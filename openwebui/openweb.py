@@ -3,7 +3,7 @@ import requests
 def get_content_from_openwebui(api_key, endpoint):
     url = f"http://adiai.adijaya.com:3000/api/{endpoint}"
     headers = {
-        'Authorization': f'Bearer {sk-13c9780d6f63429ebd3dd9f4ee06b186}',
+        'Authorization': f'Bearer {TOKEN}',
         'Content-Type': 'application/json'
     }
     

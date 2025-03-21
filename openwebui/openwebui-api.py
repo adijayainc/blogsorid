@@ -4,7 +4,7 @@ import json
 def chat_with_model(token):
     url = 'http://adiai.adijaya.com:3000/api/chat/completions'
     headers = {
-        'Authorization': f'Bearer sk-13c9780d6f63429ebd3dd9f4ee06b186',
+        'Authorization': f'Bearer ',
         'Content-Type': 'application/json'
     }
     
