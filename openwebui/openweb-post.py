@@ -1,0 +1,96 @@
+import os
+import sys
+import requests
+import json
+from datetime import datetime
+
+# Read data from data.txt
+data_dict = {}
+with open("data.txt", "r") as file:
+    for line in file:
+        line = line.strip()
+        if "=" in line:
+            key, value = line.split("=", 1)
+            data_dict[key] = value
+
+# Extract variables from the data file
+tema = data_dict.get("DIR")
+judul = data_dict.get("TITLE")
+jelas = data_dict.get("DESC")
+mod = data_dict.get("MODEL")
+sistem = data_dict.get("SYSTEM")
+
+# Get the current date and time
+now = datetime.now()
+formatted_now = now.strftime("%d-%m-%Y %H:%M:%S")
+
+# Create the directory if it doesn't exist
+new_dir_path = f"/var/www/blogsorid/user/pages/blog/{tema}"
+try:
+    os.makedirs(new_dir_path, exist_ok=True)
+except OSError as e:
+    print(f"Error creating directory: {e}")
+
+# Save the original stdout
+original_stdout = sys.stdout
+
+# Open the post.md file for writing
+with open(os.path.join(new_dir_path, 'post.md'), 'w') as f:
+    sys.stdout = f
+    print("---")
+    print("layout: ", "post")
+    print("title: ", f"{judul}")
+    print("description: ", f"{jelas}")
+    print("date: ", formatted_now)
+    print("Publish date: ", formatted_now)
+    print("image: ", f"{tema}.jpg")
+    print("taxonomy:")
+    print("  tag:")
+    print("  - genAI")
+    print("  - openwebui")
+    print("  -", f"{mod}")
+    print("---")
+
+    # Call OpenWebUI API
+    url = 'http://adiai.adijaya.com:3000/api/chat/completions'
+    headers = {
+        'Authorization': f'Bearer sk-13c9780d6f63429ebd3dd9f4ee06b186',
+        'Content-Type': 'application/json'
+    }
+    data = {
+        "model": mod,
+        "messages": [
+            {"role": "system", "content": sistem},
+            {"role": "user", "content": jelas}
+        ],
+        "temperature": 1,
+        "max_tokens": 2048,
+        "top_p": 1,
+        "stream": True
+    }
+    
+    try:
+        response = requests.post(url, headers=headers, json=data, stream=True)
+        
+        if response.status_code != 200:
+            print(f"API Error {response.status_code}: {response.text}")
+        else:
+            for line in response.iter_lines():
+                if line:
+                    decoded_line = line.decode('utf-8').strip()
+                    if decoded_line == "data: [DONE]":
+                        continue
+                    if decoded_line.startswith('data: '):
+                        try:
+                            chunk = json.loads(decoded_line[6:])
+                            if 'choices' in chunk and chunk['choices']:
+                                content = chunk['choices'][0]['delta'].get('content', '')
+                                if content:
+                                    print(content, end="", flush=True)
+                        except json.JSONDecodeError as e:
+                            print(f"JSON Decode Error: {e} for line: {decoded_line}")
+    except requests.exceptions.RequestException as e:
+        print(f"Request failed: {str(e)}")
+
+# Reset stdout back to original AFTER writing OpenWebUI output
+sys.stdout = original_stdout

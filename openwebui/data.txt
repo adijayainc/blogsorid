@@ -1,8 +1,8 @@
 # data blog
-DIR=negara gagal berawal dari tentara
-TITLE="when the fail country begin "
-DESC="Countries that fail to adapt their trade strategies in response to global dynamics risk economic decline and diminished influence"
-MODEL=llama3-70b-8192
-SYSTEM="economist expert on tariff "
+DIR=10 days of last ramadhan
+TITLE="culminating in the observance of Laylat al-Qadr "
+DESC="This period is marked by heightened worship, reflection, and the pursuit of forgiveness, culminating in the observance of Laylat al-Qadr, or the Night of Power."
+MODEL=gemma3:1b
+SYSTEM="spiritual expert "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
