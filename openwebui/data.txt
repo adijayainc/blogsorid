@@ -1,8 +1,8 @@
 # data blog
-DIR=Education Department Shutdown
-TITLE="What is the benefit  dismantling the U.S. Department of Education"
-DESC="Education advocates have voiced significant concerns about the potential impact of dismantling the department. The National Education Association warned that the shutdown could lead to increased class sizes, elimination of job training programs, and higher education tuition costs"
-MODEL=deepseek-r1-distill-llama-70b
-SYSTEM="education expert "
+DIR=Water Levels Reach 5 Meters
+TITLE="Based on data collected this morning, flooding has been recorded in 29 RTs"
+DESC=" Heavy flooding has inundated 29 neighborhood units (RT) across East Jakarta, West Jakarta, and South Jakarta, with water levels reaching up to 2.5 meters, the Jakarta Disaster Mitigation Agency (BPBD) reported on Tuesday."
+MODEL=gemma3:1b
+SYSTEM="story teller about city that singking , write more 1000 words "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
