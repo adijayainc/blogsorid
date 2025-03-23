@@ -1,9 +1,9 @@
 # data blog
-DIR=if you feel soo lonely
-TITLE="The Real Meaning of Surrendering to Allah"
-DESC=" Write a blog post exploring the true meaning of surrendering to Allah, its spiritual significance, and practical steps to embrace it in daily life. focus on content , skip interaction with user"
+DIR=banking sector has stalled
+TITLE="Productivity at U.S. banks has declined by an average of 0.3% annually"
+DESC="why Productivity at U.S. banks has declined by an average of 0.3% annually create detail analysis with example one of USA bank "
 
-MODEL=gemma3:1b
-SYSTEM=" those seeking spiritual growth,its role in overcoming challenges "
+MODEL=llama-3.3-70b-specdec
+SYSTEM=" "
 
-Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768
+Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec

@@ -69,7 +69,7 @@ with open(os.path.join(new_dir_path, 'post.md'), 'w') as f:
             {"role": "user", "content": jelas}
         ],
         "temperature": 1,
-        "max_tokens": 2048,
+        "max_tokens": 1024,
         "top_p": 1,
         "stream": True
     }
