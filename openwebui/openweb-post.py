@@ -99,3 +99,17 @@ with open(os.path.join(new_dir_path, 'post.md'), 'w') as f:
 
 # Reset stdout back to original AFTER writing OpenWebUI output
 sys.stdout = original_stdout
+# add image 
+# URL for a random image from Unsplash
+url = "https://picsum.photos/800/600"
+
+# Send request to get the image
+response = requests.get(url)
+
+# Save the image
+if response.status_code == 200:
+    with open(f"/var/www/blogsorid/user/pages/blog/{tema}/{tema}.jpg", "wb") as file:
+        file.write(response.content)
+    print(f"/var/www/blogsorid/user/pages/blog/{tema}/{tema}.jpg")
+else:
+    print("Failed to download image")

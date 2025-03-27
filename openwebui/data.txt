@@ -1,7 +1,7 @@
 # data blog
-DIR=banking sector has stalled
-TITLE="Productivity at U.S. banks has declined by an average of 0.3% annually"
-DESC="why Productivity at U.S. banks has declined by an average of 0.3% annually create detail analysis with example one of USA bank "
+DIR=AI bubble 
+TITLE="AI bubble: No Use Case for Enterprise"
+DESC="Explore the current state of the AI bubble: Is it a genuine technological revolution or a speculative frenzy? Analyze the implications of rapid AI advancements on industries, employment, and ethical considerations. Discuss potential market corrections and the sustainability of AI investments in light of historical tech bubbles "
 
 MODEL=llama-3.3-70b-specdec
 SYSTEM=" "
