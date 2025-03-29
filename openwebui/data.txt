@@ -1,8 +1,7 @@
 # data blog
-DIR=AI bubble 
-TITLE="AI bubble: No Use Case for Enterprise"
-DESC="Explore the current state of the AI bubble: Is it a genuine technological revolution or a speculative frenzy? Analyze the implications of rapid AI advancements on industries, employment, and ethical considerations. Discuss potential market corrections and the sustainability of AI investments in light of historical tech bubbles "
-
+DIR=IT job Market 
+TITLE="AI and automation are reshaping the IT job market"
+DESC="Job Creation:AI is also generating new roles that require specialized skills, such as: AI ethicists: Ensuring ethical AI development, Machine learning engineers: Designing AI algorithms and systems, AI trainers: Training AI systems to improve accuracy. AI compliance managers: Overseeing regulatory adherence in AI applications"
 MODEL=llama-3.3-70b-specdec
 SYSTEM=" "
 
