@@ -1,9 +1,8 @@
 # data blog
 DIR=Human and AI Team Members 
 TITLE="AI and automation are reshaping the IT job market"
-DESC=" Beyond Augmentation: It’s not just about AI doing more of a human’s work. It’s about collaborative work, where human creativity and emotional intelligence intersect with AI’s analytical power and speed.
- Different Strengths, Different Roles: The key is recognizing that humans and AI possess distinct strengths. Humans excel at nuanced understanding, empathy, intuition, and complex problem-solving – often requiring contextual awareness and adaptability. AI excels at data processing, pattern recognition, and repetitive tasks"
-MODEL=llama-3.3-70b-specdec
+DESC="Beyond Augmentation: It’s not just about AI doing more of a human’s work. It’s about collaborative work, where human creativity and emotional intelligence intersect with AI’s analytical power and speed.Different Strengths, Different Roles: The key is recognizing that humans and AI possess distinct strengths. Humans excel at nuanced understanding, empathy, intuition, and complex problem-solving – often requiring contextual awareness and adaptability. AI excels at data processing, pattern recognition, and repetitive tasks"
+MODEL=deepseek-r1-distill-llama-70b
 SYSTEM=" "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec
