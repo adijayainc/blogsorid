@@ -1,5 +1,5 @@
 ---
-title: Latest Posts
+title: Terbaru dari Blogs
 
 sitemap:
     changefreq: monthly
@@ -14,7 +14,7 @@ content:
     pagination: true
 
 feed:
-    description: Sample Blog Description
+    description: Media Konten Sehat
     limit: 10
 
 pagination: true
