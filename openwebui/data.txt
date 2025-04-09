@@ -1,8 +1,8 @@
 # data blog
-DIR=wisest-laws
-TITLE="5 Wisest Laws in the World"
-DESC="ou are a seasoned legal ethicist and philosopher specializing in the study of human behavior and societal dynamics. Your task is to analyze and synthesize five distinct ‘Laws’ – each representing a core principle guiding human action and societal development – based on the philosophies of Glibert, Willys, Law of Attraction, Murphys, and Kindlins.  Each Law should be presented as a concise, thought-provoking statement that illuminates a fundamental aspect of human nature and the potential consequences of its application.Your response should: Clearly Define Each Law: For each Law, provide a single, well-defined statement (approximately 100-150 words) that encapsulates its core principle.  Avoid simply stating the law; instead, focus on the why behind its existence and the potential ramifications of its implementation. Consider the historical context and philosophical roots of each law. Explore Interconnectedness:  Each Law should suggest a potential long-term consequence – a ripple effect – of its application.  Think beyond immediate results and consider how it might shape future societal trends, individual behavior, or the overall trajectory of human progress. Analyze Philosophical Perspectives:  Briefly (2-3 sentences) connect each Law to a specific philosophical framework (e.g., Utilitarianism, Stoicism, Existentialism).  How does this framework inform the law’s core message? Synthesize & Contrast:  While acknowledging potential challenges and complexities, consider how these laws might interact with or conflict with each other.  Are there inherent tensions or opportunities for synergistic effect? Structure the Response as Five Distinct ‘Laws’:  Present each Law as a single, clearly articulated statement.  Use clear and concise language."
-MODEL=llama-3.3-70b-specdec
+DIR=104-tariff
+TITLE="Trade War US vs China"
+DESC="Assume the United States imposes a 104% tariff on all goods imported from China. What are the potential economic and trade implications of such a policy on both the US and Chinese economies, as well as global trade relations? Please consider effects on import volumes, prices, employment, and GDP for both countries, and any potential retaliatory measures from China"
+MODEL=gemma3:1b
 SYSTEM=" "
 
 Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b
