@@ -1,7 +1,7 @@
 # data blog
-DIR=104-tariff
-TITLE="Trade War US vs China"
-DESC="Assume the United States imposes a 104% tariff on all goods imported from China. What are the potential economic and trade implications of such a policy on both the US and Chinese economies, as well as global trade relations? Please consider effects on import volumes, prices, employment, and GDP for both countries, and any potential retaliatory measures from China"
+DIR=may-day
+TITLE="Labor of the World United"
+DESC="Explore the historical significance and cultural differences between Labor Day (celebrated in the United States) and May Day (celebrated internationally), and discuss how the rise of Artificial Intelligence (AI) is likely to influence the future of work, potentially replacing certain job roles. Consider the following aspects: Historical origins and evolution of Labor Day and May Day. The current state of AI adoption in various industries and its impact on the workforce. Potential future changes in the job market due to AI, including job displacement and creation of new roles.Possible strategies for workers, governments, and organizations to adapt to the changing work landscape driven by AI advancements."
 MODEL=gemma3:1b
 SYSTEM=" "
 
