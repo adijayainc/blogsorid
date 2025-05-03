@@ -55,5 +55,5 @@ def chat_with_model_stream(token):
         
 # Example usage
 if __name__ == "__main__":
-    TOKEN = "sk-13c9780d6f63429ebd3dd9f4ee06b186"  # Replace with your actual token
+    TOKEN = ""  # Replace with your actual token
     chat_with_model_stream(TOKEN)
