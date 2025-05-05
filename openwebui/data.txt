@@ -1,7 +1,7 @@
 # data blog
-DIR=may-day
-TITLE="Labor of the World United"
-DESC="Explore the historical significance and cultural differences between Labor Day (celebrated in the United States) and May Day (celebrated internationally), and discuss how the rise of Artificial Intelligence (AI) is likely to influence the future of work, potentially replacing certain job roles. Consider the following aspects: Historical origins and evolution of Labor Day and May Day. The current state of AI adoption in various industries and its impact on the workforce. Potential future changes in the job market due to AI, including job displacement and creation of new roles.Possible strategies for workers, governments, and organizations to adapt to the changing work landscape driven by AI advancements."
+DIR=education
+TITLE="How AI change the education"
+DESC="Generative AI is not just a technological trend but a transformative force in education. It empowers teachers, personalizes learning, and makes education more accessible and engaging. As schools and educators continue to explore and adapt these tools, GenAI is poised to play a central role in shaping the future of teaching and learning worldwide"
 MODEL=gemma3:1b
 SYSTEM=" "
 
