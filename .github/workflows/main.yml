@@ -7,7 +7,7 @@ on:
       - master
       
   schedule:
-  - cron: "50 05 * * *" # See https://crontab.guru/#0_7,9,11_*_*_1,3
+  - cron: "0 7,9,11 * * 1,3" # See https://crontab.guru/#0_7,9,11_*_*_1,3
 
 jobs:
   auto_commit:
@@ -19,6 +19,11 @@ jobs:
         with:
          persist-credentials: false
          fetch-depth: 0
+
+         
+      - name: Pull the latest changes
+        run: |
+          git pull origin master 
 
       - name: Modify last update
         run: |
