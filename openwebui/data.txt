@@ -1,8 +1,8 @@
 # data blog
-DIR=education
-TITLE="How AI change the education"
-DESC="Generative AI is not just a technological trend but a transformative force in education. It empowers teachers, personalizes learning, and makes education more accessible and engaging. As schools and educators continue to explore and adapt these tools, GenAI is poised to play a central role in shaping the future of teaching and learning worldwide"
-MODEL=gemma3:1b
+DIR=triathlon
+TITLE="Body after triathlon"
+DESC="What are the short-term and long-term effects of triathlon participation on the human body, including changes in cardiovascular health, muscular function, and immune response? stop saying ok , be more specific and direct talk"
+MODEL=trump-9000
 SYSTEM=" "
 
-Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b
+Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b,gemma3:1b,nikolas-tesla,doctor:latest
