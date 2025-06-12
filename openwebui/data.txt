@@ -1,13 +1,8 @@
 # data blog
-DIR= Understanding-of-Hajj
+DIR=Understanding of Hajj
 TITLE="Understanding the significance of Hajj"
-DESC="     Spiritual Preparations: Understanding the significance of Hajj, the rituals involved, and the importance of being in a state of ihram.
-     Physical and Health Preparations: Tips on fitness, vaccinations, and managing health conditions during travel.
-     Logistical Preparations: Guidance on travel arrangements, accommodation, and necessary documentation.
-     Financial Preparations: Budgeting for the trip, understanding costs, and financial considerations.
-     Educational Preparations: Learning about the rituals, understanding the sequence of events during Hajj, and knowing what to expect.
-     "
-MODEL=deepseek-r1:1.5b
+DESC="Spiritual Preparations: Understanding the significance of Hajj, the rituals involved, and the importance of being in a state of ihram. Physical and Health Preparations: Tips on fitness, vaccinations, and managing health conditions during travel. Logistical Preparations: Guidance on travel arrangements, accommodation, and necessary documentation. Financial Preparations: Budgeting for the trip, understanding costs, and financial considerations. Educational Preparations: Learning about the rituals, understanding the sequence of events during Hajj, and knowing what to expect."
+MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 
-Modellist=deepseek-r1:1.5b, gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b,gemma3:1b,nikolas-tesla,doctor:latest
+Modellist=deepseek-r1:1.5b, gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b,gemma3:1b,nikolas-tesla,doctor:latest,llama-3.3-70b-versatile

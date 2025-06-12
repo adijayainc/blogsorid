@@ -1,7 +1,7 @@
 ---
 layout:  post
 title:  "Understanding the significance of Hajj"
-description:  "     Spiritual Preparations: Understanding the significance of Hajj, the rituals involved, and the importance of being in a state of ihram.
+description:  "Spiritual Preparations: Understanding the significance of Hajj, the rituals involved, and the importance of being in a state of ihram."
 date:  12-06-2025 08:40:12
 Publish date:  12-06-2025 08:40:12
 image:   Understanding-of-Hajj.jpg
