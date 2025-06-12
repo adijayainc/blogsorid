@@ -1,8 +1,13 @@
 # data blog
-DIR=increase-tariff
-TITLE="How to Fix the Economy using Tariff "
-DESC="While tariffs offer a form of domestic control over prices and markets by imposing barriers on foreign competition, their effectiveness depends on context. Understanding how tariffs affect other aspects of the economy, such as supply chain disruption, international trade dynamics, and employment, is crucial for using them effectively in macroeconomic strategies. A balanced approach that considers these factors can lead to more effective economic policies when leveraging tariffs."
-MODEL=trump-9000
+DIR= Understanding-of-Hajj
+TITLE="Understanding the significance of Hajj"
+DESC="     Spiritual Preparations: Understanding the significance of Hajj, the rituals involved, and the importance of being in a state of ihram.
+     Physical and Health Preparations: Tips on fitness, vaccinations, and managing health conditions during travel.
+     Logistical Preparations: Guidance on travel arrangements, accommodation, and necessary documentation.
+     Financial Preparations: Budgeting for the trip, understanding costs, and financial considerations.
+     Educational Preparations: Learning about the rituals, understanding the sequence of events during Hajj, and knowing what to expect.
+     "
+MODEL=deepseek-r1:1.5b
 SYSTEM=" "
 
-Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b,gemma3:1b,nikolas-tesla,doctor:latest
+Modellist=deepseek-r1:1.5b, gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b,gemma3:1b,nikolas-tesla,doctor:latest
