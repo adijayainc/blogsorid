@@ -1,4 +1,5 @@
 import os
+import re
 import sys
 import requests
 import json
@@ -14,6 +15,7 @@ with open("data.txt", "r") as file:
             data_dict[key] = value
 
 # Extract variables from the data file
+temaold = data_dict.get("DIROLD")
 tema = data_dict.get("DIR")
 judul = data_dict.get("TITLE")
 jelas = data_dict.get("DESC")
@@ -113,3 +115,31 @@ if response.status_code == 200:
     print(f"/var/www/blogsorid/user/pages/blog/{tema}/{tema}.jpg")
 else:
     print("Failed to download image")
+#
+# replace file 
+#
+#
+import re
+
+def replace_text_with_regex(file_path, pattern, replacement):
+    try:
+        with open(file_path, 'r', encoding='utf-8') as file:
+            file_data = file.read()
+
+        # Ganti semua yang cocok dengan pattern regex
+        file_data_new = re.sub(pattern, replacement, file_data)
+
+        with open(file_path, 'w', encoding='utf-8') as file:
+            file.write(file_data_new)
+
+        print("Teks berhasil diganti dengan regex.")
+    except Exception as e:
+        print(f"Terjadi kesalahan: {e}")
+
+if __name__ == "__main__":
+    file_path = '/var/www/blogsorid/user/config/system.yaml'
+    pattern = r'/blog/[^ \n]+'  # Contoh: ganti semua path yang dimulai dengan /blog/ sampai spasi atau newline
+    replacement = f'/blog/{tema}\''
+
+    replace_text_with_regex(file_path, pattern, replacement)
+

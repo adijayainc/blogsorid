@@ -1,7 +1,8 @@
 # data blog
-DIR=consumption-status
-TITLE="Consumption and Status "
-DESC="describe consumption and status  according Thorstein Veblen"
+#
+DIR=new-year-1447H
+TITLE="New Year 1 Muharam 1447 H"
+DESC="The history of Hijrah refers to the migration of the Islamic prophet Muhammad and his followers from Mecca to Medina in 622 CE"
 MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 
