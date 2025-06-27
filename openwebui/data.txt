@@ -1,7 +1,7 @@
 # data blog
-DIR=money-relationship-with-us
-TITLE="Money and Us"
-DESC="what is psychology of money morgan housel "
+DIR=consumption-status
+TITLE="Consumption and Status "
+DESC="describe consumption and status  according Thorstein Veblen"
 MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 
