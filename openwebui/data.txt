@@ -1,7 +1,7 @@
 # data blog
-DIR=Understanding of Hajj
-TITLE="Understanding the significance of Hajj"
-DESC="Spiritual Preparations: Understanding the significance of Hajj, the rituals involved, and the importance of being in a state of ihram. Physical and Health Preparations: Tips on fitness, vaccinations, and managing health conditions during travel. Logistical Preparations: Guidance on travel arrangements, accommodation, and necessary documentation. Financial Preparations: Budgeting for the trip, understanding costs, and financial considerations. Educational Preparations: Learning about the rituals, understanding the sequence of events during Hajj, and knowing what to expect."
+DIR=money-relationship-with-us
+TITLE="Money and Us"
+DESC="what is psychology of money morgan housel "
 MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 
