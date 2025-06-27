@@ -1,7 +1,7 @@
 absolute_urls: false
 
 home:
-  alias: '/blog/new-year-1447H'
+  alias: '/blog/new-year-1447h'
 
 pages:
   theme: notepad
