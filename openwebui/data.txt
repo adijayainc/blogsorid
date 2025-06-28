@@ -1,9 +1,20 @@
 # data blog
 #
-DIR=new-year-1447H
-TITLE="New Year 1 Muharam 1447 H"
-DESC="The history of Hijrah refers to the migration of the Islamic prophet Muhammad and his followers from Mecca to Medina in 622 CE"
+DIR=spiritually-drained
+TITLE="Feeling Spiritually Drained"
+DESC="Explore the common signs and underlying reasons behind feeling spiritually drained, including emotional exhaustion, lack of fulfillment, and disconnection from one's values and purpose. Provide insights on how modern life, societal pressures, and internal struggles can lead to spiritual depletion, and offer practical advice on how to recharge and revitalize one's spiritual well-being."
 MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 
-Modellist=deepseek-r1:1.5b, gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,llama-3.3-70b-specdec,mistral-saba-24b,gemma3:1b,nikolas-tesla,doctor:latest,llama-3.3-70b-versatile
+Modellist:
+deepseek-r1:1.5b
+gemma-7b-it
+gemma2-9b-it
+llama3-8b-8192
+mixtral-8x7b-32768
+llama-3.3-70b-specdec
+mistral-saba-24b
+gemma3:1b
+nikolas-tesla
+doctor:latest
+llama-3.3-70b-versatile
