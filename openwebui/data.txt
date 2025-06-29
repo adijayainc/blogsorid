@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=biases-in-economic
-TITLE="Cognitive Biases in Economic"
-DESC="Discuss the concept of cognitive biases in economic decision-making as introduced by Nobel laureate Daniel Kahneman. Specifically, explain how heuristics, such as availability bias, anchoring bias, and confirmation bias, influence our judgment and decision-making processes. Additionally, provide examples of how these biases can lead to irrational economic choices and market inefficiencies. Furthermore, explore the implications of Kahneman's work on behavioral economics and its applications in fields such as finance, policy-making, and marketing"
+DIR=kecemasan-sosial
+TITLE="Alain de Botton - Kecemasan Status Sosial"
+DESC="Alain de Botton Kecemasan Status Sosial"
 MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 YTUB=" "
@@ -18,3 +18,6 @@ gemma3:1b
 nikolas-tesla
 doctor:latest
 llama-3.3-70b-versatile
+compound-beta
+compound-beta-mini
+live_search.duckduckgo

@@ -4,7 +4,7 @@
        <main class="summer-content" role="main">
 
         {% for post in collection %}
-            {% include 'partials/article.html.twig' with {page: post} %}
+            {% include 'partials/article.html.twig' with {'page': post} %}
         {% endfor %}
 
         {% if config.plugins.pagination.enabled and collection.params.pagination %}
