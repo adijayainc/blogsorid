@@ -6,4 +6,5 @@ logs/**
 .DS_Store
 assets/**
 backup/**
+user/account/**
 config.codekit

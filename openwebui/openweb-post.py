@@ -138,8 +138,8 @@ def replace_text_with_regex(file_path, pattern, replacement):
 
 if __name__ == "__main__":
     file_path = '/var/www/blogsorid/user/config/system.yaml'
-    pattern = r'/blog/[^ \n]+'  # Contoh: ganti semua path yang dimulai dengan /blog/ sampai spasi atau newline
-    replacement = f'/blog/{tema}\''
+#    pattern = r'/blog/[^ \n]+'  # Contoh: ganti semua path yang dimulai dengan /blog/ sampai spasi atau newline
+#    replacement = f'/blog/{tema}\''
 
     replace_text_with_regex(file_path, pattern, replacement)
 

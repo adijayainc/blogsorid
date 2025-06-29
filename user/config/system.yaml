@@ -1,7 +1,8 @@
 absolute_urls: false
 
 home:
-  alias: '/blog/spiritually-drained'
+  alias: '/blog'
+  hide_in_urls: false 
 
 pages:
   theme: notepad
