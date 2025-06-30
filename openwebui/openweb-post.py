@@ -3,8 +3,12 @@ import re
 import sys
 import requests
 import json
+import time
 from datetime import datetime
-
+#
+# counting time 
+#
+start_time = time.perf_counter()
 # Read data from data.txt
 data_dict = {}
 with open("data.txt", "r") as file:
@@ -98,6 +102,13 @@ with open(os.path.join(new_dir_path, 'post.md'), 'w') as f:
                             print(f"JSON Decode Error: {e} for line: {decoded_line}")
     except requests.exceptions.RequestException as e:
         print(f"Request failed: {str(e)}")
+
+    ## Print waktu yang dibutuhkan 
+    end_time = time.perf_counter()
+    elapsed_time = end_time - start_time
+    print("---")
+    print("===============")
+    print(f"process : {elapsed_time:.6f} seconds")
 
 # Reset stdout back to original AFTER writing OpenWebUI output
 sys.stdout = original_stdout

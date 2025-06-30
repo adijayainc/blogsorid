@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=kecemasan-sosial
-TITLE="Alain de Botton - Kecemasan Status Sosial"
-DESC="Alain de Botton Kecemasan Status Sosial"
+DIR=mengajak-sholat-anak
+TITLE="Mengajak Sholat Anak"
+DESC="Bagaimana sebaiknya cara mengajak anak perempuan remaja belasan tahun sehingga mau untuk rajin sholat, sebutkan dengan cara detail setiap langkah sehingga selalu tercatat dalam ingatan"
 MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 YTUB=" "
@@ -15,6 +15,7 @@ mixtral-8x7b-32768
 llama-3.3-70b-specdec
 mistral-saba-24b
 gemma3:1b
+gemma3:4b
 nikolas-tesla
 doctor:latest
 llama-3.3-70b-versatile
