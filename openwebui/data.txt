@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=mengajak-sholat-anak
-TITLE="Mengajak Sholat Anak"
-DESC="Bagaimana sebaiknya cara mengajak anak perempuan remaja belasan tahun sehingga mau untuk rajin sholat, sebutkan dengan cara detail setiap langkah sehingga selalu tercatat dalam ingatan"
+DIR=elon-trump
+TITLE="Elon vs Trump"
+DESC="Compare and contrast the leadership styles of Elon Musk and Donald Trump, analyzing their approaches to business, public image, and handling of controversy. Consider their impact on their respective industries and the public discourse."
 MODEL=llama-3.3-70b-versatile
 SYSTEM=" "
 YTUB=" "
