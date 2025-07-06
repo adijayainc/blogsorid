@@ -1,9 +1,9 @@
 # data blog
 #
-DIR=elon-trump
-TITLE="Elon vs Trump"
-DESC="Compare and contrast the leadership styles of Elon Musk and Donald Trump, analyzing their approaches to business, public image, and handling of controversy. Consider their impact on their respective industries and the public discourse."
-MODEL=llama-3.3-70b-versatile
+DIR=ai-tools
+TITLE="AI-powered tools gaining popularity"
+DESC="AI-powered tools are rapidly gaining popularity. AI code assistants are transforming software development, while AI vocal removers are revolutionizing music production by allowing users to separate vocals from instrumentals easily"
+MODEL=mistral-saba-24b
 SYSTEM=" "
 YTUB=" "
 Modellist:
