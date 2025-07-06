@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=ai-tools
-TITLE="AI-powered tools gaining popularity"
-DESC="AI-powered tools are rapidly gaining popularity. AI code assistants are transforming software development, while AI vocal removers are revolutionizing music production by allowing users to separate vocals from instrumentals easily"
+DIR=3phase
+TITLE="1-phase , 2-phase and 3-phase current electricity"
+DESC="Explain the fundamental differences between 1-phase , 2-phase and 3-phase current electricity.  Specifically, detail how each system delivers power, focusing on the number of sinusoidal waveforms, their relative timing and phase differences, and the key advantages and disadvantages of each."
 MODEL=mistral-saba-24b
 SYSTEM=" "
 YTUB=" "
