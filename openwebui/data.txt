@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=Islami-Neomodernism
-TITLE="Islamic Neomodernism"
-DESC="Explore Islamic Neomodernism as a contemporary reformist movement in Islamic thought, rooted in the 20th-century ideas of Fazlur Rahman and later adapted in contexts like Indonesia. Analyze its key objectives: reconciling classical Islamic tradition with modernity, critical reinterpretation of the Quran through contextualist and hermeneutic frameworks, and advocating for progressive values such as democracy, human rights, and scholarly inquiry. Highlight the movement’s distinction from earlier Islamic Modernism by emphasizing its dual focus on tajdid (renewal) and integration of postmodern and modernist principles, while addressing debates around pluralism, gender equality, and globalization. Discuss its significance as a bridge between traditional Islamic jurisprudence and contemporary ethical-political challenges, referencing key scholarly contributions (e.g., Rahman’s neo-modernist paradigm) and its practical application in Islamic education or socio-legal reforms. Conclude with its role in shaping 21st-century Islamic intellectual discourse"
+DIR=tasawuf-jihad
+TITLE="tasawuf (Sufism) and jihad"
+DESC="Analyze the complex relationship between tasawuf (Sufism) and jihad as expressed by Syekh Abdul Qadir Al-Jaza'iri.  Discuss how his teachings  integrated these seemingly contrasting concepts and explore the implications of his perspective on spiritual warfare and the pursuit of Islamic knowledge. Draw upon scholarly sources and provide concrete examples from his works to support your analysis."
 MODEL=mistral-saba-24b
 SYSTEM=" "
 YTUB=" "

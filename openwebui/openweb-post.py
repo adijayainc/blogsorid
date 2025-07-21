@@ -106,7 +106,7 @@ with open(os.path.join(new_dir_path, 'post.md'), 'w') as f:
     ## Print waktu yang dibutuhkan 
     end_time = time.perf_counter()
     elapsed_time = end_time - start_time
-    print("---")
+    print(" ")
     print("===============")
     print(f"process : {elapsed_time:.6f} seconds")
 
