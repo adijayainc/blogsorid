@@ -1,9 +1,9 @@
 # data blog
 #
-DIR=tasawuf-jihad
-TITLE="tasawuf (Sufism) and jihad"
-DESC="Analyze the complex relationship between tasawuf (Sufism) and jihad as expressed by Syekh Abdul Qadir Al-Jaza'iri.  Discuss how his teachings  integrated these seemingly contrasting concepts and explore the implications of his perspective on spiritual warfare and the pursuit of Islamic knowledge. Draw upon scholarly sources and provide concrete examples from his works to support your analysis."
-MODEL=mistral-saba-24b
+DIR=tasawuf-modern
+TITLE="Buya Hamka and Tasawauf"
+DESC="Can you discuss the contemporary relevance of Tasawuf, the mystical dimension of Islam, as exemplified in the writings of Buya Hamka, a renowned Indonesian Islamic scholar and writer? Please provide insights on how his work integrates Sufi teachings with modern societal concerns, and how his approach might inspire new perspectives on spirituality and community building in the 21st century."
+MODEL=llama3-8b-8192
 SYSTEM=" "
 YTUB=" "
 Modellist:
