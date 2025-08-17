@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=tasawuf-modern
-TITLE="Buya Hamka and Tasawauf"
-DESC="Can you discuss the contemporary relevance of Tasawuf, the mystical dimension of Islam, as exemplified in the writings of Buya Hamka, a renowned Indonesian Islamic scholar and writer? Please provide insights on how his work integrates Sufi teachings with modern societal concerns, and how his approach might inspire new perspectives on spirituality and community building in the 21st century."
+DIR=proklamasi-indonesia
+TITLE="Proklamasi Indonesia 80th"
+DESC="Describe Indonesia's 80 independence days milestones, historical background, and notable events that took place during this period. Consider the key challenges faced by the country during its struggle for independence, such as foreign occupation by the Netherlands, and the eventual declaration of independence on August 17, 1945. Please highlight significant events that marked Indonesia's path to independence, including key figures like Sukarno and Hatta, and any major diplomatic or military achievements that solidified Indonesia's sovereignty by the 80th Independence Day."
 MODEL=llama3-8b-8192
 SYSTEM=" "
 YTUB=" "
