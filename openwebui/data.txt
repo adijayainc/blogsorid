@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=proklamasi-indonesia
-TITLE="Proklamasi Indonesia 80th"
-DESC="Describe Indonesia's 80 independence days milestones, historical background, and notable events that took place during this period. Consider the key challenges faced by the country during its struggle for independence, such as foreign occupation by the Netherlands, and the eventual declaration of independence on August 17, 1945. Please highlight significant events that marked Indonesia's path to independence, including key figures like Sukarno and Hatta, and any major diplomatic or military achievements that solidified Indonesia's sovereignty by the 80th Independence Day."
+DIR=genAI-implmentation
+TITLE="GenAI Implementation"
+DESC="As a senior technology decision‑maker tasked with integrating generative AI across our enterprise, I need a clear, practical roadmap that covers strategy, data readiness, model selection, architecture design, security & compliance, workforce training, and change management. Please outline step‑by‑step actions, best practices, common pitfalls, and measurable KPIs, including a high‑level timeline and cost considerations, to enable a smooth, scalable, and responsible rollout of generative AI solutions throughout the organization"
 MODEL=openai/gpt-oss-120b
 SYSTEM=" "
 YTUB=" "
