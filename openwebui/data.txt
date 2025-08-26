@@ -1,9 +1,9 @@
 # data blog
 #
-DIR=genAI-implmentation
-TITLE="GenAI Implementation"
-DESC="As a senior technology decision‑maker tasked with integrating generative AI across our enterprise, I need a clear, practical roadmap that covers strategy, data readiness, model selection, architecture design, security & compliance, workforce training, and change management. Please outline step‑by‑step actions, best practices, common pitfalls, and measurable KPIs, including a high‑level timeline and cost considerations, to enable a smooth, scalable, and responsible rollout of generative AI solutions throughout the organization"
-MODEL=openai/gpt-oss-120b
+DIR=stoicism-today
+TITLE="Relevancy of Stoicism"
+DESC="Stoicism, an ancient philosophy, remains highly relevant in addressing today's challenges. How can its principles of resilience, emotional control, and focus on what truly matters help individuals navigate modern issues like stress, uncertainty, and the pressures of technology and social media?"
+MODEL=gemma2-9b-it
 SYSTEM=" "
 YTUB=" "
 Modellist:
