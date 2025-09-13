@@ -1,10 +1,12 @@
 # data blog
 #
-DIR=stoicism-today
-TITLE="Relevancy of Stoicism"
-DESC="Stoicism, an ancient philosophy, remains highly relevant in addressing today's challenges. How can its principles of resilience, emotional control, and focus on what truly matters help individuals navigate modern issues like stress, uncertainty, and the pressures of technology and social media?"
-MODEL=gemma2-9b-it
-SYSTEM=" "
+DIR=implication-financial
+TITLE="Understanding the Implications of Substantial Financial Investment within a System"
+DESC="Imagine a situation where a substantial amount of money is suddenly poured into a particular economic system—be it a country's economy, a specific industry, or a community's financial infrastructure. Explain what might happen, addressing how this influx could affect inflation, investment patterns, market confidence, and social inequality. Discuss potential benefits (such as growth and innovation) and risks (such as bubbles, misallocation of resources, or regulatory backlash), and outline what policymakers might consider to maximize positive outcomes while mitigating adverse effects."
+#MODEL=openai/gpt-oss-120b
+#MODEL=openai/gpt-oss-20b
+MODEL=qwen3:0.6b
+SYSTEM="not more then 100000 words short description"
 YTUB=" "
 Modellist:
 deepseek-r1:1.5b
