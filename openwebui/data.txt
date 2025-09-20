@@ -2,7 +2,7 @@
 #
 DIR=why-nation-failed
 TITLE="Why Nation Failed"
-DESC=""Please analyze the reasons behind the failure of a specific nation/state (you’ll need to clarify which one) by examining key historical, political, economic, social, or external factors. Detail the timeline of events leading to the collapse, identify root causes (e.g., governance issues, resource mismanagement, social inequality, or external invasions), and explain how these factors interacted to create a crisis. Specify the timeframe, the type of failure (e.g., economic decline, loss of legitimacy, collapse of institutions), and any critical turning points or actors involved (e.g., leaders, policies, external alliances/enemies). If applicable, compare this case to similar historical failures to highlight broader patterns."
+DESC="Explore the reasons why some nations fail economically and politically while others succeed. In your response, analyze the role of political and economic institutions in shaping a nation prosperity or poverty. Discuss the concepts of inclusive versus extractive institutions as proposed by Daron Acemoglu and James A. Robinson in their book Why Nations Fail"
 #MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
