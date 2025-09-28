@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=why-nation-failed
-TITLE="Why Nation Failed"
-DESC="Explore the reasons why some nations fail economically and politically while others succeed. In your response, analyze the role of political and economic institutions in shaping a nation prosperity or poverty. Discuss the concepts of inclusive versus extractive institutions as proposed by Daron Acemoglu and James A. Robinson in their book Why Nations Fail"
+DIR=LLM-dead-end
+TITLE="LLM has no Goals and Already Dead End"
+DESC="LLMs are powerful tools for generating text and engaging in conversation, but some argue they lack a true understanding or inherent goals. What are the limitations of current LLMs in terms of their ability to achieve complex goals, and what future developments might be needed to address these limitations?"
 #MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
