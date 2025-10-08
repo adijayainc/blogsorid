@@ -1,15 +1,15 @@
 # data blog
 #
-DIR=LLM-dead-end
-TITLE="LLM has no Goals and Already Dead End"
-DESC="LLMs are powerful tools for generating text and engaging in conversation, but some argue they lack a true understanding or inherent goals. What are the limitations of current LLMs in terms of their ability to achieve complex goals, and what future developments might be needed to address these limitations?"
+DIR=Value-Crisis 
+TITLE="Crisis of Value and Spiritual"
+DESC="Please provide a concise yet comprehensive exploration of the concept of value and spiritual crisis. Define what constitutes a spiritual crisis and identify modern factors that erode traditional values—such as secularization, technological change, economic disparity, and social media influence. Analyze the effects on personal identity, community cohesion, and mental well‑being, and then propose actionable strategies to restore meaning and ethical grounding (e.g., community engagement, education, mindfulness practices, or interfaith dialogue). Aim for a balanced, analytical tone that remains empathetic"
 #MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
 #MODEL=mistral:latest
 MODEL=llama-3.3-70b-versatile
 SYSTEM="unlimited text"
-YTUB=" "
+YTUB="omyrLjY7TJc&t=2832s"
 Modellist:
 deepseek-r1:1.5b
 gemma-7b-it
