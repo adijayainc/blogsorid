@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=Anomie-phase
-TITLE="We Are on The Anomie Phase"
-DESC="Provide a concise yet comprehensive explanation of Émile Durkheim’s concept of anomie, as outlined in his seminal work The Division of Labor in Society. Highlight how Durkheim defines anomie as a societal condition arising from a breakdown of collective norms and values, often occurring during periods of rapid social change (e.g., industrialization). Emphasize its connection to normlessness, where individuals experience disconnection from societal expectations, leading to potential psychological distress or deviant behavior. Include Durkheim’s empirical analysis of suicide rates as a key case study, demonstrating how anomie interacts with social regulation (e.g., excessive or insufficient societal controls) to influence human behavior. Clarify Durkheim’s sociological framework, which contrasts mechanical and organic solidarity, to contextualize the role of anomie in modern societies."
+DIR=Project-AI
+TITLE="Almost 95% AI project Failed"
+DESC="Despite the widely cited statistic that nearly 95 % of AI projects fail to meet their original goals, many organizations still view these setbacks as valuable learning opportunities rather than outright defeats. Discuss why such a high failure rate persists—considering factors like unrealistic expectations, data quality issues, talent shortages, and misaligned business objectives—while also exploring how teams can turn these challenges into growth points. Highlight practical strategies for improving project planning, stakeholder communication, and iterative testing that can increase the odds of success, and reflect on why embracing failure can ultimately be beneficial for the broader AI ecosystem."
 #MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
