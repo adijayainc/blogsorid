@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=jevon-paradox
-TITLE="Jevon's Paradox"
-DESC="Describe how increased efficiency in resource use (e.g., energy-efficient light bulbs) leads to higher overall consumption due to lower costs or greater demand. Include a real-world example (like water heaters or transportation) to make it relatable. Avoid technical jargon, and ensure the explanation highlights the key takeaway: efficiency alone does not guarantee conservation if usage patterns change in response. Mention the paradox’s originator (William Stanley Jevons) and its relevance to modern sustainability debates"
+DIR=internet-fax-machine
+TITLE="Internet and Fax Machine"
+DESC="Explain Paul Krugman’s argument that the internet’s economic impact has not surpassed the fax machine’s, as he stated during the late 1990s dot-com bubble. Describe the key reasons for his claim: Why did he believe technologies like fax machines had more immediate, measurable effects on productivity and business processes compared to early internet innovations? Mention the specific context (e.g., overhyped expectations of the internet in the 1990s) and his economic theory of ‘network externalities’ and adoption costs. Use simple language to contrast how fax machines directly streamlined communication in industries versus the internet’s slower integration due to infrastructure and cost barriers. Conclude with his broader point about real vs. perceived technological progress"
 #MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
