@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=Project-AI
-TITLE="Almost 95% AI project Failed"
-DESC="Despite the widely cited statistic that nearly 95 % of AI projects fail to meet their original goals, many organizations still view these setbacks as valuable learning opportunities rather than outright defeats. Discuss why such a high failure rate persists—considering factors like unrealistic expectations, data quality issues, talent shortages, and misaligned business objectives—while also exploring how teams can turn these challenges into growth points. Highlight practical strategies for improving project planning, stakeholder communication, and iterative testing that can increase the odds of success, and reflect on why embracing failure can ultimately be beneficial for the broader AI ecosystem."
+DIR=social-equity
+TITLE="Social Equity and Market Effeiciency"
+DESC="Briefly summarize its main argument: How can principles of social equity (socialism) and market efficiency (capitalism) be harmonized to address modern economic challenges? Highlight key examples discussed, such as public-private partnerships or welfare policies, and explain the article’s stance on balancing collective welfare with economic growth. Use simple language, avoid jargon, and ensure clarity for readers unfamiliar with the topic."
 #MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
