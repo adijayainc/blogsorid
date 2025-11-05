@@ -1,8 +1,8 @@
 # data blog
 #
-DIR=internet-fax-machine
-TITLE="Internet and Fax Machine"
-DESC="Explain Paul Krugman’s argument that the internet’s economic impact has not surpassed the fax machine’s, as he stated during the late 1990s dot-com bubble. Describe the key reasons for his claim: Why did he believe technologies like fax machines had more immediate, measurable effects on productivity and business processes compared to early internet innovations? Mention the specific context (e.g., overhyped expectations of the internet in the 1990s) and his economic theory of ‘network externalities’ and adoption costs. Use simple language to contrast how fax machines directly streamlined communication in industries versus the internet’s slower integration due to infrastructure and cost barriers. Conclude with his broader point about real vs. perceived technological progress"
+DIR=capitalism-socialism-gnt
+TITLE="Understanding Capitalism vs Socialism (grnt)"
+DESC="Analyze and compare the core principles, historical development, and economic outcomes of capitalism and socialism as contrasting economic systems. Highlight key differences in wealth distribution, market regulation, innovation incentives, and government roles, using real-world examples (e.g., historical implementations in the 20th century or modern mixed economies). Discuss how each system addresses issues like poverty, inequality, and resource allocation, and evaluate arguments for and against each model. Present a balanced overview in a clear, structured paragraph, ensuring technical terms are explained for accessibility."
 #MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
