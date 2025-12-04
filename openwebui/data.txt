@@ -1,14 +1,14 @@
 # data blog
 #
-DIR=capitalism-socialism-gnt
-TITLE="Understanding Capitalism vs Socialism (grnt)"
-DESC="Analyze and compare the core principles, historical development, and economic outcomes of capitalism and socialism as contrasting economic systems. Highlight key differences in wealth distribution, market regulation, innovation incentives, and government roles, using real-world examples (e.g., historical implementations in the 20th century or modern mixed economies). Discuss how each system addresses issues like poverty, inequality, and resource allocation, and evaluate arguments for and against each model. Present a balanced overview in a clear, structured paragraph, ensuring technical terms are explained for accessibility."
-#MODEL=openai/gpt-oss-120b
+DIR=after-capitalism
+TITLE="After Capitalism"
+DESC="Write a clear and concise analysis of the new economy that could emerge after capitalism, outlining its core principles, the main economic actors (such as cooperative enterprises, decentralized autonomous organizations, and community-owned platforms), and the mechanisms of value creation and exchange (including digital currencies, tokenomics, and circular resource flows). Explain how this system might address current social and environmental challenges—like income inequality, climate change, and job displacement—by providing concrete examples and potential benefits. Discuss any foreseeable drawbacks or risks, and propose practical policy or societal measures that could facilitate a smooth transition. Aim for a response of about 300–400 words, using straightforward language and a logical structure that guides the reader through the evolution, operation, and impacts of this post‑capitalist economy"
+MODEL=openai/gpt-oss-120b
 #MODEL=openai/gpt-oss-20b
 #MODEL=qwen3:0.6b
 #MODEL=mistral:latest
 #MODEL=llama-3.3-70b-versatile
-MODEL=granite3.2-vision:latest
+#MODEL=granite3.2-vision:latest
 SYSTEM="unlimited text"
 YTUB="omyrLjY7TJc&t=2832s"
 Modellist:
