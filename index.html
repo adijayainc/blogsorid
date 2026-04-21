@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>blogs.or.id — Tulis. Bagain. Viralin.</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #020202; }
+    
+    /* Noise overlay */
+    .noise::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.3;
+    }
+
+    /* Scroll reveal */
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .stagger-delay-1 { transition-delay: 100ms; }
+    .stagger-delay-2 { transition-delay: 200ms; }
+    .stagger-delay-3 { transition-delay: 300ms; }
+    .stagger-delay-4 { transition-delay: 400ms; }
+    .stagger-delay-5 { transition-delay: 500ms; }
+
+    /* Text gradient */
+    .text-gradient {
+      background: linear-gradient(to right, #ffffff, #a1a1aa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-gradient-accent {
+      background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .text-gradient-fire {
+      background: linear-gradient(135deg, #f97316, #ef4444, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Glow cursor */
+    .glow-cursor {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 40;
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s ease-out;
+    }
+
+    /* Card hover */
+    .card-hover {
+      transition: all 500ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,255,255,0.1);
+      background-image: linear-gradient(to bottom right, rgba(99,102,241,0.05), transparent);
+    }
+
+    /* Bento hover */
+    .bento-hover {
+      transition: all 500ms ease;
+    }
+    .bento-hover:hover {
+      background: linear-gradient(to bottom right, rgba(99,102,241,0.08), rgba(168,85,247,0.04));
+    }
+
+    /* Marquee */
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee { animation: marquee 25s linear infinite; }
+
+    /* Float */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-10px) rotate(1deg); }
+      66% { transform: translateY(5px) rotate(-1deg); }
+    }
+    .animate-float { animation: float 6s ease-in-out infinite; }
+
+    /* Pulse ring */
+    @keyframes pulse-ring {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(2.5); opacity: 0; }
+    }
+    .pulse-ring::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 2px solid #818cf8;
+      animation: pulse-ring 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+
+    /* Typing cursor */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .typing-cursor::after {
+      content: '▊';
+      animation: blink 0.8s infinite;
+      color: #818cf8;
+      font-size: 14px;
+    }
+
+    /* Chat bubble animation */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(12px) scale(0.95); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .chat-bubble-anim { animation: slideUp 0.3s ease-out forwards; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #09090b; }
+    ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+    /* Badge shimmer */
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-badge {
+      background: linear-gradient(90deg, rgba(129,140,248,0.15) 25%, rgba(129,140,248,0.3) 50%, rgba(129,140,248,0.15) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite;
+    }
+
+    /* Emoji wiggle */
+    @keyframes wiggle {
+      0%, 100% { transform: rotate(0deg); }
+      25% { transform: rotate(-12deg); }
+      75% { transform: rotate(12deg); }
+    }
+    .emoji-wiggle:hover { animation: wiggle 0.4s ease-in-out; }
+
+    /* Toast */
+    @keyframes toastIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.9); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    @keyframes toastOut {
+      from { opacity: 1; transform: translateY(0) scale(1); }
+      to { opacity: 0; transform: translateY(20px) scale(0.9); }
+    }
+    .toast-in { animation: toastIn 0.4s ease-out forwards; }
+    .toast-out { animation: toastOut 0.3s ease-in forwards; }
+  </style>
+</head>
+<body class="noise text-white antialiased overflow-x-hidden">
+
+  <!-- Glow Cursor -->
+  <div class="glow-cursor" id="glowCursor"></div>
+
+  <!-- Toast Container -->
+  <div id="toastContainer" class="fixed bottom-24 right-6 z-[60] flex flex-col gap-3"></div>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 h-20 flex items-center transition-all duration-500 bg-black/50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto w-full px-6 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center group-hover:bg-indigo-500/30 transition-colors">
+          <span class="text-lg">✍️</span>
+        </div>
+        <span class="text-white font-bold text-lg tracking-tight">simple<span class="text-indigo-400">blogs</span><span class="text-zinc-500">.or.id</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#features" class="text-sm font-light tracking-wide text-zinc-500 hover:text-white transition-colors duration-150">Fitur</a>
+        <a href="#trending" class="text-sm font-light tracking-wide text-zinc-500 hover:text-white transition-colors duration-150">Trending</a>
+        <a href="#community" class="text-sm font-light tracking-wide text-zinc-500 hover:text-white transition-colors duration-150">Komunitas</a>
+        <a href="#pricing" class="text-sm font-light tracking-wide text-zinc-500 hover:text-white transition-colors duration-150">Harga</a>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex items-center gap-4">
+        <button onclick="showToast('✨ Fitur login segera hadir!', 'info')" class="hidden md:block text-sm font-light tracking-wide text-zinc-400 hover:text-white transition-colors duration-150">Masuk</button>
+        <button onclick="showToast('🚀 Dalam antrean! Kami akan kabari kamu.', 'success')" class="bg-white text-black text-xs font-medium tracking-wide px-5 py-2.5 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300">
+          Mulai Gratis 🤩
+        </button>
+        <!-- Mobile Menu -->
+        <button id="mobileMenuBtn" class="md:hidden text-zinc-400 hover:text-white transition-colors">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobileMenu" class="fixed inset-0 z-[45] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-8 hidden">
+    <a href="#features" class="text-2xl font-light text-zinc-300 hover:text-white transition-colors mobile-nav-link">Fitur</a>
+    <a href="#trending" class="text-2xl font-light text-zinc-300 hover:text-white transition-colors mobile-nav-link">Trending</a>
+    <a href="#community" class="text-2xl font-light text-zinc-300 hover:text-white transition-colors mobile-nav-link">Komunitas</a>
+    <a href="#pricing" class="text-2xl font-light text-zinc-300 hover:text-white transition-colors mobile-nav-link">Harga</a>
+    <button onclick="showToast('🚀 Dalam antrean! Kami akan kabari kamu.', 'success')" class="mt-4 bg-white text-black text-sm font-medium px-8 py-3 rounded-full">Mulai Gratis ✨</button>
+    <button id="mobileMenuClose" class="absolute top-6 right-6 text-zinc-400 hover:text-white">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0">
+      <img src="https://picsum.photos/seed/genzblog2024/1920/1080.jpg" alt="" class="w-full h-full object-cover opacity-30 scale-105">
+      <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent"></div>
+    </div>
+
+    <!-- Floating emojis -->
+    <div class="absolute top-32 left-[10%] text-3xl animate-float opacity-30 select-none pointer-events-none" style="animation-delay: 0s;">📝</div>
+    <div class="absolute top-48 right-[15%] text-2xl animate-float opacity-20 select-none pointer-events-none" style="animation-delay: 1s;">🔥</div>
+    <div class="absolute bottom-40 left-[20%] text-3xl animate-float opacity-20 select-none pointer-events-none" style="animation-delay: 2s;">💬</div>
+    <div class="absolute bottom-52 right-[10%] text-2xl animate-float opacity-25 select-none pointer-events-none" style="animation-delay: 0.5s;">⚡</div>
+    <div class="absolute top-64 left-[50%] text-xl animate-float opacity-15 select-none pointer-events-none" style="animation-delay: 3s;">🚀</div>
+
+    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <!-- Badge -->
+      <div class="reveal-on-scroll inline-flex items-center gap-2 shimmer-badge border border-indigo-500/20 rounded-full px-4 py-2 mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+        </span>
+        <span class="text-xs font-medium text-indigo-300 tracking-wide">AI-POWERED BLOGGING PLATFORM</span>
+      </div>
+
+      <!-- Headline -->
+      <h1 class="reveal-on-scroll stagger-delay-1 text-5xl md:text-7xl lg:text-[96px] font-medium leading-[0.9] tracking-tighter mb-6">
+        Tulis.<br>
+        <span class="text-gradient-accent">Bagain.</span><br>
+        <span class="text-gradient-fire">Viralin.</span>
+      </h1>
+
+      <!-- Sub -->
+      <p class="reveal-on-scroll stagger-delay-2 text-lg md:text-xl font-light text-zinc-400 max-w-2xl mx-auto mb-4 leading-relaxed">
+        Platform blog paling gampang buat generasi kamu. Tulis pakai AI, publish dalam hitungan detik, dan biarkan kontenmu auto-viral 🤯
+      </p>
+      <p class="reveal-on-scroll stagger-delay-3 text-sm font-light text-zinc-600 mb-10">
+        12,000+ creator udah gabung. Kamu kapan?
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="reveal-on-scroll stagger-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <button onclick="openAIChat()" class="group bg-white text-black text-sm font-medium px-8 py-4 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300 flex items-center gap-2 hover:px-10">
+          Chat sama AI dulu
+          <i data-lucide="sparkles" class="w-4 h-4 group-hover:rotate-12 transition-transform"></i>
+        </button>
+        <button onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})" class="group text-sm font-light text-zinc-400 px-8 py-4 rounded-full border border-white/10 hover:border-white/20 hover:text-white transition-all duration-300 flex items-center gap-2">
+          Pelajarin dulu
+          <i data-lucide="arrow-down" class="w-4 h-4 group-hover:translate-y-1 transition-transform"></i>
+        </button>
+      </div>
+
+      <!-- Social proof -->
+      <div class="reveal-on-scroll stagger-delay-4 flex items-center justify-center gap-3">
+        <div class="flex -space-x-2">
+          <img src="https://picsum.photos/seed/user1/64/64.jpg" class="w-8 h-8 rounded-full border-2 border-black object-cover" alt="">
+          <img src="https://picsum.photos/seed/user2/64/64.jpg" class="w-8 h-8 rounded-full border-2 border-black object-cover" alt="">
+          <img src="https://picsum.photos/seed/user3/64/64.jpg" class="w-8 h-8 rounded-full border-2 border-black object-cover" alt="">
+          <img src="https://picsum.photos/seed/user4/64/64.jpg" class="w-8 h-8 rounded-full border-2 border-black object-cover" alt="">
+          <div class="w-8 h-8 rounded-full border-2 border-black bg-indigo-500/30 flex items-center justify-center text-[10px] font-medium text-indigo-300">+9k</div>
+        </div>
+        <div class="text-left">
+          <div class="flex items-center gap-1">
+            <span class="text-yellow-400 text-xs">★★★★★</span>
+          </div>
+          <p class="text-xs text-zinc-500 font-light">"Gila sih, auto jadi nulis" — Rina, 19</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+      <span class="text-[10px] uppercase tracking-[0.2em] text-zinc-500">Scroll</span>
+      <div class="w-px h-8 bg-gradient-to-b from-zinc-500 to-transparent"></div>
+    </div>
+  </section>
+
+  <!-- ==================== MARQUEE ==================== -->
+  <div class="relative py-6 border-y border-white/5 overflow-hidden">
+    <div class="animate-marquee flex items-center gap-8 whitespace-nowrap">
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">✍️ AI Writer</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🚀 Auto SEO</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🎨 Custom Theme</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">📱 Mobile First</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">💬 AI Chatbot</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">📊 Analytics</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🌍 Custom Domain</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">⚡ Instant Publish</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🔒 No Code</span>
+      <span class="text-zinc-800">•</span>
+      <!-- Duplicate -->
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">✍️ AI Writer</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🚀 Auto SEO</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🎨 Custom Theme</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">📱 Mobile First</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">💬 AI Chatbot</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">📊 Analytics</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🌍 Custom Domain</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">⚡ Instant Publish</span>
+      <span class="text-zinc-800">•</span>
+      <span class="text-sm text-zinc-600 font-light flex items-center gap-2">🔒 No Code</span>
+      <span class="text-zinc-800">•</span>
+    </div>
+  </div>
+
+  <!-- ==================== FEATURES BENTO ==================== -->
+  <section id="features" class="py-32 px-6">
+    <div class="max-w-7xl mx-auto">
+      <!-- Section header -->
+      <div class="text-center mb-16">
+        <p class="reveal-on-scroll text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-4">FITUR-FITUR GILA</p>
+        <h2 class="reveal-on-scroll stagger-delay-1 text-3xl md:text-5xl font-medium tracking-tight mb-4">
+          Semua yang kamu butuhin,<br><span class="text-gradient">ada di sini.</span>
+        </h2>
+        <p class="reveal-on-scroll stagger-delay-2 text-zinc-500 font-light max-w-xl mx-auto">Bukan cuma blog biasa. Ini blog masa depan yang bikin kamu kayak punya tim editorial sendiri.</p>
+      </div>
+
+      <!-- Bento Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4 md:h-[900px]">
+        <!-- Main card (2x2) -->
+        <div class="reveal-on-scroll md:col-span-2 md:row-span-2 rounded-2xl border border-white/5 bg-zinc-950/40 p-8 relative overflow-hidden group bento-hover flex flex-col justify-end min-h-[400px]">
+          <img src="https://picsum.photos/seed/aiwriter2024/800/800.jpg" alt="" class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-700">
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+          <div class="relative z-10">
+            <div class="w-12 h-12 rounded-2xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center mb-4">
+              <i data-lucide="sparkles" class="w-6 h-6 text-indigo-400"></i>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-medium tracking-tight mb-3">AI Writer 🤖</h3>
+            <p class="text-zinc-400 font-light leading-relaxed max-w-md">Jelasin ide kamu sekilas, AI kita yang nulis artikel lengkap. Bahasa santai, formal, atau poetic — terserah kamu. Hasilnya auto-edit dan siap publish.</p>
+          </div>
+        </div>
+
+        <!-- Top right 1 -->
+        <div class="reveal-on-scroll stagger-delay-1 md:col-span-1 rounded-2xl border border-white/5 bg-zinc-950/40 p-6 relative overflow-hidden group bento-hover flex flex-col justify-between min-h-[200px]">
+          <div class="w-10 h-10 rounded-xl bg-purple-500/15 border border-purple-500/20 flex items-center justify-center">
+            <i data-lucide="search" class="w-5 h-5 text-purple-400"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-medium mb-1">Auto SEO</h4>
+            <p class="text-zinc-500 text-sm font-light">Keyword, meta description, heading — semua auto-optimized. Tinggal tulis, sisanya biar AI.</p>
+          </div>
+        </div>
+
+        <!-- Top right 2 -->
+        <div class="reveal-on-scroll stagger-delay-2 md:col-span-1 rounded-2xl border border-white/5 bg-zinc-950/40 p-6 relative overflow-hidden group bento-hover flex flex-col justify-between min-h-[200px]">
+          <div class="w-10 h-10 rounded-xl bg-pink-500/15 border border-pink-500/20 flex items-center justify-center">
+            <i data-lucide="palette" class="w-5 h-5 text-pink-400"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-medium mb-1">Aesthetic Themes</h4>
+            <p class="text-zinc-500 text-sm font-light">Pilih dari 50+ tema yang aesthetik. Dark mode, minimalist, Y2K — semua ada.</p>
+          </div>
+        </div>
+
+        <!-- Mid right (wide) -->
+        <div class="reveal-on-scroll stagger-delay-2 md:col-span-2 rounded-2xl border border-white/5 bg-zinc-950/40 p-6 relative overflow-hidden group bento-hover flex flex-col justify-between min-h-[200px]">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-orange-500/15 border border-orange-500/20 flex items-center justify-center">
+              <i data-lucide="zap" class="w-5 h-5 text-orange-400"></i>
+            </div>
+            <h4 class="text-lg font-medium">Instant Publish ke Mana Aja</h4>
+          </div>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-400">WordPress</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-400">Medium</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-400">Notion</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-400">Dev.to</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-400">Hashnode</span>
+            <span class="px-3 py-1.5 rounded-full bg-white/5 border border-white/5 text-xs text-zinc-400">+12 lainnya</span>
+          </div>
+        </div>
+
+        <!-- Bottom cards -->
+        <div class="reveal-on-scroll stagger-delay-3 md:col-span-1 rounded-2xl border border-white/5 bg-zinc-950/40 p-6 relative overflow-hidden group bento-hover flex flex-col justify-between min-h-[200px]">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center">
+            <i data-lucide="bar-chart-3" class="w-5 h-5 text-emerald-400"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-medium mb-1">Real-time Stats</h4>
+            <p class="text-zinc-500 text-sm font-light">Views, reads, shares — monitor performa blog kamu real-time di dashboard yang clean.</p>
+          </div>
+        </div>
+
+        <div class="reveal-on-scroll stagger-delay-4 md:col-span-1 rounded-2xl border border-white/5 bg-zinc-950/40 p-6 relative overflow-hidden group bento-hover flex flex-col justify-between min-h-[200px]">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/20 flex items-center justify-center">
+            <i data-lucide="globe" class="w-5 h-5 text-cyan-400"></i>
+          </div>
+          <div>
+            <h4 class="text-lg font-medium mb-1">Custom Domain</h4>
+            <p class="text-zinc-500 text-sm font-light">Pakai domain kamu sendiri. .com, .id, atau apapun. Setup cuma 2 menit.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== AI DEMO SECTION ==================== -->
+  <section class="py-32 px-6 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/10 to-transparent pointer-events-none"></div>
+    <div class="max-w-4xl mx-auto relative">
+      <div class="text-center mb-16">
+        <p class="reveal-on-scroll text-xs font-medium tracking-[0.2em] uppercase text-indigo-400 mb-4">DEMO LANGSUNG</p>
+        <h2 class="reveal-on-scroll stagger-delay-1 text-3xl md:text-5xl font-medium tracking-tight mb-4">
+          Coba AI Writer <span class="text-gradient-fire">sekarang</span> 🧪
+        </h2>
+        <p class="reveal-on-scroll stagger-delay-2 text-zinc-500 font-light">Ketik ide kamu, liat magic-nya. Ini bukan demo palsu — ini AI beneran.</p>
+      </div>
+
+      <!-- AI Demo Card -->
+      <div class="reveal-on-scroll stagger-delay-2 rounded-2xl border border-white/10 bg-zinc-950/60 backdrop-blur-sm overflow-hidden shadow-2xl">
+        <!-- Top bar -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-white/5">
+          <div class="flex items-center gap-3">
+            <div class="flex gap-1.5">
+              <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+            </div>
+            <span class="text-xs text-zinc-500 font-light">simple blogs — AI Writer</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-[10px] text-emerald-400 font-medium">ONLINE</span>
+          </div>
+        </div>
+
+        <!-- Chat area -->
+        <div id="aiDemoChat" class="p-6 space-y-4 min-h-[300px] max-h-[400px] overflow-y-auto">
+          <!-- Initial message -->
+          <div class="flex gap-3 chat-bubble-anim">
+            <div class="w-8 h-8 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-1">
+              <i data-lucide="bot" class="w-4 h-4 text-indigo-400"></i>
+            </div>
+            <div class="bg-white/5 rounded-2xl rounded-tl-md px-4 py-3 max-w-md">
+              <p class="text-sm text-zinc-300 font-light leading-relaxed">Haii! 👋 Aku AI Writer dari simple blogs. Ceritain ide blog kamu, aku bantu bikin artikelnya. Mau bahas apa hari ini?</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Input area -->
+        <div class="px-6 py-4 border-t border-white/5">
+          <div class="flex items-center gap-3">
+            <div class="flex-1 relative">
+              <input id="aiDemoInput" type="text" placeholder="Ketik ide kamu di sini... contoh: 'tips jadi content creator'" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 font-light focus:outline-none focus:border-indigo-500/50 focus:bg-white/[0.07] transition-all" onkeydown="if(event.key==='Enter')sendAIDemo()">
+            </div>
+            <button onclick="sendAIDemo()" class="w-11 h-11 rounded-xl bg-indigo-500 hover:bg-indigo-400 flex items-center justify-center transition-colors flex-shrink-0">
+              <i data-lucide="send" class="w-4 h-4 text-white"></i>
+            </button>
+          </div>
+          <div class="flex items-center gap-2 mt-3">
+            <span class="text-[10px] text-zinc-600">Coba:</span>
+            <button onclick="document.getElementById('aiDemoInput').value='Cara dapat uang dari blog';sendAIDemo()" class="text-[10px] text-zinc-500 hover:text-indigo-400 px-2 py-1 rounded-md bg-white/5 hover:bg-white/10 transition-all">💰 Cara dapat uang dari blog</button>
+            <button onclick="document.getElementById('aiDemoInput').value='Review laptop untuk mahasiswa';sendAIDemo()" class="text-[10px] text-zinc-500 hover:text-indigo-400 px-2 py-1 rounded-md bg-white/5 hover:bg-white/10 transition-all">💻 Review laptop mahasiswa</button>
+            <button onclick="document.getElementById('aiDemoInput').value='Tips mental health buat gen z';sendAIDemo()" class="text-[10px] text-zinc-500 hover:text-indigo-400 px-2 py-1 rounded-md bg-white/5 hover:bg-white/10 transition-all hidden sm:block">🧠 Mental health Gen Z</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRENDING POSTS ==================== -->
+  <section id="trending" class="py-32 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-end justify-between mb-12">
+        <div>
+          <p class="reveal-on-scroll text-xs font-medium tracking-[0.2em] uppercase text-orange-400 mb-4">🔥 TRENDING SEKARANG</p>
+          <h2 class="reveal-on-scroll stagger-delay-1 text-3xl md:text-5xl font-medium tracking-tight">
+            Lagi viral nih
+          </h2>
+        </div>
+        <button class="reveal-on-scroll stagger-delay-2 hidden md:flex items-center gap-2 text-sm text-zinc-500 hover:text-white transition-colors">
+          Lihat semua
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Post 1 -->
+        <article class="reveal-on-scroll card-hover rounded-2xl border border-white/5 bg-zinc-950/40 overflow-hidden group cursor-pointer" onclick="showToast('📖 Full article segera hadir!', 'info')">
+          <div class="relative overflow-hidden aspect-[16/10]">
+            <img src="https://picsum.photos/seed/trending1/600/400.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-3 left-3 flex gap-2">
+              <span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-[10px] font-medium text-orange-300 border border-orange-500/20">🔥 Hot</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <img src="https://picsum.photos/seed/author1/64/64.jpg" class="w-6 h-6 rounded-full object-cover" alt="">
+              <span class="text-xs text-zinc-500 font-light">Dinda Aulia</span>
+              <span class="text-zinc-700 text-xs">•</span>
+              <span class="text-xs text-zinc-600 font-light">3 jam lalu</span>
+            </div>
+            <h3 class="text-lg font-medium tracking-tight mb-2 group-hover:text-indigo-300 transition-colors">Kenapa Gen Z Lebih Suka Blog Dibanding Instagram untuk Belajar?</h3>
+            <p class="text-sm text-zinc-500 font-light leading-relaxed line-clamp-2">Fakta mengejutkan tentang perubahan perilaku konsumsi konten di kalangan generasi muda Indonesia...</p>
+            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-white/5">
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 12.4k</span>
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3"></i> 892</span>
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3"></i> 67</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="reveal-on-scroll stagger-delay-1 card-hover rounded-2xl border border-white/5 bg-zinc-950/40 overflow-hidden group cursor-pointer" onclick="showToast('📖 Full article segera hadir!', 'info')">
+          <div class="relative overflow-hidden aspect-[16/10]">
+            <img src="https://picsum.photos/seed/trending2/600/400.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-[10px] font-medium text-indigo-300 border border-indigo-500/20">✍️ AI Generated</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <img src="https://picsum.photos/seed/author2/64/64.jpg" class="w-6 h-6 rounded-full object-cover" alt="">
+              <span class="text-xs text-zinc-500 font-light">Rizky Pratama</span>
+              <span class="text-zinc-700 text-xs">•</span>
+              <span class="text-xs text-zinc-600 font-light">5 jam lalu</span>
+            </div>
+            <h3 class="text-lg font-medium tracking-tight mb-2 group-hover:text-indigo-300 transition-colors">Saya Bikin Blog dengan AI dalam 5 Menit. Ini Hasilnya.</h3>
+            <p class="text-sm text-zinc-500 font-light leading-relaxed line-clamp-2">Step-by-step nyata bagaimana saya membuat blog komplet cuma pakai perintah teks dan AI...</p>
+            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-white/5">
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 8.7k</span>
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3"></i> 654</span>
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3"></i> 43</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="reveal-on-scroll stagger-delay-2 card-hover rounded-2xl border border-white/5 bg-zinc-950/40 overflow-hidden group cursor-pointer" onclick="showToast('📖 Full article segera hadir!', 'info')">
+          <div class="relative overflow-hidden aspect-[16/10]">
+            <img src="https://picsum.photos/seed/trending3/600/400.jpg" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute top-3 left-3">
+              <span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-sm text-[10px] font-medium text-emerald-300 border border-emerald-500/20">💰 Monetize</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <img src="https://picsum.photos/seed/author3/64/64.jpg" class="w-6 h-6 rounded-full object-cover" alt="">
+              <span class="text-xs text-zinc-500 font-light">Sarah Kim</span>
+              <span class="text-zinc-700 text-xs">•</span>
+              <span class="text-xs text-zinc-600 font-light">8 jam lalu</span>
+            </div>
+            <h3 class="text-lg font-medium tracking-tight mb-2 group-hover:text-indigo-300 transition-colors">Dari Nol Sampai Rp 10 Juta/Bulan dari Blog — Tanpa Iklan</h3>
+            <p class="text-sm text-zinc-500 font-light leading-relaxed line-clamp-2">Strategi monetisasi blog yang jarang orang tahu. Bukan adsense, bukan afiliasi biasa...</p>
+            <div class="flex items-center gap-4 mt-4 pt-4 border-t border-white/5">
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="eye" class="w-3 h-3"></i> 21.3k</span>
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="heart" class="w-3 h-3"></i> 1.8k</span>
+              <span class="text-xs text-zinc-600 flex items-center gap-1"><i data-lucide="message-circle" class="w-3 h-3"></i> 124</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== COMMUNITY STATS ==================== -->
+  <section id="community" class="py-32 px-6 relative">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-950/5 to-transparent pointer-events-none"></div>
+    <div class="max-w-7xl mx-auto relative">
+      <div class="reveal-on-scroll rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-sm p-8 md:p-16 relative overflow-hidden">
+        <!-- Background decoration -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10">
+          <div class="text-center mb-16">
+            <p class="text-xs font-medium tracking-[0.2em] uppercase text-purple-400 mb-4">KOMUNITAS</p>
+            <h2 class="text-3xl md:text-5xl font-medium tracking-tight mb-4">
+              Kita buat sesuatu <span class="text-gradient-accent">besar</span> bareng ✨
+            </h2>
+            <p class="text-zinc-500 font-light max-w-lg mx-auto">12,000+ creator dari seluruh Indonesia udah join. Dari pelajar sampai profesional.</p>
+          </div>
+
+          <!-- Stats grid -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extralight tracking-tighter text-white mb-2" id="stat1">0</div>
+              <p class="text-xs text-zinc-500 font-light uppercase tracking-wider">Creator Aktif</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extralight tracking-tighter text-white mb-2" id="stat2">0</div>
+              <p class="text-xs text-zinc-500 font-light uppercase tracking-wider">Artikel Dipublish</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extralight tracking-tighter text-white mb-2" id="stat3">0</div>
+              <p class="text-xs text-zinc-500 font-light uppercase tracking-wider">Total Views</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-extralight tracking-tighter text-white mb-2" id="stat4">0</div>
+              <p class="text-xs text-zinc-500 font-light uppercase tracking-wider">AI Artikel/day</p>
+            </div>
+          </div>
+
+          <!-- Testimonials -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white/[0.03] rounded-2xl p-6 border border-white/5 card-hover">
+              <div class="flex items-center gap-1 mb-4">
+                <span class="text-yellow-400 text-sm">★★★★★</span>
+              </div>
+              <p class="text-sm text-zinc-400 font-light leading-relaxed mb-4">"Dulu susah banget mulai nulis blog. Sekarang cuma jelasin ke AI, 2 menit langsung jadi artikel. Gila sih teknologi sekarang 😭🙏"</p>
+              <div class="flex items-center gap-3">
+                <img src="https://picsum.photos/seed/testi1/64/64.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+                <div>
+                  <p class="text-sm font-medium">Aisyah Rahma</p>
+                  <p class="text-xs text-zinc-600">Mahasiswi UI, 20 yo</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white/[0.03] rounded-2xl p-6 border border-white/5 card-hover">
+              <div class="flex items-center gap-1 mb-4">
+                <span class="text-yellow-400 text-sm">★★★★★</span>
+              </div>
+              <p class="text-sm text-zinc-400 font-light leading-relaxed mb-4">"Blog saya sekarang dapat 50k organic visits/bulan. SEMUA konten dibantu AI simple blogs. Ini bukan main-main, ini real results 🔥"</p>
+              <div class="flex items-center gap-3">
+                <img src="https://picsum.photos/seed/testi2/64/64.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+                <div>
+                  <p class="text-sm font-medium">Farel Wijaya</p>
+                  <p class="text-xs text-zinc-600">Freelancer, 23 yo</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white/[0.03] rounded-2xl p-6 border border-white/5 card-hover">
+              <div class="flex items-center gap-1 mb-4">
+                <span class="text-yellow-400 text-sm">★★★★★</span>
+              </div>
+              <p class="text-sm text-zinc-400 font-light leading-relaxed mb-4">"UI-nya clean banget, vibes-nya tepat buat gen z. Bukan kayak blog platform lain yang kelihatan jadul. Love it! 💜"</p>
+              <div class="flex items-center gap-3">
+                <img src="https://picsum.photos/seed/testi3/64/64.jpg" class="w-8 h-8 rounded-full object-cover" alt="">
+                <div>
+                  <p class="text-sm font-medium">Keyra Putri</p>
+                  <p class="text-xs text-zinc-600">Content Creator, 18 yo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PRICING ==================== -->
+  <section id="pricing" class="py-32 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="reveal-on-scroll text-xs font-medium tracking-[0.2em] uppercase text-emerald-400 mb-4">HARGA YANG MASUK AKAL</p>
+        <h2 class="reveal-on-scroll stagger-delay-1 text-3xl md:text-5xl font-medium tracking-tight mb-4">
+          Gratis dulu, <span class="text-gradient">bayar kalau udah cocok</span>
+        </h2>
+        <p class="reveal-on-scroll stagger-delay-2 text-zinc-500 font-light max-w-lg mx-auto">No credit card. No ribet. Langsung pakai.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Free -->
+        <div class="reveal-on-scroll card-hover rounded-2xl border border-white/5 bg-zinc-950/40 p-8 flex flex-col">
+          <div class="mb-6">
+            <h3 class="text-lg font-medium mb-1">Free</h3>
+            <p class="text-xs text-zinc-500 font-light">Buat yang baru mulai</p>
+          </div>
+          <div class="mb-6">
+            <span class="text-4xl font-extralight tracking-tighter">Rp0</span>
+            <span class="text-zinc-600 text-sm font-light">/bulan</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> 3 blog</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> 10 AI artikel/bulan</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> Basic themes</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-emerald-400 flex-shrink-0"></i> simpleblogs.or.id subdomain</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-600 font-light"><i data-lucide="x" class="w-4 h-4 text-zinc-700 flex-shrink-0"></i> Custom domain</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-600 font-light"><i data-lucide="x" class="w-4 h-4 text-zinc-700 flex-shrink-0"></i> Analytics</li>
+          </ul>
+          <button onclick="showToast('🎉 Gratis! Langsung daftar aja.', 'success')" class="w-full py-3 rounded-full border border-white/10 text-sm font-medium text-zinc-300 hover:bg-white/5 hover:border-white/20 transition-all">
+            Mulai Gratis
+          </button>
+        </div>
+
+        <!-- Pro -->
+        <div class="reveal-on-scroll stagger-delay-1 rounded-2xl border border-indigo-500/30 bg-zinc-950/40 p-8 flex flex-col relative overflow-hidden">
+          <div class="absolute top-0 right-0 bg-indigo-500 text-black text-[10px] font-semibold px-3 py-1 rounded-bl-xl">POPULER</div>
+          <div class="absolute inset-0 bg-gradient-to-b from-indigo-500/5 to-transparent pointer-events-none"></div>
+          <div class="relative z-10 flex flex-col h-full">
+            <div class="mb-6">
+              <h3 class="text-lg font-medium mb-1">Pro ✨</h3>
+              <p class="text-xs text-zinc-500 font-light">Buat creator serius</p>
+            </div>
+            <div class="mb-6">
+              <span class="text-4xl font-extralight tracking-tighter">Rp49k</span>
+              <span class="text-zinc-600 text-sm font-light">/bulan</span>
+            </div>
+            <ul class="space-y-3 mb-8 flex-1">
+              <li class="flex items-center gap-2 text-sm text-zinc-300 font-light"><i data-lucide="check" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> Unlimited blog</li>
+              <li class="flex items-center gap-2 text-sm text-zinc-300 font-light"><i data-lucide="check" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> 100 AI artikel/bulan</li>
+              <li class="flex items-center gap-2 text-sm text-zinc-300 font-light"><i data-lucide="check" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> All premium themes</li>
+              <li class="flex items-center gap-2 text-sm text-zinc-300 font-light"><i data-lucide="check" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> Custom domain</li>
+              <li class="flex items-center gap-2 text-sm text-zinc-300 font-light"><i data-lucide="check" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> Full analytics</li>
+              <li class="flex items-center gap-2 text-sm text-zinc-300 font-light"><i data-lucide="check" class="w-4 h-4 text-indigo-400 flex-shrink-0"></i> AI chat assistant 24/7</li>
+            </ul>
+            <button onclick="showToast('💎 Pro plan segera tersedia! Join waitlist ya.', 'success')" class="w-full py-3 rounded-full bg-indigo-500 text-sm font-medium text-white hover:bg-indigo-400 transition-all">
+              Pilih Pro 🔥
+            </button>
+          </div>
+        </div>
+
+        <!-- Team -->
+        <div class="reveal-on-scroll stagger-delay-2 card-hover rounded-2xl border border-white/5 bg-zinc-950/40 p-8 flex flex-col">
+          <div class="mb-6">
+            <h3 class="text-lg font-medium mb-1">Team</h3>
+            <p class="text-xs text-zinc-500 font-light">Buat agency & tim</p>
+          </div>
+          <div class="mb-6">
+            <span class="text-4xl font-extralight tracking-tighter">Rp149k</span>
+            <span class="text-zinc-600 text-sm font-light">/bulan</span>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1">
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Everything in Pro</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> 5 team members</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Unlimited AI articles</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> White label</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> API access</li>
+            <li class="flex items-center gap-2 text-sm text-zinc-400 font-light"><i data-lucide="check" class="w-4 h-4 text-purple-400 flex-shrink-0"></i> Priority support</li>
+          </ul>
+          <button onclick="showToast('🏢 Hubungi kami di hello@simpleblogs.or.id', 'info')" class="w-full py-3 rounded-full border border-white/10 text-sm font-medium text-zinc-300 hover:bg-white/5 hover:border-white/20 transition-all">
+            Hubungi Sales
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="py-32 px-6 relative">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="reveal-on-scroll">
+        <p class="text-6xl mb-6 emoji-wiggle inline-block cursor-default">🚀</p>
+      </div>
+      <h2 class="reveal-on-scroll stagger-delay-1 text-4xl md:text-6xl lg:text-7xl font-medium tracking-tighter leading-[0.9] mb-6">
+        Udah siap<br>
+        <span class="text-gradient-accent">ngeblog</span>?
+      </h2>
+      <p class="reveal-on-scroll stagger-delay-2 text-lg text-zinc-500 font-light max-w-lg mx-auto mb-10">
+        Ribuan creator udah duluan. Kamu tinggal daftar, tulis ide, dan biar AI yang kerja. Simple banget kan?
+      </p>
+      <div class="reveal-on-scroll stagger-delay-3 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="showToast('🎉 Kamu masuk waitlist! Cek email ya.', 'success')" class="group bg-white text-black text-sm font-medium px-10 py-4 rounded-full hover:bg-indigo-500 hover:text-white transition-all duration-300 flex items-center gap-2 hover:px-12">
+          Daftar Sekarang — Gratis
+          <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+        </button>
+      </div>
+      <p class="reveal-on-scroll stagger-delay-4 text-xs text-zinc-700 mt-6">No credit card required • Setup 30 detik • Cancel anytime</p>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="border-t border-white/5 py-16 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <!-- Brand -->
+        <div class="md:col-span-1">
+          <a href="#" class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center">
+              <span class="text-sm">✍️</span>
+            </div>
+            <span class="text-white font-bold tracking-tight">simple<span class="text-indigo-400">blogs</span></span>
+          </a>
+          <p class="text-sm text-zinc-600 font-light leading-relaxed mb-4">Platform blogging AI-powered buat generasi baru Indonesia.</p>
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-zinc-500 hover:text-white hover:border-white/20 transition-all">
+              <i data-lucide="twitter" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-zinc-500 hover:text-white hover:border-white/20 transition-all">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-zinc-500 hover:text-white hover:border-white/20 transition-all">
+              <i data-lucide="youtube" class="w-4 h-4"></i>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-full bg-white/5 border border-white/5 flex items-center justify-center text-zinc-500 hover:text-white hover:border-white/20 transition-all">
+              <i data-lucide="github" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div>
+          <h4 class="text-xs font-medium uppercase tracking-wider text-zinc-400 mb-4">Produk</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">AI Writer</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Themes</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Analytics</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Integrations</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-medium uppercase tracking-wider text-zinc-400 mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Blog</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Tutorial</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">API Docs</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Community</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-xs font-medium uppercase tracking-wider text-zinc-400 mb-4">Legal</h4>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Cookie Policy</a></li>
+            <li><a href="#" class="text-sm text-zinc-600 hover:text-zinc-300 font-light transition-colors">Kontak</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-zinc-700 font-light">© 2025 simple blogs.or.id — Made with 💜 in Indonesia</p>
+        <p class="text-xs text-zinc-800 font-light">v0.1.0 beta — still cooking 🔥</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING AI CHAT BUTTON ==================== -->
+  <button id="aiChatBtn" onclick="openAIChat()" class="fixed bottom-6 right-6 z-[55] w-14 h-14 rounded-full bg-indigo-500 hover:bg-indigo-400 flex items-center justify-center shadow-lg shadow-indigo-500/25 transition-all duration-300 hover:scale-110 group">
+    <i data-lucide="message-circle" class="w-6 h-6 text-white group-hover:hidden"></i>
+    <i data-lucide="x" class="w-6 h-6 text-white hidden group-hover:block"></i>
+    <!-- Pulse -->
+    <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-black text-[8px] font-bold text-black flex items-center justify-center">1</span>
+  </button>
+
+  <!-- ==================== AI CHAT PANEL ==================== -->
+  <div id="aiChatPanel" class="fixed bottom-24 right-6 z-[55] w-[380px] max-w-[calc(100vw-48px)] rounded-2xl border border-white/10 bg-zinc-950/95 backdrop-blur-xl shadow-2xl shadow-black/50 overflow-hidden hidden">
+    <!-- Header -->
+    <div class="px-5 py-4 border-b border-white/5 flex items-center justify-between bg-zinc-950/80">
+      <div class="flex items-center gap-3">
+        <div class="relative">
+          <div class="w-9 h-9 rounded-full bg-indigo-500/20 flex items-center justify-center">
+            <i data-lucide="bot" class="w-5 h-5 text-indigo-400"></i>
+          </div>
+          <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 rounded-full bg-emerald-400 border-2 border-zinc-950"></span>
+        </div>
+        <div>
+          <p class="text-sm font-medium">AI Assistant</p>
+          <p class="text-[10px] text-emerald-400">Online • Instant reply</p>
+        </div>
+      </div>
+      <button onclick="closeAIChat()" class="w-7 h-7 rounded-lg hover:bg-white/5 flex items-center justify-center text-zinc-500 hover:text-white transition-all">
+        <i data-lucide="minus" class="w-4 h-4"></i>
+      </button>
+    </div>
+
+    <!-- Messages -->
+    <div id="aiChatMessages" class="p-4 space-y-3 h-[320px] overflow-y-auto">
+      <div class="flex gap-2.5 chat-bubble-anim">
+        <div class="w-7 h-7 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <i data-lucide="bot" class="w-3.5 h-3.5 text-indigo-400"></i>
+        </div>
+        <div class="bg-white/5 rounded-2xl rounded-tl-md px-3.5 py-2.5 max-w-[280px]">
+          <p class="text-sm text-zinc-300 font-light leading-relaxed">Hai! 👋 Aku AI assistant simple blogs. Mau nanya apa? Bisa tentang fitur, harga, cara mulai, atau apa aja!</p>
+        </div>
+      </div>
+      <!-- Quick actions -->
+      <div class="flex flex-wrap gap-1.5 pl-9">
+        <button onclick="sendChatMessage('Gimana cara mulai blog?')" class="text-[11px] text-indigo-300 px-2.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 transition-all">🚀 Cara mulai</button>
+        <button onclick="sendChatMessage('Berapa harga Pro?')" class="text-[11px] text-indigo-300 px-2.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 transition-all">💰 Harga Pro</button>
+        <button onclick="sendChatMessage('Apa itu AI Writer?')" class="text-[11px] text-indigo-300 px-2.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 hover:bg-indigo-500/20 transition-all">🤖 AI Writer</button>
+      </div>
+    </div>
+
+    <!-- Input -->
+    <div class="px-4 py-3 border-t border-white/5">
+      <div class="flex items-center gap-2">
+        <input id="aiChatInput" type="text" placeholder="Ketik pesan..." class="flex-1 bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-zinc-600 font-light focus:outline-none focus:border-indigo-500/50 transition-all" onkeydown="if(event.key==='Enter')sendChatFromInput()">
+        <button onclick="sendChatFromInput()" class="w-9 h-9 rounded-xl bg-indigo-500 hover:bg-indigo-400 flex items-center justify-center transition-colors flex-shrink-0">
+          <i data-lucide="send" class="w-3.5 h-3.5 text-white"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // ===== GLOW CURSOR =====
+    const glow = document.getElementById('glowCursor');
+    let mouseX = 0, mouseY = 0, glowX = 0, glowY = 0;
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+    function animateGlow() {
+      glowX += (mouseX - glowX) * 0.15;
+      glowY += (mouseY - glowY) * 0.15;
+      glow.style.left = glowX + 'px';
+      glow.style.top = glowY + 'px';
+      requestAnimationFrame(animateGlow);
+    }
+    animateGlow();
+
+    // Hide glow on mobile
+    if ('ontouchstart' in window) glow.style.display = 'none';
+
+    // ===== SCROLL REVEAL =====
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+    // ===== NAVBAR SCROLL =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('bg-black/80', 'backdrop-blur-xl');
+        navbar.classList.remove('bg-black/50', 'backdrop-blur-md');
+      } else {
+        navbar.classList.remove('bg-black/80', 'backdrop-blur-xl');
+        navbar.classList.add('bg-black/50', 'backdrop-blur-md');
+      }
+    });
+
+    // ===== MOBILE MENU =====
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+    mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.remove('hidden'));
+    mobileMenuClose.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // ===== COUNTER ANIMATION =====
+    function animateCounter(id, target, prefix = '', suffix = '') {
+      const el = document.getElementById(id);
+      let current = 0;
+      const increment = target / 60;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        if (target >= 1000000) {
+          el.textContent = prefix + (current / 1000000).toFixed(1) + 'M' + suffix;
+        } else if (target >= 1000) {
+          el.textContent = prefix + Math.floor(current / 1000) + 'K' + suffix;
+        } else {
+          el.textContent = prefix + Math.floor(current) + suffix;
+        }
+      }, 30);
+    }
+
+    const statsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter('stat1', 12000, '', '+');
+          animateCounter('stat2', 85000, '', '+');
+          animateCounter('stat3', 2500000, '', '+');
+          animateCounter('stat4', 3400, '', '+');
+          statsObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    statsObserver.observe(document.getElementById('stat1'));
+
+    // ===== TOAST SYSTEM =====
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      const colors = {
+        success: 'border-emerald-500/30 bg-emerald-500/10',
+        info: 'border-indigo-500/30 bg-indigo-500/10',
+        error: 'border-red-500/30 bg-red-500/10'
+      };
+      toast.className = `toast-in px-5 py-3 rounded-xl border ${colors[type]} backdrop-blur-xl text-sm text-zinc-200 font-light max-w-sm shadow-lg`;
+      toast.textContent = message;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.classList.remove('toast-in');
+        toast.classList.add('toast-out');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+
+    // ===== AI DEMO CHAT =====
+    const aiResponses = {
+      'default': [
+        "Oke, ide yang menarik! 🔥 Biar aku bantu susun jadi artikel yang engaging. Pertama, kita mulai dari headline yang catchy, lalu isi dengan poin-poin yang mudah dicerna. Mau tone-nya santai kayak gini, atau lebih formal?",
+        "Wah, topik yang bagus banget! 💡 Aku bisa bikin outline dulu nih:\n\n1. Hook pembuka yang bikin penasaran\n2. 3-5 poin utama dengan data\n3. Tips actionable\n4. Closing yang memorable\n\nMau aku lanjut tulis full artikelnya?",
+        "Nice choice! ✨ Untuk topik ini, target pembaca kita adalah Gen Z dan milenial muda. Aku bakal pakai bahasa yang relatable, tambahin beberapa referensi terkini, dan pastiin SEO-nya optimal. Ready?",
+      ],
+      'uang': "💰 Topik monetisasi blog itu evergreen banget! Ini outline yang aku sarankan:\n\n**5 Cara Dapat Uang dari Blog (Tanpa Ribet)**\n\n1. **Affiliate Marketing** — Review produk, earn commission per sale\n2. **Digital Products** — Ebook, template, course\n3. **Sponsorship** — Paid post dari brand\n4. **Membership** — Konten eksklusif buat subscriber bayar\n5. **Services** — Jadi freelance writer lewat portofolio blog\n\nMau aku tulis jadi artikel lengkap? Bisa auto-SEO juga lho 😎",
+      'laptop': "💻 Review laptop buat mahasiswa? Let me help! Ini draft-nya:\n\n**5 Laptop Terbaik buat Mahasiswa 2025 (Budget 5-10 Juta)**\n\n1. ASUS VivoBook 14 — Ringan, baterai tahan 8 jam\n2. Lenovo IdeaPad Slim 3 — Performa mantap, harga bersahabat\n3. Acer Aspire 5 — layar IPS, cocok buat tugas & coding\n4. HP Pavilion 14 — Desain premium, keyboard nyaman\n5. RedmiBook 15 — Value for money terbaik\n\nAku bisa tambahin spesifikasi detail, harga terkini, dan link beli. Mau dilanjut?",
+      'mental': "🧠 Mental health itu topik yang penting banget buat dibahas! Ini sudut pandang yang bisa kita angkat:\n\n**Tips Mental Health buat Gen Z yang Relatable**\n\n1. **Recognize your burnout** — Bukan malas, tapi capek beneran\n2. **Social media detox** — Unfollow yang bikin insecure\n3. **Therapy is cool** — Konseling buat yang butuh, bukan aib\n4. **Build safe circle** — Teman yang support, buat yang toxic\n5. **Self-compassion** — Udah usaha aja, hasilnya pelan-pelan\n\nTone-nya mau lebih personal atau lebih edukatif? 😊",
+      'mulai': "🚀 Cara mulai blog di simple blogs itu gampang banget:\n\n1. **Sign up** — Cuma butuh email, 30 detik selesai\n2. **Pilih tema** — 50+ aesthetic themes tersedia\n3. **Tulis atau AI-in** — Ketik sendiri atau minta AI bantu\n4. **Publish** — Satu klik, langsung live\n5. **Share** — Auto-share ke platform lain\n\nYang paling keren? Kamu bisa mulai GRATIS. No credit card, no ribet. Mau coba sekarang? 😄",
+      'harga': "💰 Harga Pro cuma **Rp49.000/bulan**! Ini yang kamu dapat:\n\n✅ Unlimited blog\n✅ 100 AI artikel/bulan\n✅ All premium themes\n✅ Custom domain\n✅ Full analytics\n✅ AI chat assistant 24/7\n\nBandingin sama langganan ChatGPT Plus yang Rp650k/bulan — ini jauh lebih worth it buat blogging. Plus ada plan Free kalau mau coba dulu! 🤩",
+      'ai writer': "🤖 AI Writer adalah fitur unggulan kita! Caranya gini:\n\n1. **Jelasin ide** — Bisa bahasa santai, singkat aja\n2. **Pilih tone** — Santai, formal, poetic, atau humor\n3. **Pilih bahasa** — Indonesia, English, atau campur\n4. **Generate** — 5-10 detik, artikel jadi\n5. **Edit** — Fine-tune sesuai selera\n6. **Publish** — Langsung ke blog kamu\n\nHasilnya bukan copypaste — AI kita nulis orisinal, SEO-optimized, dan readable. Banyak user bilang hasilnya kayak ditulis manusia profesional 😎"
+    };
+
+    function getAIResponse(input) {
+      const lower = input.toLowerCase();
+      if (lower.includes('uang') || lower.includes('monet') || lower.includes('dapat uang') || lower.includes('earning')) return aiResponses['uang'];
+      if (lower.includes('laptop') || lower.includes('gadget') || lower.includes('review')) return aiResponses['laptop'];
+      if (lower.includes('mental') || lower.includes('health') || lower.includes('gen z')) return aiResponses['mental'];
+      if (lower.includes('mulai') || lower.includes('cara') || lower.includes('start') || lower.includes('daftar')) return aiResponses['mulai'];
+      if (lower.includes('harga') || lower.includes('price') || lower.includes('pro') || lower.includes('biaya')) return aiResponses['harga'];
+      if (lower.includes('ai writer') || lower.includes('ai write') || lower.includes('fitur ai')) return aiResponses['ai writer'];
+      const defaults = aiResponses['default'];
+      return defaults[Math.floor(Math.random() * defaults.length)];
+    }
+
+    function addMessageToChat(container, text, isUser = false) {
+      const wrapper = document.createElement('div');
+      wrapper.className = `flex gap-2.5 chat-bubble-anim ${isUser ? 'justify-end' : ''}`;
+      
+      if (isUser) {
+        wrapper.innerHTML = `<div class="bg-indigo-500/20 border border-indigo-500/20 rounded-2xl rounded-tr-md px-3.5 py-2.5 max-w-[280px]">
+          <p class="text-sm text-indigo-100 font-light leading-relaxed">${escapeHtml(text)}</p>
+        </div>`;
+      } else {
+        wrapper.innerHTML = `<div class="w-7 h-7 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg class="w-3.5 h-3.5 text-indigo-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+        </div>
+        <div class="bg-white/5 rounded-2xl rounded-tl-md px-3.5 py-2.5 max-w-[280px]">
+          <p class="text-sm text-zinc-300 font-light leading-relaxed whitespace-pre-line">${escapeHtml(text)}</p>
+        </div>`;
+      }
+      container.appendChild(wrapper);
+      container.scrollTop = container.scrollHeight;
+    }
+
+    function addTypingIndicator(container) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'flex gap-2.5 chat-bubble-anim typing-indicator';
+      wrapper.innerHTML = `<div class="w-7 h-7 rounded-full bg-indigo-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+          <svg class="w-3.5 h-3.5 text-indigo-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+        </div>
+        <div class="bg-white/5 rounded-2xl rounded-tl-md px-4 py-3">
+          <div class="flex gap-1"><span class="w-2 h-2 rounded-full bg-zinc-500 animate-pulse"></span><span class="w-2 h-2 rounded-full bg-zinc-500 animate-pulse" style="animation-delay:0.2s"></span><span class="w-2 h-2 rounded-full bg-zinc-500 animate-pulse" style="animation-delay:0.4s"></span></div>
+        </div>`;
+      container.appendChild(wrapper);
+      container.scrollTop = container.scrollHeight;
+      return wrapper;
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    // Demo chat
+    function sendAIDemo() {
+      const input = document.getElementById('aiDemoInput');
+      const chat = document.getElementById('aiDemoChat');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      addMessageToChat(chat, text, true);
+      const typing = addTypingIndicator(chat);
+      setTimeout(() => {
+        typing.remove();
+        addMessageToChat(chat, getAIResponse(text));
+      }, 1200 + Math.random() * 800);
+    }
+
+    // Floating AI chat
+    function sendChatMessage(text) {
+      const chat = document.getElementById('aiChatMessages');
+      addMessageToChat(chat, text, true);
+      const typing = addTypingIndicator(chat);
+      setTimeout(() => {
+        typing.remove();
+        addMessageToChat(chat, getAIResponse(text));
+      }, 1000 + Math.random() * 600);
+    }
+
+    function sendChatFromInput() {
+      const input = document.getElementById('aiChatInput');
+      const text = input.value.trim();
+      if (!text) return;
+      input.value = '';
+      sendChatMessage(text);
+    }
+
+    function openAIChat() {
+      const panel = document.getElementById('aiChatPanel');
+      const badge = document.querySelector('#aiChatBtn span');
+      panel.classList.remove('hidden');
+      if (badge) badge.style.display = 'none';
+      document.getElementById('aiChatInput').focus();
+    }
+
+    function closeAIChat() {
+      document.getElementById('aiChatPanel').classList.add('hidden');
+    }
+
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
