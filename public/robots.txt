@@ -1,0 +1,3 @@
+User-agent: *
+
+https://blogs.or.id/sitemap.xml
