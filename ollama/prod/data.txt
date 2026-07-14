@@ -1,8 +1,0 @@
-# data blog
-DIR=selling-open-source
-TITLE="Legalization for selling open source application"
-DESC="descript more about open source , and other license "
-MODEL=llama3.2
-SYSTEM="open source programmer"
-
-Modellist=gemma-7b-it,gemma2-9b-it,llama3-8b-8192,mixtral-8x7b-32768,tinydolphin,llama3

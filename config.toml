@@ -1,0 +1,4 @@
+baseURL = 'https://blogs.or.id/'
+languageCode = 'en-us'
+title = 'blogs Or ID '
+theme = "adistart"

@@ -1,1 +1,0 @@
-# ollama-modelfiles for adijayainc

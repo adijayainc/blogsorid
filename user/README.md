@@ -1,2 +1,0 @@
-grav-skeleton-notepad-site
-==========================
